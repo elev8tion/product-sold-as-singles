@@ -1,0 +1,165 @@
+<template>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <style>
+  @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/space-grotesk.woff2") format("woff2"); font-weight: 400 700; }
+  @font-face { font-family: "DM Mono"; src: url("assets/fonts/dm-mono.woff2") format("woff2"); font-weight: 400 700; }
+
+  #root { position: absolute; inset: 0; width: 1920px; height: 1080px; overflow: hidden; color: #E9E8DF; font-family: "Space Grotesk", sans-serif; }
+
+  /* full-bleed ground on its own clip (never on #root) */
+  .f11-the-right-place-bg { position: absolute; inset: 0; background: #0D0F0E; }
+  .f11-the-right-place-layer { position: absolute; inset: 0; }
+  .f11-the-right-place-cam { position: absolute; inset: 0; }
+
+  /* ✳ mark — eight lime spokes from one center, drawn stroke by stroke */
+  .f11-the-right-place-mark { position: absolute; left: 0; right: 0; top: 232px; width: 150px; height: 150px; margin: 0 auto; overflow: visible; display: block; }
+  .f11-the-right-place-mark path { fill: none; stroke: #D6FF55; stroke-width: 24; stroke-linecap: round; }
+
+  /* wordmark — DM Mono, cream, tracked 0.14em, typed letter by letter */
+  .f11-the-right-place-word { position: absolute; left: 0; right: 0; top: 412px; text-align: center; font-family: "DM Mono", monospace; font-size: 40px; line-height: 48px; font-weight: 500; letter-spacing: .14em; color: #E9E8DF; white-space: nowrap; }
+  .f11-the-right-place-wordbox { position: relative; display: inline-block; margin-right: -.14em; }
+  .f11-the-right-place-ghost { visibility: hidden; }
+  .f11-the-right-place-typed { position: absolute; left: 0; top: 0; white-space: pre; }
+  .f11-the-right-place-cursor { display: inline-block; width: .56em; height: .8em; background: #D6FF55; vertical-align: -.06em; opacity: 0; }
+
+  /* tagline — the app's own sentence-case h1, "place." in lime */
+  .f11-the-right-place-tagline { position: absolute; left: 0; right: 0; top: 496px; text-align: center; font-size: 96px; font-weight: 700; line-height: 1; letter-spacing: -.03em; color: #E9E8DF; white-space: nowrap; }
+  .f11-the-right-place-line { display: block; height: 98px; }
+  .f11-the-right-place-mask { display: inline-block; vertical-align: top; overflow: hidden; padding: 0 .04em .18em; margin-bottom: -.18em; }
+  .f11-the-right-place-in { display: inline-block; }
+  .f11-the-right-place-lime { color: #D6FF55; }
+
+  /* chrome — 1px hairline + mono footer, settles last */
+  .f11-the-right-place-rule { position: absolute; left: 0; right: 0; top: 746px; width: 560px; height: 1px; margin: 0 auto; background: #30342F; }
+  .f11-the-right-place-foot { position: absolute; left: 0; right: 0; top: 772px; text-align: center; font-family: "DM Mono", monospace; font-size: 18px; line-height: 24px; font-weight: 400; letter-spacing: .14em; text-transform: uppercase; color: #A0A49A; white-space: nowrap; }
+  </style>
+
+  <div data-hf-id="hf-udem" id="root" data-composition-id="11-the-right-place" data-width="1920" data-height="1080">
+    <div data-hf-id="hf-5ioy" class="clip f11-the-right-place-bg" data-start="0" data-duration="4.5" data-track-index="0"></div>
+    <div data-hf-id="hf-8spj" class="clip f11-the-right-place-layer" data-start="0" data-duration="4.5" data-track-index="1">
+      <div data-hf-id="hf-6jvi" class="f11-the-right-place-cam" id="f11-the-right-place-cam">
+
+        <svg data-hf-id="hf-ssqf" class="f11-the-right-place-mark" id="f11-the-right-place-mark" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path data-hf-id="hf-05w6" class="f11-the-right-place-spoke" d="M100 100 L100 14" />
+          <path data-hf-id="hf-czuk" class="f11-the-right-place-spoke" d="M100 100 L160.81 39.19" />
+          <path data-hf-id="hf-kkpc" class="f11-the-right-place-spoke" d="M100 100 L186 100" />
+          <path data-hf-id="hf-grby" class="f11-the-right-place-spoke" d="M100 100 L160.81 160.81" />
+          <path data-hf-id="hf-2mww" class="f11-the-right-place-spoke" d="M100 100 L100 186" />
+          <path data-hf-id="hf-z38c" class="f11-the-right-place-spoke" d="M100 100 L39.19 160.81" />
+          <path data-hf-id="hf-81d4" class="f11-the-right-place-spoke" d="M100 100 L14 100" />
+          <path data-hf-id="hf-pl92" class="f11-the-right-place-spoke" d="M100 100 L39.19 39.19" />
+        </svg>
+
+        <div data-hf-id="hf-zzd9" class="f11-the-right-place-word">
+          <span data-hf-id="hf-4dwy" class="f11-the-right-place-wordbox">
+            <span data-hf-id="hf-jcah" class="f11-the-right-place-ghost">PALLET PRICE SCOUT</span>
+            <span data-hf-id="hf-ytit" class="f11-the-right-place-typed"><span data-hf-id="hf-gfcx" id="f11-the-right-place-text"></span><span data-hf-id="hf-87n7" class="f11-the-right-place-cursor" id="f11-the-right-place-cursor"></span></span>
+          </span>
+        </div>
+
+        <div data-hf-id="hf-zn4k" class="f11-the-right-place-tagline">
+          <div data-hf-id="hf-mk9s" class="f11-the-right-place-line">
+            <span data-hf-id="hf-7bn3" class="f11-the-right-place-mask"><span data-hf-id="hf-v4p6" class="f11-the-right-place-in" id="f11-the-right-place-l1">The right items.</span></span>
+          </div>
+          <div data-hf-id="hf-8460" class="f11-the-right-place-line">
+            <span data-hf-id="hf-dvbj" class="f11-the-right-place-mask"><span data-hf-id="hf-x3o5" class="f11-the-right-place-in" id="f11-the-right-place-l2">The right</span></span>
+            <span data-hf-id="hf-dh0i" class="f11-the-right-place-mask"><span data-hf-id="hf-thax" class="f11-the-right-place-in f11-the-right-place-lime" id="f11-the-right-place-place">place.</span></span>
+          </div>
+        </div>
+
+        <div data-hf-id="hf-p3nm" class="f11-the-right-place-rule" id="f11-the-right-place-rule"></div>
+        <div data-hf-id="hf-j1qc" class="f11-the-right-place-foot" id="f11-the-right-place-foot">Inventory routing · demo workspace · sample data</div>
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var ID = "11-the-right-place";
+      var scope = document.querySelector('[data-composition-id="' + ID + '"]') || document;
+      var q = function (s) { return scope.querySelector(s); };
+      var qa = function (s) { return Array.prototype.slice.call(scope.querySelectorAll(s)); };
+
+      var tl = gsap.timeline({ paused: true });
+      var DURATION = 4.5;
+
+      var cam = q("#f11-the-right-place-cam");
+      var mark = q("#f11-the-right-place-mark");
+      var spokes = qa(".f11-the-right-place-spoke");
+      var textEl = q("#f11-the-right-place-text");
+      var cursorEl = q("#f11-the-right-place-cursor");
+      var l1 = q("#f11-the-right-place-l1");
+      var l2 = q("#f11-the-right-place-l2");
+      var place = q("#f11-the-right-place-place");
+      var rule = q("#f11-the-right-place-rule");
+      var foot = q("#f11-the-right-place-foot");
+
+      // Macro settle under the whole build (0–3.0s), then dead still for the hold.
+      tl.fromTo(cam, { scale: 1.035 }, { scale: 1, duration: 3.0, ease: "power2.out", transformOrigin: "960px 514px" }, 0);
+
+      // ── Scene 1 (0.0–1.0s): ✳ draws on spoke by spoke (svg-path-draw) ──
+      var SPOKE_R = 86; // straight spoke: exact length = radius
+      var SEG_1_START = 0.08, SEG_STAGGER = 0.1, SEG_DUR = 0.24;
+      spokes.forEach(function (p, i) {
+        var len = (p.getTotalLength && p.getTotalLength()) || SPOKE_R;
+        if (!(len > 0)) len = SPOKE_R;
+        len = len * 1.02;
+        p.style.strokeDasharray = len + " " + len;
+        var start = SEG_1_START + i * SEG_STAGGER;
+        // round caps can leave a dot on a zero-length dash — gate visibility to the draw start
+        tl.fromTo(p, { opacity: 0 }, { opacity: 1, duration: 0.01, ease: "none" }, start);
+        tl.fromTo(p, { strokeDashoffset: len }, { strokeDashoffset: 0, duration: SEG_DUR, ease: "power2.out" }, start);
+      });
+      tl.fromTo(mark, { rotation: -22.5 }, { rotation: 0, duration: 1.15, ease: "power2.out", transformOrigin: "50% 50%" }, 0);
+
+      // ── Scene 2 (1.0–1.8s): wordmark builds letter by letter (discrete-text-sequence) ──
+      var WORD = "PALLET PRICE SCOUT";
+      var TYPE_START = 1.0;
+      var SEQUENCE = [{ t: 0, text: "" }];
+      var tk = TYPE_START + 0.02;
+      for (var i = 1; i <= WORD.length; i++) {
+        if (WORD.charAt(i - 1) === " ") { tk += 0.05; continue; } // word-break pause; space lands with the next letter
+        SEQUENCE.push({ t: Math.round(tk * 1000) / 1000, text: WORD.slice(0, i) });
+        tk += 0.04;
+      }
+      var TYPE_END = SEQUENCE[SEQUENCE.length - 1].t; // ≈ 1.72s
+      var BLINK = 0.28; // one off/on blink after completion, then the cursor leaves
+
+      function textAt(time) {
+        for (var k = SEQUENCE.length - 1; k >= 0; k--) {
+          if (time >= SEQUENCE[k].t) return SEQUENCE[k].text;
+        }
+        return "";
+      }
+      function cursorOn(time) {
+        if (time < TYPE_START) return false;
+        if (time < TYPE_END) return true;
+        if (time >= TYPE_END + BLINK) return false;
+        return Math.sin(((time - TYPE_END) / BLINK) * Math.PI * 2 + Math.PI) > 1e-6;
+      }
+      var driver = { t: 0 };
+      function renderType() {
+        var s = textAt(driver.t);
+        if (textEl.textContent !== s) textEl.textContent = s;
+        cursorEl.style.opacity = cursorOn(driver.t) ? "1" : "0";
+      }
+      tl.fromTo(driver, { t: 0 }, { t: DURATION, duration: DURATION, ease: "none", onUpdate: renderType }, 0);
+      renderType();
+
+      // ── Scene 3 (1.8–3.0s): tagline line by line, "place." lands lime on the chime; footer settles last ──
+      tl.fromTo(l1, { yPercent: 112 }, { yPercent: 0, duration: 0.55, ease: "power3.out" }, 1.8);
+      tl.fromTo(l2, { yPercent: 112 }, { yPercent: 0, duration: 0.55, ease: "power3.out" }, 1.98);
+      tl.fromTo(place, { yPercent: 112 }, { yPercent: 0, duration: 0.6, ease: "expo.out" }, 2.1);
+
+      tl.fromTo(rule, { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: "power2.inOut", transformOrigin: "50% 50%" }, 2.4);
+      tl.fromTo(foot, { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 2.5);
+
+      // ── Scene 4 (3.0–4.5s): hold still; final 0.4s the lockup fades to the ground (final frame) ──
+      tl.fromTo(cam, { opacity: 1 }, { opacity: 0, duration: 0.4, ease: "power1.inOut", immediateRender: false }, DURATION - 0.4);
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines[ID] = tl;
+    })();
+  </script>
+</template>

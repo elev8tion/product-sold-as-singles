@@ -1,0 +1,3146 @@
+{
+ "overview": {
+  "page": {
+   "w": 1920,
+   "h": 1340
+  },
+  "els": [
+   {
+    "sel": "header.topbar",
+    "text": "✳ PALLET PRICE SCOUT INVENTORY ROUTING DEMO WORKSPACE / NO LIVE CONNECTIONS",
+    "x": 152,
+    "y": 20,
+    "w": 1616,
+    "h": 57
+   },
+   {
+    "sel": "h2",
+    "text": "Good inventory. Better decisions.",
+    "x": 432,
+    "y": 135,
+    "w": 421,
+    "h": 34
+   },
+   {
+    "sel": "div.stats.panel",
+    "text": "ANALYZED INVENTORY 215 16 product lines · 9 units on hold READY RETAIL VALUE $12",
+    "x": 432,
+    "y": 291,
+    "w": 1336,
+    "h": 131
+   },
+   {
+    "sel": "div.stat",
+    "text": "ANALYZED INVENTORY 215 16 product lines · 9 units on hold",
+    "x": 433,
+    "y": 292,
+    "w": 334,
+    "h": 129
+   },
+   {
+    "sel": "div.stat",
+    "text": "READY RETAIL VALUE $12,260 Illustrative prices · excludes holds",
+    "x": 767,
+    "y": 292,
+    "w": 334,
+    "h": 129
+   },
+   {
+    "sel": "div.stat",
+    "text": "RESERVED FOR SINGLES 40 6 fast-selling SKUs identified",
+    "x": 1100,
+    "y": 292,
+    "w": 334,
+    "h": 129
+   },
+   {
+    "sel": "div.stat",
+    "text": "AVAILABLE FOR PALLETS 166 $8,320 in retail value",
+    "x": 1434,
+    "y": 292,
+    "w": 334,
+    "h": 129
+   },
+   {
+    "sel": "section.panel",
+    "text": "01 Send the best sellers first. STORE MATCHED Ranked by 30-day unit sales at Mai",
+    "x": 432,
+    "y": 445,
+    "w": 1028,
+    "h": 492
+   },
+   {
+    "sel": "h3",
+    "text": "Send the best sellers first.",
+    "x": 472,
+    "y": 464,
+    "w": 180,
+    "h": 19
+   },
+   {
+    "sel": "tr",
+    "text": "PRODUCT 30D SOLD AVG. DAYS TO SELL 7D PULL",
+    "x": 433,
+    "y": 544,
+    "w": 1026,
+    "h": 36
+   },
+   {
+    "sel": "tr",
+    "text": "01 NI Ninja air fryer AF101 · 4 qt · black 48 3.2 days 10 units",
+    "x": 433,
+    "y": 580,
+    "w": 1026,
+    "h": 62
+   },
+   {
+    "sel": "tr",
+    "text": "02 CO COSORI electric kettle 1.7 L · stainless steel 42 2.6 days 6 units",
+    "x": 433,
+    "y": 641,
+    "w": 1026,
+    "h": 62
+   },
+   {
+    "sel": "tr",
+    "text": "03 JB JBL Flip 6 speaker Portable Bluetooth · black 36 4.1 days 8 units",
+    "x": 433,
+    "y": 703,
+    "w": 1026,
+    "h": 62
+   },
+   {
+    "sel": "tr",
+    "text": "04 KE Keurig K-Mini Single-serve coffee maker 30 4.8 days 5 units",
+    "x": 433,
+    "y": 765,
+    "w": 1026,
+    "h": 62
+   },
+   {
+    "sel": "tr",
+    "text": "05 AN Soundcore Q20 headphones Over-ear · noise cancelling 27 5.2 days 6 units",
+    "x": 433,
+    "y": 827,
+    "w": 1026,
+    "h": 61
+   },
+   {
+    "sel": "div.panel-foot",
+    "text": "7-day demand minus current store stock Review pull list →",
+    "x": 433,
+    "y": 888,
+    "w": 1026,
+    "h": 48
+   },
+   {
+    "sel": "section.panel.allocation",
+    "text": "Where it goes. 215 UNITS 96% ready to route Single-item store 40 Pallet inventor",
+    "x": 1478,
+    "y": 445,
+    "w": 290,
+    "h": 492
+   },
+   {
+    "sel": "h3",
+    "text": "Where it goes.",
+    "x": 1496,
+    "y": 464,
+    "w": 98,
+    "h": 19
+   },
+   {
+    "sel": "div.allocation-bar",
+    "text": "",
+    "x": 1498,
+    "y": 631,
+    "w": 250,
+    "h": 15
+   },
+   {
+    "sel": "span.pallet",
+    "text": "",
+    "x": 1546,
+    "y": 631,
+    "w": 186,
+    "h": 15
+   },
+   {
+    "sel": "i.pallet",
+    "text": "",
+    "x": 1498,
+    "y": 698,
+    "w": 7,
+    "h": 7
+   },
+   {
+    "sel": "section.tier-section",
+    "text": "02 Four price points. One value rule. MINIMUM RETAIL = SALE × 1.30 PALLET / 01 ↗",
+    "x": 432,
+    "y": 957,
+    "w": 1336,
+    "h": 251
+   },
+   {
+    "sel": "h3",
+    "text": "Four price points. One value rule.",
+    "x": 454,
+    "y": 971,
+    "w": 224,
+    "h": 19
+   },
+   {
+    "sel": "div.tier-grid",
+    "text": "PALLET / 01 ↗ $400sale price Minimum retail $520 +30% RETAIL VALUE BUILD PALLET ",
+    "x": 432,
+    "y": 1012,
+    "w": 1336,
+    "h": 196
+   },
+   {
+    "sel": "button.tier-card",
+    "text": "PALLET / 01 ↗ $400sale price Minimum retail $520 +30% RETAIL VALUE BUILD PALLET ",
+    "x": 432,
+    "y": 1012,
+    "w": 325,
+    "h": 196
+   },
+   {
+    "sel": "span.tier-top",
+    "text": "PALLET / 01 ↗",
+    "x": 449,
+    "y": 1030,
+    "w": 291,
+    "h": 21
+   },
+   {
+    "sel": "div.tier-value",
+    "text": "Minimum retail $520",
+    "x": 449,
+    "y": 1137,
+    "w": 291,
+    "h": 17
+   },
+   {
+    "sel": "div.tier-base",
+    "text": "+30% RETAIL VALUE BUILD PALLET →",
+    "x": 449,
+    "y": 1171,
+    "w": 291,
+    "h": 36
+   },
+   {
+    "sel": "button.tier-card",
+    "text": "PALLET / 02 ↗ $600sale price Minimum retail $780 +30% RETAIL VALUE BUILD PALLET ",
+    "x": 769,
+    "y": 1012,
+    "w": 325,
+    "h": 196
+   },
+   {
+    "sel": "span.tier-top",
+    "text": "PALLET / 02 ↗",
+    "x": 786,
+    "y": 1030,
+    "w": 291,
+    "h": 21
+   },
+   {
+    "sel": "div.tier-value",
+    "text": "Minimum retail $780",
+    "x": 786,
+    "y": 1137,
+    "w": 291,
+    "h": 17
+   },
+   {
+    "sel": "div.tier-base",
+    "text": "+30% RETAIL VALUE BUILD PALLET →",
+    "x": 786,
+    "y": 1171,
+    "w": 291,
+    "h": 36
+   },
+   {
+    "sel": "button.tier-card",
+    "text": "PALLET / 03 ↗ $900sale price Minimum retail $1,170 +30% RETAIL VALUE BUILD PALLE",
+    "x": 1106,
+    "y": 1012,
+    "w": 325,
+    "h": 196
+   },
+   {
+    "sel": "span.tier-top",
+    "text": "PALLET / 03 ↗",
+    "x": 1123,
+    "y": 1030,
+    "w": 291,
+    "h": 21
+   },
+   {
+    "sel": "div.tier-value",
+    "text": "Minimum retail $1,170",
+    "x": 1123,
+    "y": 1137,
+    "w": 291,
+    "h": 17
+   },
+   {
+    "sel": "div.tier-base",
+    "text": "+30% RETAIL VALUE BUILD PALLET →",
+    "x": 1123,
+    "y": 1171,
+    "w": 291,
+    "h": 36
+   },
+   {
+    "sel": "button.tier-card",
+    "text": "PALLET / 04 ↗ $1,400sale price Minimum retail $1,820 +30% RETAIL VALUE BUILD PAL",
+    "x": 1443,
+    "y": 1012,
+    "w": 325,
+    "h": 196
+   },
+   {
+    "sel": "span.tier-top",
+    "text": "PALLET / 04 ↗",
+    "x": 1460,
+    "y": 1030,
+    "w": 291,
+    "h": 21
+   },
+   {
+    "sel": "div.tier-value",
+    "text": "Minimum retail $1,820",
+    "x": 1460,
+    "y": 1137,
+    "w": 291,
+    "h": 17
+   },
+   {
+    "sel": "div.tier-base",
+    "text": "+30% RETAIL VALUE BUILD PALLET →",
+    "x": 1460,
+    "y": 1171,
+    "w": 291,
+    "h": 36
+   }
+  ]
+ },
+ "analysis": {
+  "page": {
+   "w": 1920,
+   "h": 1703
+  },
+  "els": [
+   {
+    "sel": "header.topbar",
+    "text": "✳ PALLET PRICE SCOUT INVENTORY ROUTING DEMO WORKSPACE / NO LIVE CONNECTIONS",
+    "x": 152,
+    "y": 20,
+    "w": 1616,
+    "h": 57
+   },
+   {
+    "sel": "h2",
+    "text": "Every item, accounted for.",
+    "x": 432,
+    "y": 135,
+    "w": 401,
+    "h": 34
+   },
+   {
+    "sel": "div.stats.panel",
+    "text": "PRODUCT LINES 16 Illustrative batch · 024 READY UNITS 206 Identified, priced, co",
+    "x": 432,
+    "y": 222,
+    "w": 1336,
+    "h": 131
+   },
+   {
+    "sel": "div.stat",
+    "text": "PRODUCT LINES 16 Illustrative batch · 024",
+    "x": 433,
+    "y": 223,
+    "w": 334,
+    "h": 129
+   },
+   {
+    "sel": "div.stat",
+    "text": "READY UNITS 206 Identified, priced, condition-ready",
+    "x": 767,
+    "y": 223,
+    "w": 334,
+    "h": 129
+   },
+   {
+    "sel": "div.stat",
+    "text": "EXACT STORE MATCHES 13 Product-level SKU match, not name similarity",
+    "x": 1100,
+    "y": 223,
+    "w": 334,
+    "h": 129
+   },
+   {
+    "sel": "div.stat",
+    "text": "ON HOLD 9 3 product lines require review",
+    "x": 1434,
+    "y": 223,
+    "w": 334,
+    "h": 129
+   },
+   {
+    "sel": "section.panel",
+    "text": "⌕ Search product, SKU, or category… Filter items All items Ready to route Needs ",
+    "x": 432,
+    "y": 453,
+    "w": 1336,
+    "h": 1156
+   },
+   {
+    "sel": "div.filter-bar",
+    "text": "⌕ Search product, SKU, or category… Filter items All items Ready to route Needs ",
+    "x": 433,
+    "y": 454,
+    "w": 1334,
+    "h": 67
+   },
+   {
+    "sel": "tr",
+    "text": "IDENTIFIED PRODUCT QTY RETAIL / UNIT IDENTITY CONF. STORE MATCH ROUTING",
+    "x": 433,
+    "y": 522,
+    "w": 1334,
+    "h": 38
+   },
+   {
+    "sel": "tr",
+    "text": "NI Ninja air fryer AF101 · 4 qt · black 14 $100 99% Exact SKU SINGLES + PALLETS",
+    "x": 433,
+    "y": 560,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "tr",
+    "text": "JB JBL Flip 6 speaker Portable Bluetooth · black 10 $130 98% Exact SKU SINGLES +",
+    "x": 433,
+    "y": 623,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "tr",
+    "text": "SH Shark upright vacuum Navigator · NV360 8 $180 98% Exact SKU SINGLES + PALLETS",
+    "x": 433,
+    "y": 686,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "tr",
+    "text": "KE Keurig K-Mini Single-serve coffee maker 12 $80 99% Exact SKU SINGLES + PALLET",
+    "x": 433,
+    "y": 749,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "tr",
+    "text": "CO COSORI electric kettle 1.7 L · stainless steel 18 $40 97% Exact SKU SINGLES +",
+    "x": 433,
+    "y": 812,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "tr",
+    "text": "AN Soundcore Q20 headphones Over-ear · noise cancelling 16 $60 98% Exact SKU SIN",
+    "x": 433,
+    "y": 875,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "tr",
+    "text": "IP Instant Pot Duo 7-in-1 pressure cooker · 6 qt 10 $100 98% Exact SKU PALLET IN",
+    "x": 433,
+    "y": 938,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "tr",
+    "text": "LO Lodge cast iron skillet Pre-seasoned · 12 inch 22 $30 99% Exact SKU PALLET IN",
+    "x": 433,
+    "y": 1001,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "tr",
+    "text": "LE Levoit air purifier Core 200S · white 12 $90 96% Exact SKU PALLET INVENTORY",
+    "x": 433,
+    "y": 1064,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "tr",
+    "text": "OS Oster countertop blender Classic series · glass jar 16 $50 96% Exact SKU PALL",
+    "x": 433,
+    "y": 1127,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "tr",
+    "text": "SU Sunbeam heated throw Fleece · 50 × 60 inch 20 $40 95% Exact SKU PALLET INVENT",
+    "x": 433,
+    "y": 1190,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "tr",
+    "text": "RU Rubbermaid food storage Easy Find Lids · 20-piece 30 $20 98% Exact SKU PALLET",
+    "x": 433,
+    "y": 1253,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "tr",
+    "text": "BE Belkin wireless charger 15 W charging pad 18 $30 97% No match PALLET INVENTOR",
+    "x": 433,
+    "y": 1316,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "tr",
+    "text": "?? Unidentified countertop appliance Model label obscured 3 Unknown 62% Unconfir",
+    "x": 433,
+    "y": 1379,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "tr",
+    "text": "DY Dyson cordless vacuum Possible V8 · variant unconfirmed 2 $300 73% Unconfirme",
+    "x": 433,
+    "y": 1442,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "tr",
+    "text": "HB Hamilton Beach toaster 2-slice · damaged packaging 4 $30 95% Exact SKU ON HOL",
+    "x": 433,
+    "y": 1505,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "div.panel-foot",
+    "text": "Unknown ≠ zero. Held retail references are excluded from available value. SAMPLE",
+    "x": 433,
+    "y": 1567,
+    "w": 1334,
+    "h": 41
+   }
+  ]
+ },
+ "dialog-ninja": {
+  "page": {
+   "w": 1920,
+   "h": 1703
+  },
+  "els": [
+   {
+    "sel": "header.topbar",
+    "text": "✳ PALLET PRICE SCOUT INVENTORY ROUTING DEMO WORKSPACE / NO LIVE CONNECTIONS",
+    "x": 152,
+    "y": 20,
+    "w": 1616,
+    "h": 57
+   },
+   {
+    "sel": "h2",
+    "text": "Every item, accounted for.",
+    "x": 432,
+    "y": 135,
+    "w": 401,
+    "h": 34
+   },
+   {
+    "sel": "div.stats.panel",
+    "text": "PRODUCT LINES 16 Illustrative batch · 024 READY UNITS 206 Identified, priced, co",
+    "x": 432,
+    "y": 222,
+    "w": 1336,
+    "h": 131
+   },
+   {
+    "sel": "div.stat",
+    "text": "PRODUCT LINES 16 Illustrative batch · 024",
+    "x": 433,
+    "y": 223,
+    "w": 334,
+    "h": 129
+   },
+   {
+    "sel": "div.stat",
+    "text": "READY UNITS 206 Identified, priced, condition-ready",
+    "x": 767,
+    "y": 223,
+    "w": 334,
+    "h": 129
+   },
+   {
+    "sel": "div.stat",
+    "text": "EXACT STORE MATCHES 13 Product-level SKU match, not name similarity",
+    "x": 1100,
+    "y": 223,
+    "w": 334,
+    "h": 129
+   },
+   {
+    "sel": "div.stat",
+    "text": "ON HOLD 9 3 product lines require review",
+    "x": 1434,
+    "y": 223,
+    "w": 334,
+    "h": 129
+   },
+   {
+    "sel": "section.panel",
+    "text": "⌕ Search product, SKU, or category… Filter items All items Ready to route Needs ",
+    "x": 432,
+    "y": 453,
+    "w": 1336,
+    "h": 1156
+   },
+   {
+    "sel": "div.filter-bar",
+    "text": "⌕ Search product, SKU, or category… Filter items All items Ready to route Needs ",
+    "x": 433,
+    "y": 454,
+    "w": 1334,
+    "h": 67
+   },
+   {
+    "sel": "tr",
+    "text": "IDENTIFIED PRODUCT QTY RETAIL / UNIT IDENTITY CONF. STORE MATCH ROUTING",
+    "x": 433,
+    "y": 522,
+    "w": 1334,
+    "h": 38
+   },
+   {
+    "sel": "tr",
+    "text": "NI Ninja air fryer AF101 · 4 qt · black 14 $100 99% Exact SKU SINGLES + PALLETS",
+    "x": 433,
+    "y": 560,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "tr",
+    "text": "JB JBL Flip 6 speaker Portable Bluetooth · black 10 $130 98% Exact SKU SINGLES +",
+    "x": 433,
+    "y": 623,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "tr",
+    "text": "SH Shark upright vacuum Navigator · NV360 8 $180 98% Exact SKU SINGLES + PALLETS",
+    "x": 433,
+    "y": 686,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "tr",
+    "text": "KE Keurig K-Mini Single-serve coffee maker 12 $80 99% Exact SKU SINGLES + PALLET",
+    "x": 433,
+    "y": 749,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "tr",
+    "text": "CO COSORI electric kettle 1.7 L · stainless steel 18 $40 97% Exact SKU SINGLES +",
+    "x": 433,
+    "y": 812,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "tr",
+    "text": "AN Soundcore Q20 headphones Over-ear · noise cancelling 16 $60 98% Exact SKU SIN",
+    "x": 433,
+    "y": 875,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "tr",
+    "text": "IP Instant Pot Duo 7-in-1 pressure cooker · 6 qt 10 $100 98% Exact SKU PALLET IN",
+    "x": 433,
+    "y": 938,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "tr",
+    "text": "LO Lodge cast iron skillet Pre-seasoned · 12 inch 22 $30 99% Exact SKU PALLET IN",
+    "x": 433,
+    "y": 1001,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "tr",
+    "text": "LE Levoit air purifier Core 200S · white 12 $90 96% Exact SKU PALLET INVENTORY",
+    "x": 433,
+    "y": 1064,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "tr",
+    "text": "OS Oster countertop blender Classic series · glass jar 16 $50 96% Exact SKU PALL",
+    "x": 433,
+    "y": 1127,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "tr",
+    "text": "SU Sunbeam heated throw Fleece · 50 × 60 inch 20 $40 95% Exact SKU PALLET INVENT",
+    "x": 433,
+    "y": 1190,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "tr",
+    "text": "RU Rubbermaid food storage Easy Find Lids · 20-piece 30 $20 98% Exact SKU PALLET",
+    "x": 433,
+    "y": 1253,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "tr",
+    "text": "BE Belkin wireless charger 15 W charging pad 18 $30 97% No match PALLET INVENTOR",
+    "x": 433,
+    "y": 1316,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "tr",
+    "text": "?? Unidentified countertop appliance Model label obscured 3 Unknown 62% Unconfir",
+    "x": 433,
+    "y": 1379,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "tr",
+    "text": "DY Dyson cordless vacuum Possible V8 · variant unconfirmed 2 $300 73% Unconfirme",
+    "x": 433,
+    "y": 1442,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "tr",
+    "text": "HB Hamilton Beach toaster 2-slice · damaged packaging 4 $30 95% Exact SKU ON HOL",
+    "x": 433,
+    "y": 1505,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "div.panel-foot",
+    "text": "Unknown ≠ zero. Held retail references are excluded from available value. SAMPLE",
+    "x": 433,
+    "y": 1567,
+    "w": 1334,
+    "h": 41
+   },
+   {
+    "sel": "dialog",
+    "text": "SCOUT / DEMO WORKSPACE Ninja air fryer × NI AF101 · 4 qt · black NIN-101 · Kitch",
+    "x": 670,
+    "y": 248,
+    "w": 580,
+    "h": 584
+   },
+   {
+    "sel": "h2",
+    "text": "Ninja air fryer",
+    "x": 696,
+    "y": 296,
+    "w": 137,
+    "h": 30
+   },
+   {
+    "sel": "h3",
+    "text": "Store cross-reference",
+    "x": 696,
+    "y": 642,
+    "w": 528,
+    "h": 19
+   }
+  ]
+ },
+ "dialog-lodge": {
+  "page": {
+   "w": 1920,
+   "h": 1703
+  },
+  "els": [
+   {
+    "sel": "header.topbar",
+    "text": "✳ PALLET PRICE SCOUT INVENTORY ROUTING DEMO WORKSPACE / NO LIVE CONNECTIONS",
+    "x": 152,
+    "y": 20,
+    "w": 1616,
+    "h": 57
+   },
+   {
+    "sel": "h2",
+    "text": "Every item, accounted for.",
+    "x": 432,
+    "y": 135,
+    "w": 401,
+    "h": 34
+   },
+   {
+    "sel": "div.stats.panel",
+    "text": "PRODUCT LINES 16 Illustrative batch · 024 READY UNITS 206 Identified, priced, co",
+    "x": 432,
+    "y": 222,
+    "w": 1336,
+    "h": 131
+   },
+   {
+    "sel": "div.stat",
+    "text": "PRODUCT LINES 16 Illustrative batch · 024",
+    "x": 433,
+    "y": 223,
+    "w": 334,
+    "h": 129
+   },
+   {
+    "sel": "div.stat",
+    "text": "READY UNITS 206 Identified, priced, condition-ready",
+    "x": 767,
+    "y": 223,
+    "w": 334,
+    "h": 129
+   },
+   {
+    "sel": "div.stat",
+    "text": "EXACT STORE MATCHES 13 Product-level SKU match, not name similarity",
+    "x": 1100,
+    "y": 223,
+    "w": 334,
+    "h": 129
+   },
+   {
+    "sel": "div.stat",
+    "text": "ON HOLD 9 3 product lines require review",
+    "x": 1434,
+    "y": 223,
+    "w": 334,
+    "h": 129
+   },
+   {
+    "sel": "section.panel",
+    "text": "⌕ Search product, SKU, or category… Filter items All items Ready to route Needs ",
+    "x": 432,
+    "y": 453,
+    "w": 1336,
+    "h": 1156
+   },
+   {
+    "sel": "div.filter-bar",
+    "text": "⌕ Search product, SKU, or category… Filter items All items Ready to route Needs ",
+    "x": 433,
+    "y": 454,
+    "w": 1334,
+    "h": 67
+   },
+   {
+    "sel": "tr",
+    "text": "IDENTIFIED PRODUCT QTY RETAIL / UNIT IDENTITY CONF. STORE MATCH ROUTING",
+    "x": 433,
+    "y": 522,
+    "w": 1334,
+    "h": 38
+   },
+   {
+    "sel": "tr",
+    "text": "NI Ninja air fryer AF101 · 4 qt · black 14 $100 99% Exact SKU SINGLES + PALLETS",
+    "x": 433,
+    "y": 560,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "tr",
+    "text": "JB JBL Flip 6 speaker Portable Bluetooth · black 10 $130 98% Exact SKU SINGLES +",
+    "x": 433,
+    "y": 623,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "tr",
+    "text": "SH Shark upright vacuum Navigator · NV360 8 $180 98% Exact SKU SINGLES + PALLETS",
+    "x": 433,
+    "y": 686,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "tr",
+    "text": "KE Keurig K-Mini Single-serve coffee maker 12 $80 99% Exact SKU SINGLES + PALLET",
+    "x": 433,
+    "y": 749,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "tr",
+    "text": "CO COSORI electric kettle 1.7 L · stainless steel 18 $40 97% Exact SKU SINGLES +",
+    "x": 433,
+    "y": 812,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "tr",
+    "text": "AN Soundcore Q20 headphones Over-ear · noise cancelling 16 $60 98% Exact SKU SIN",
+    "x": 433,
+    "y": 875,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "tr",
+    "text": "IP Instant Pot Duo 7-in-1 pressure cooker · 6 qt 10 $100 98% Exact SKU PALLET IN",
+    "x": 433,
+    "y": 938,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "tr",
+    "text": "LO Lodge cast iron skillet Pre-seasoned · 12 inch 22 $30 99% Exact SKU PALLET IN",
+    "x": 433,
+    "y": 1001,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "tr",
+    "text": "LE Levoit air purifier Core 200S · white 12 $90 96% Exact SKU PALLET INVENTORY",
+    "x": 433,
+    "y": 1064,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "tr",
+    "text": "OS Oster countertop blender Classic series · glass jar 16 $50 96% Exact SKU PALL",
+    "x": 433,
+    "y": 1127,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "tr",
+    "text": "SU Sunbeam heated throw Fleece · 50 × 60 inch 20 $40 95% Exact SKU PALLET INVENT",
+    "x": 433,
+    "y": 1190,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "tr",
+    "text": "RU Rubbermaid food storage Easy Find Lids · 20-piece 30 $20 98% Exact SKU PALLET",
+    "x": 433,
+    "y": 1253,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "tr",
+    "text": "BE Belkin wireless charger 15 W charging pad 18 $30 97% No match PALLET INVENTOR",
+    "x": 433,
+    "y": 1316,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "tr",
+    "text": "?? Unidentified countertop appliance Model label obscured 3 Unknown 62% Unconfir",
+    "x": 433,
+    "y": 1379,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "tr",
+    "text": "DY Dyson cordless vacuum Possible V8 · variant unconfirmed 2 $300 73% Unconfirme",
+    "x": 433,
+    "y": 1442,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "tr",
+    "text": "HB Hamilton Beach toaster 2-slice · damaged packaging 4 $30 95% Exact SKU ON HOL",
+    "x": 433,
+    "y": 1505,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "div.panel-foot",
+    "text": "Unknown ≠ zero. Held retail references are excluded from available value. SAMPLE",
+    "x": 433,
+    "y": 1567,
+    "w": 1334,
+    "h": 41
+   },
+   {
+    "sel": "dialog",
+    "text": "SCOUT / DEMO WORKSPACE Lodge cast iron skillet × LO Pre-seasoned · 12 inch LOD-1",
+    "x": 670,
+    "y": 248,
+    "w": 580,
+    "h": 584
+   },
+   {
+    "sel": "h2",
+    "text": "Lodge cast iron skillet",
+    "x": 696,
+    "y": 296,
+    "w": 224,
+    "h": 30
+   },
+   {
+    "sel": "h3",
+    "text": "Store cross-reference",
+    "x": 696,
+    "y": 642,
+    "w": 528,
+    "h": 19
+   }
+  ]
+ },
+ "dialog-unknown": {
+  "page": {
+   "w": 1920,
+   "h": 1703
+  },
+  "els": [
+   {
+    "sel": "header.topbar",
+    "text": "✳ PALLET PRICE SCOUT INVENTORY ROUTING DEMO WORKSPACE / NO LIVE CONNECTIONS",
+    "x": 152,
+    "y": 20,
+    "w": 1616,
+    "h": 57
+   },
+   {
+    "sel": "h2",
+    "text": "Every item, accounted for.",
+    "x": 432,
+    "y": 135,
+    "w": 401,
+    "h": 34
+   },
+   {
+    "sel": "div.stats.panel",
+    "text": "PRODUCT LINES 16 Illustrative batch · 024 READY UNITS 206 Identified, priced, co",
+    "x": 432,
+    "y": 222,
+    "w": 1336,
+    "h": 131
+   },
+   {
+    "sel": "div.stat",
+    "text": "PRODUCT LINES 16 Illustrative batch · 024",
+    "x": 433,
+    "y": 223,
+    "w": 334,
+    "h": 129
+   },
+   {
+    "sel": "div.stat",
+    "text": "READY UNITS 206 Identified, priced, condition-ready",
+    "x": 767,
+    "y": 223,
+    "w": 334,
+    "h": 129
+   },
+   {
+    "sel": "div.stat",
+    "text": "EXACT STORE MATCHES 13 Product-level SKU match, not name similarity",
+    "x": 1100,
+    "y": 223,
+    "w": 334,
+    "h": 129
+   },
+   {
+    "sel": "div.stat",
+    "text": "ON HOLD 9 3 product lines require review",
+    "x": 1434,
+    "y": 223,
+    "w": 334,
+    "h": 129
+   },
+   {
+    "sel": "section.panel",
+    "text": "⌕ Search product, SKU, or category… Filter items All items Ready to route Needs ",
+    "x": 432,
+    "y": 453,
+    "w": 1336,
+    "h": 1156
+   },
+   {
+    "sel": "div.filter-bar",
+    "text": "⌕ Search product, SKU, or category… Filter items All items Ready to route Needs ",
+    "x": 433,
+    "y": 454,
+    "w": 1334,
+    "h": 67
+   },
+   {
+    "sel": "tr",
+    "text": "IDENTIFIED PRODUCT QTY RETAIL / UNIT IDENTITY CONF. STORE MATCH ROUTING",
+    "x": 433,
+    "y": 522,
+    "w": 1334,
+    "h": 38
+   },
+   {
+    "sel": "tr",
+    "text": "NI Ninja air fryer AF101 · 4 qt · black 14 $100 99% Exact SKU SINGLES + PALLETS",
+    "x": 433,
+    "y": 560,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "tr",
+    "text": "JB JBL Flip 6 speaker Portable Bluetooth · black 10 $130 98% Exact SKU SINGLES +",
+    "x": 433,
+    "y": 623,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "tr",
+    "text": "SH Shark upright vacuum Navigator · NV360 8 $180 98% Exact SKU SINGLES + PALLETS",
+    "x": 433,
+    "y": 686,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "tr",
+    "text": "KE Keurig K-Mini Single-serve coffee maker 12 $80 99% Exact SKU SINGLES + PALLET",
+    "x": 433,
+    "y": 749,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "tr",
+    "text": "CO COSORI electric kettle 1.7 L · stainless steel 18 $40 97% Exact SKU SINGLES +",
+    "x": 433,
+    "y": 812,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "tr",
+    "text": "AN Soundcore Q20 headphones Over-ear · noise cancelling 16 $60 98% Exact SKU SIN",
+    "x": 433,
+    "y": 875,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "tr",
+    "text": "IP Instant Pot Duo 7-in-1 pressure cooker · 6 qt 10 $100 98% Exact SKU PALLET IN",
+    "x": 433,
+    "y": 938,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "tr",
+    "text": "LO Lodge cast iron skillet Pre-seasoned · 12 inch 22 $30 99% Exact SKU PALLET IN",
+    "x": 433,
+    "y": 1001,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "tr",
+    "text": "LE Levoit air purifier Core 200S · white 12 $90 96% Exact SKU PALLET INVENTORY",
+    "x": 433,
+    "y": 1064,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "tr",
+    "text": "OS Oster countertop blender Classic series · glass jar 16 $50 96% Exact SKU PALL",
+    "x": 433,
+    "y": 1127,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "tr",
+    "text": "SU Sunbeam heated throw Fleece · 50 × 60 inch 20 $40 95% Exact SKU PALLET INVENT",
+    "x": 433,
+    "y": 1190,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "tr",
+    "text": "RU Rubbermaid food storage Easy Find Lids · 20-piece 30 $20 98% Exact SKU PALLET",
+    "x": 433,
+    "y": 1253,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "tr",
+    "text": "BE Belkin wireless charger 15 W charging pad 18 $30 97% No match PALLET INVENTOR",
+    "x": 433,
+    "y": 1316,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "tr",
+    "text": "?? Unidentified countertop appliance Model label obscured 3 Unknown 62% Unconfir",
+    "x": 433,
+    "y": 1379,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "tr",
+    "text": "DY Dyson cordless vacuum Possible V8 · variant unconfirmed 2 $300 73% Unconfirme",
+    "x": 433,
+    "y": 1442,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "tr",
+    "text": "HB Hamilton Beach toaster 2-slice · damaged packaging 4 $30 95% Exact SKU ON HOL",
+    "x": 433,
+    "y": 1505,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "div.panel-foot",
+    "text": "Unknown ≠ zero. Held retail references are excluded from available value. SAMPLE",
+    "x": 433,
+    "y": 1567,
+    "w": 1334,
+    "h": 41
+   },
+   {
+    "sel": "dialog",
+    "text": "SCOUT / DEMO WORKSPACE Unidentified countertop appliance × ?? Model label obscur",
+    "x": 670,
+    "y": 872,
+    "w": 580,
+    "h": 582
+   },
+   {
+    "sel": "h2",
+    "text": "Unidentified countertop appliance",
+    "x": 696,
+    "y": 920,
+    "w": 355,
+    "h": 30
+   },
+   {
+    "sel": "h3",
+    "text": "Store cross-reference",
+    "x": 696,
+    "y": 1245,
+    "w": 528,
+    "h": 19
+   }
+  ]
+ },
+ "analysis-held": {
+  "page": {
+   "w": 1920,
+   "h": 1106
+  },
+  "els": [
+   {
+    "sel": "header.topbar",
+    "text": "✳ PALLET PRICE SCOUT INVENTORY ROUTING DEMO WORKSPACE / NO LIVE CONNECTIONS",
+    "x": 152,
+    "y": 20,
+    "w": 1616,
+    "h": 57
+   },
+   {
+    "sel": "h2",
+    "text": "Every item, accounted for.",
+    "x": 432,
+    "y": 135,
+    "w": 401,
+    "h": 34
+   },
+   {
+    "sel": "div.stats.panel",
+    "text": "PRODUCT LINES 16 Illustrative batch · 024 READY UNITS 206 Identified, priced, co",
+    "x": 432,
+    "y": 222,
+    "w": 1336,
+    "h": 131
+   },
+   {
+    "sel": "div.stat",
+    "text": "PRODUCT LINES 16 Illustrative batch · 024",
+    "x": 433,
+    "y": 223,
+    "w": 334,
+    "h": 129
+   },
+   {
+    "sel": "div.stat",
+    "text": "READY UNITS 206 Identified, priced, condition-ready",
+    "x": 767,
+    "y": 223,
+    "w": 334,
+    "h": 129
+   },
+   {
+    "sel": "div.stat",
+    "text": "EXACT STORE MATCHES 13 Product-level SKU match, not name similarity",
+    "x": 1100,
+    "y": 223,
+    "w": 334,
+    "h": 129
+   },
+   {
+    "sel": "div.stat",
+    "text": "ON HOLD 9 3 product lines require review",
+    "x": 1434,
+    "y": 223,
+    "w": 334,
+    "h": 129
+   },
+   {
+    "sel": "section.panel",
+    "text": "⌕ Search product, SKU, or category… Filter items All items Ready to route Needs ",
+    "x": 432,
+    "y": 453,
+    "w": 1336,
+    "h": 337
+   },
+   {
+    "sel": "div.filter-bar",
+    "text": "⌕ Search product, SKU, or category… Filter items All items Ready to route Needs ",
+    "x": 433,
+    "y": 454,
+    "w": 1334,
+    "h": 67
+   },
+   {
+    "sel": "tr",
+    "text": "IDENTIFIED PRODUCT QTY RETAIL / UNIT IDENTITY CONF. STORE MATCH ROUTING",
+    "x": 433,
+    "y": 522,
+    "w": 1334,
+    "h": 38
+   },
+   {
+    "sel": "tr",
+    "text": "?? Unidentified countertop appliance Model label obscured 3 Unknown 62% Unconfir",
+    "x": 433,
+    "y": 560,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "tr",
+    "text": "DY Dyson cordless vacuum Possible V8 · variant unconfirmed 2 $300 73% Unconfirme",
+    "x": 433,
+    "y": 623,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "tr",
+    "text": "HB Hamilton Beach toaster 2-slice · damaged packaging 4 $30 95% Exact SKU ON HOL",
+    "x": 433,
+    "y": 686,
+    "w": 1334,
+    "h": 63
+   },
+   {
+    "sel": "div.panel-foot",
+    "text": "Unknown ≠ zero. Held retail references are excluded from available value. SAMPLE",
+    "x": 433,
+    "y": 748,
+    "w": 1334,
+    "h": 41
+   }
+  ]
+ },
+ "singles": {
+  "page": {
+   "w": 1920,
+   "h": 1655
+  },
+  "els": [
+   {
+    "sel": "header.topbar",
+    "text": "✳ PALLET PRICE SCOUT INVENTORY ROUTING DEMO WORKSPACE / NO LIVE CONNECTIONS",
+    "x": 152,
+    "y": 20,
+    "w": 1616,
+    "h": 57
+   },
+   {
+    "sel": "h2",
+    "text": "Stock the shelf. Not the backroom.",
+    "x": 432,
+    "y": 135,
+    "w": 443,
+    "h": 34
+   },
+   {
+    "sel": "div.stats.panel",
+    "text": "FAST-SELLING SKUS 6 ≥20 sold / 30 days · ≤7 days to sell STORE PULL 40 Reserved;",
+    "x": 432,
+    "y": 272,
+    "w": 1336,
+    "h": 131
+   },
+   {
+    "sel": "div.stat",
+    "text": "FAST-SELLING SKUS 6 ≥20 sold / 30 days · ≤7 days to sell",
+    "x": 433,
+    "y": 273,
+    "w": 334,
+    "h": 129
+   },
+   {
+    "sel": "div.stat",
+    "text": "STORE PULL 40 Reserved; excluded from pallet inventory",
+    "x": 767,
+    "y": 273,
+    "w": 334,
+    "h": 129
+   },
+   {
+    "sel": "div.stat",
+    "text": "PULL RETAIL VALUE $3,940 Reference value, not store revenue",
+    "x": 1100,
+    "y": 273,
+    "w": 334,
+    "h": 129
+   },
+   {
+    "sel": "div.stat",
+    "text": "TRANSFER DRAFT Review quantities before dispatch",
+    "x": 1434,
+    "y": 273,
+    "w": 334,
+    "h": 129
+   },
+   {
+    "sel": "section.panel",
+    "text": "Recommended replenishment EDITABLE PULL LIST Pull = ceil(30-day sales ÷ 30 × 7) ",
+    "x": 432,
+    "y": 426,
+    "w": 1336,
+    "h": 1033
+   },
+   {
+    "sel": "h3",
+    "text": "Recommended replenishment",
+    "x": 450,
+    "y": 445,
+    "w": 207,
+    "h": 19
+   },
+   {
+    "sel": "div.filter-bar",
+    "text": "⌕ Search matched store products… Filter items All exact matches Fast sellers Slo",
+    "x": 433,
+    "y": 524,
+    "w": 1334,
+    "h": 67
+   },
+   {
+    "sel": "tr",
+    "text": "PRODUCT 30D SOLD AVG. DAYS TO SELL STORE ON-HAND BATCH QTY REC. PULL QTY",
+    "x": 433,
+    "y": 592,
+    "w": 1334,
+    "h": 51
+   },
+   {
+    "sel": "tr",
+    "text": "NI Ninja air fryer AF101 · 4 qt · black 48FAST 3.2d 2 14 10",
+    "x": 433,
+    "y": 642,
+    "w": 1334,
+    "h": 68
+   },
+   {
+    "sel": "tr",
+    "text": "CO COSORI electric kettle 1.7 L · stainless steel 42FAST 2.6d 4 18 6",
+    "x": 433,
+    "y": 710,
+    "w": 1334,
+    "h": 68
+   },
+   {
+    "sel": "tr",
+    "text": "JB JBL Flip 6 speaker Portable Bluetooth · black 36FAST 4.1d 1 10 8",
+    "x": 433,
+    "y": 778,
+    "w": 1334,
+    "h": 68
+   },
+   {
+    "sel": "tr",
+    "text": "KE Keurig K-Mini Single-serve coffee maker 30FAST 4.8d 2 12 5",
+    "x": 433,
+    "y": 846,
+    "w": 1334,
+    "h": 68
+   },
+   {
+    "sel": "tr",
+    "text": "AN Soundcore Q20 headphones Over-ear · noise cancelling 27FAST 5.2d 1 16 6",
+    "x": 433,
+    "y": 914,
+    "w": 1334,
+    "h": 68
+   },
+   {
+    "sel": "tr",
+    "text": "SH Shark upright vacuum Navigator · NV360 24FAST 5.4d 1 8 5",
+    "x": 433,
+    "y": 982,
+    "w": 1334,
+    "h": 68
+   },
+   {
+    "sel": "tr",
+    "text": "RU Rubbermaid food storage Easy Find Lids · 20-piece 11 14d 8 30 0",
+    "x": 433,
+    "y": 1050,
+    "w": 1334,
+    "h": 68
+   },
+   {
+    "sel": "tr",
+    "text": "LO Lodge cast iron skillet Pre-seasoned · 12 inch 9 16d 6 22 0",
+    "x": 433,
+    "y": 1118,
+    "w": 1334,
+    "h": 68
+   },
+   {
+    "sel": "tr",
+    "text": "IP Instant Pot Duo 7-in-1 pressure cooker · 6 qt 7 18d 5 10 0",
+    "x": 433,
+    "y": 1186,
+    "w": 1334,
+    "h": 68
+   },
+   {
+    "sel": "tr",
+    "text": "LE Levoit air purifier Core 200S · white 5 22d 4 12 0",
+    "x": 433,
+    "y": 1254,
+    "w": 1334,
+    "h": 68
+   },
+   {
+    "sel": "tr",
+    "text": "OS Oster countertop blender Classic series · glass jar 4 25d 6 16 0",
+    "x": 433,
+    "y": 1322,
+    "w": 1334,
+    "h": 68
+   },
+   {
+    "sel": "tr",
+    "text": "SU Sunbeam heated throw Fleece · 50 × 60 inch 3 28d 8 20 0",
+    "x": 433,
+    "y": 1390,
+    "w": 1334,
+    "h": 68
+   },
+   {
+    "sel": "div.action-bar.panel",
+    "text": "40 units → Main Street store Reservations are live in this demo. Sending locks t",
+    "x": 432,
+    "y": 1477,
+    "w": 1336,
+    "h": 84
+   }
+  ]
+ },
+ "pallets-empty": {
+  "page": {
+   "w": 1920,
+   "h": 1435
+  },
+  "els": [
+   {
+    "sel": "header.topbar",
+    "text": "✳ PALLET PRICE SCOUT INVENTORY ROUTING DEMO WORKSPACE / NO LIVE CONNECTIONS",
+    "x": 152,
+    "y": 20,
+    "w": 1616,
+    "h": 57
+   },
+   {
+    "sel": "h2",
+    "text": "Build the value. Then wrap it.",
+    "x": 432,
+    "y": 135,
+    "w": 364,
+    "h": 34
+   },
+   {
+    "sel": "div.builder-tiers",
+    "text": "SALE PRICE $400 $520 minimum retail SALE PRICE $600 $780 minimum retail SALE PRI",
+    "x": 432,
+    "y": 222,
+    "w": 1336,
+    "h": 131
+   },
+   {
+    "sel": "button.builder-tier.selected",
+    "text": "SALE PRICE $400 $520 minimum retail",
+    "x": 432,
+    "y": 222,
+    "w": 325,
+    "h": 131
+   },
+   {
+    "sel": "button.builder-tier",
+    "text": "SALE PRICE $600 $780 minimum retail",
+    "x": 769,
+    "y": 222,
+    "w": 325,
+    "h": 131
+   },
+   {
+    "sel": "button.builder-tier",
+    "text": "SALE PRICE $900 $1,170 minimum retail",
+    "x": 1106,
+    "y": 222,
+    "w": 325,
+    "h": 131
+   },
+   {
+    "sel": "button.builder-tier",
+    "text": "SALE PRICE $1,400 $1,820 minimum retail",
+    "x": 1443,
+    "y": 222,
+    "w": 325,
+    "h": 131
+   },
+   {
+    "sel": "section.panel.inventory-panel",
+    "text": "Available inventory 166 UNITS Store reservations and packed pallets are excluded",
+    "x": 432,
+    "y": 377,
+    "w": 1016,
+    "h": 965
+   },
+   {
+    "sel": "h3",
+    "text": "Available inventory",
+    "x": 450,
+    "y": 395,
+    "w": 130,
+    "h": 19
+   },
+   {
+    "sel": "div.filter-bar",
+    "text": "⌕ Search available inventory… Filter items All categories Kitchen Home Electroni",
+    "x": 433,
+    "y": 475,
+    "w": 1014,
+    "h": 61
+   },
+   {
+    "sel": "tr",
+    "text": "PRODUCT RETAIL AVAILABLE IN PALLET",
+    "x": 433,
+    "y": 536,
+    "w": 1014,
+    "h": 38
+   },
+   {
+    "sel": "tr",
+    "text": "NI Ninja air fryer AF101 · 4 qt · black $100 4 − +",
+    "x": 433,
+    "y": 574,
+    "w": 1014,
+    "h": 59
+   },
+   {
+    "sel": "tr",
+    "text": "JB JBL Flip 6 speaker Portable Bluetooth · black $130 2 − +",
+    "x": 433,
+    "y": 633,
+    "w": 1014,
+    "h": 59
+   },
+   {
+    "sel": "tr",
+    "text": "SH Shark upright vacuum Navigator · NV360 $180 3 − +",
+    "x": 433,
+    "y": 692,
+    "w": 1014,
+    "h": 59
+   },
+   {
+    "sel": "tr",
+    "text": "KE Keurig K-Mini Single-serve coffee maker $80 7 − +",
+    "x": 433,
+    "y": 751,
+    "w": 1014,
+    "h": 59
+   },
+   {
+    "sel": "tr",
+    "text": "CO COSORI electric kettle 1.7 L · stainless steel $40 12 − +",
+    "x": 433,
+    "y": 810,
+    "w": 1014,
+    "h": 59
+   },
+   {
+    "sel": "tr",
+    "text": "AN Soundcore Q20 headphones Over-ear · noise cancelling $60 10 − +",
+    "x": 433,
+    "y": 869,
+    "w": 1014,
+    "h": 59
+   },
+   {
+    "sel": "tr",
+    "text": "IP Instant Pot Duo 7-in-1 pressure cooker · 6 qt $100 10 − +",
+    "x": 433,
+    "y": 928,
+    "w": 1014,
+    "h": 59
+   },
+   {
+    "sel": "tr",
+    "text": "LO Lodge cast iron skillet Pre-seasoned · 12 inch $30 22 − +",
+    "x": 433,
+    "y": 987,
+    "w": 1014,
+    "h": 59
+   },
+   {
+    "sel": "tr",
+    "text": "LE Levoit air purifier Core 200S · white $90 12 − +",
+    "x": 433,
+    "y": 1046,
+    "w": 1014,
+    "h": 59
+   },
+   {
+    "sel": "tr",
+    "text": "OS Oster countertop blender Classic series · glass jar $50 16 − +",
+    "x": 433,
+    "y": 1105,
+    "w": 1014,
+    "h": 59
+   },
+   {
+    "sel": "tr",
+    "text": "SU Sunbeam heated throw Fleece · 50 × 60 inch $40 20 − +",
+    "x": 433,
+    "y": 1164,
+    "w": 1014,
+    "h": 59
+   },
+   {
+    "sel": "tr",
+    "text": "RU Rubbermaid food storage Easy Find Lids · 20-piece $20 30 − +",
+    "x": 433,
+    "y": 1223,
+    "w": 1014,
+    "h": 59
+   },
+   {
+    "sel": "tr",
+    "text": "BE Belkin wireless charger 15 W charging pad $30 18 − +",
+    "x": 433,
+    "y": 1282,
+    "w": 1014,
+    "h": 59
+   },
+   {
+    "sel": "aside.panel.composition",
+    "text": "PALLET COMPOSITION DRAFT ACCUMULATED RETAIL $0 of $520 minimum 0% $520 more reta",
+    "x": 1468,
+    "y": 377,
+    "w": 300,
+    "h": 676
+   },
+   {
+    "sel": "div.target-meter",
+    "text": "",
+    "x": 1487,
+    "y": 574,
+    "w": 262,
+    "h": 6
+   }
+  ]
+ },
+ "pallets-autofill": {
+  "page": {
+   "w": 1920,
+   "h": 1435
+  },
+  "els": [
+   {
+    "sel": "header.topbar",
+    "text": "✳ PALLET PRICE SCOUT INVENTORY ROUTING DEMO WORKSPACE / NO LIVE CONNECTIONS",
+    "x": 152,
+    "y": 20,
+    "w": 1616,
+    "h": 57
+   },
+   {
+    "sel": "h2",
+    "text": "Build the value. Then wrap it.",
+    "x": 432,
+    "y": 135,
+    "w": 364,
+    "h": 34
+   },
+   {
+    "sel": "div.builder-tiers",
+    "text": "SALE PRICE $400 $520 minimum retail SALE PRICE $600 $780 minimum retail SALE PRI",
+    "x": 432,
+    "y": 222,
+    "w": 1336,
+    "h": 131
+   },
+   {
+    "sel": "button.builder-tier.selected",
+    "text": "SALE PRICE $400 $520 minimum retail",
+    "x": 432,
+    "y": 222,
+    "w": 325,
+    "h": 131
+   },
+   {
+    "sel": "button.builder-tier",
+    "text": "SALE PRICE $600 $780 minimum retail",
+    "x": 769,
+    "y": 222,
+    "w": 325,
+    "h": 131
+   },
+   {
+    "sel": "button.builder-tier",
+    "text": "SALE PRICE $900 $1,170 minimum retail",
+    "x": 1106,
+    "y": 222,
+    "w": 325,
+    "h": 131
+   },
+   {
+    "sel": "button.builder-tier",
+    "text": "SALE PRICE $1,400 $1,820 minimum retail",
+    "x": 1443,
+    "y": 222,
+    "w": 325,
+    "h": 131
+   },
+   {
+    "sel": "section.panel.inventory-panel",
+    "text": "Available inventory 166 UNITS Store reservations and packed pallets are excluded",
+    "x": 432,
+    "y": 377,
+    "w": 1016,
+    "h": 965
+   },
+   {
+    "sel": "h3",
+    "text": "Available inventory",
+    "x": 450,
+    "y": 395,
+    "w": 130,
+    "h": 19
+   },
+   {
+    "sel": "div.filter-bar",
+    "text": "⌕ Search available inventory… Filter items All categories Kitchen Home Electroni",
+    "x": 433,
+    "y": 475,
+    "w": 1014,
+    "h": 61
+   },
+   {
+    "sel": "tr",
+    "text": "PRODUCT RETAIL AVAILABLE IN PALLET",
+    "x": 433,
+    "y": 536,
+    "w": 1014,
+    "h": 38
+   },
+   {
+    "sel": "tr",
+    "text": "NI Ninja air fryer AF101 · 4 qt · black $100 4 − +",
+    "x": 433,
+    "y": 574,
+    "w": 1014,
+    "h": 59
+   },
+   {
+    "sel": "tr",
+    "text": "JB JBL Flip 6 speaker Portable Bluetooth · black $130 2 − +",
+    "x": 433,
+    "y": 633,
+    "w": 1014,
+    "h": 59
+   },
+   {
+    "sel": "tr",
+    "text": "SH Shark upright vacuum Navigator · NV360 $180 3 − +",
+    "x": 433,
+    "y": 692,
+    "w": 1014,
+    "h": 59
+   },
+   {
+    "sel": "tr",
+    "text": "KE Keurig K-Mini Single-serve coffee maker $80 7 − +",
+    "x": 433,
+    "y": 751,
+    "w": 1014,
+    "h": 59
+   },
+   {
+    "sel": "tr",
+    "text": "CO COSORI electric kettle 1.7 L · stainless steel $40 12 − +",
+    "x": 433,
+    "y": 810,
+    "w": 1014,
+    "h": 59
+   },
+   {
+    "sel": "tr",
+    "text": "AN Soundcore Q20 headphones Over-ear · noise cancelling $60 10 − +",
+    "x": 433,
+    "y": 869,
+    "w": 1014,
+    "h": 59
+   },
+   {
+    "sel": "tr",
+    "text": "IP Instant Pot Duo 7-in-1 pressure cooker · 6 qt $100 10 − +",
+    "x": 433,
+    "y": 928,
+    "w": 1014,
+    "h": 59
+   },
+   {
+    "sel": "tr",
+    "text": "LO Lodge cast iron skillet Pre-seasoned · 12 inch $30 22 − +",
+    "x": 433,
+    "y": 987,
+    "w": 1014,
+    "h": 59
+   },
+   {
+    "sel": "tr",
+    "text": "LE Levoit air purifier Core 200S · white $90 12 − +",
+    "x": 433,
+    "y": 1046,
+    "w": 1014,
+    "h": 59
+   },
+   {
+    "sel": "tr",
+    "text": "OS Oster countertop blender Classic series · glass jar $50 16 − +",
+    "x": 433,
+    "y": 1105,
+    "w": 1014,
+    "h": 59
+   },
+   {
+    "sel": "tr",
+    "text": "SU Sunbeam heated throw Fleece · 50 × 60 inch $40 20 − +",
+    "x": 433,
+    "y": 1164,
+    "w": 1014,
+    "h": 59
+   },
+   {
+    "sel": "tr",
+    "text": "RU Rubbermaid food storage Easy Find Lids · 20-piece $20 30 − +",
+    "x": 433,
+    "y": 1223,
+    "w": 1014,
+    "h": 59
+   },
+   {
+    "sel": "tr",
+    "text": "BE Belkin wireless charger 15 W charging pad $30 18 − +",
+    "x": 433,
+    "y": 1282,
+    "w": 1014,
+    "h": 59
+   },
+   {
+    "sel": "aside.panel.composition",
+    "text": "PALLET COMPOSITION DRAFT ACCUMULATED RETAIL $520 of $520 minimum 100% ✓ Retail t",
+    "x": 1468,
+    "y": 377,
+    "w": 300,
+    "h": 673
+   },
+   {
+    "sel": "div.target-meter",
+    "text": "",
+    "x": 1487,
+    "y": 574,
+    "w": 262,
+    "h": 6
+   }
+  ]
+ },
+ "pallets-slow-sellers": {
+  "page": {
+   "w": 1920,
+   "h": 1435
+  },
+  "els": [
+   {
+    "sel": "header.topbar",
+    "text": "✳ PALLET PRICE SCOUT INVENTORY ROUTING DEMO WORKSPACE / NO LIVE CONNECTIONS",
+    "x": 152,
+    "y": 20,
+    "w": 1616,
+    "h": 57
+   },
+   {
+    "sel": "h2",
+    "text": "Build the value. Then wrap it.",
+    "x": 432,
+    "y": 135,
+    "w": 364,
+    "h": 34
+   },
+   {
+    "sel": "div.builder-tiers",
+    "text": "SALE PRICE $400 $520 minimum retail SALE PRICE $600 $780 minimum retail SALE PRI",
+    "x": 432,
+    "y": 222,
+    "w": 1336,
+    "h": 131
+   },
+   {
+    "sel": "button.builder-tier.selected",
+    "text": "SALE PRICE $400 $520 minimum retail",
+    "x": 432,
+    "y": 222,
+    "w": 325,
+    "h": 131
+   },
+   {
+    "sel": "button.builder-tier",
+    "text": "SALE PRICE $600 $780 minimum retail",
+    "x": 769,
+    "y": 222,
+    "w": 325,
+    "h": 131
+   },
+   {
+    "sel": "button.builder-tier",
+    "text": "SALE PRICE $900 $1,170 minimum retail",
+    "x": 1106,
+    "y": 222,
+    "w": 325,
+    "h": 131
+   },
+   {
+    "sel": "button.builder-tier",
+    "text": "SALE PRICE $1,400 $1,820 minimum retail",
+    "x": 1443,
+    "y": 222,
+    "w": 325,
+    "h": 131
+   },
+   {
+    "sel": "section.panel.inventory-panel",
+    "text": "Available inventory 166 UNITS Store reservations and packed pallets are excluded",
+    "x": 432,
+    "y": 377,
+    "w": 1016,
+    "h": 965
+   },
+   {
+    "sel": "h3",
+    "text": "Available inventory",
+    "x": 450,
+    "y": 395,
+    "w": 130,
+    "h": 19
+   },
+   {
+    "sel": "div.filter-bar",
+    "text": "⌕ Search available inventory… Filter items All categories Kitchen Home Electroni",
+    "x": 433,
+    "y": 475,
+    "w": 1014,
+    "h": 61
+   },
+   {
+    "sel": "tr",
+    "text": "PRODUCT RETAIL AVAILABLE IN PALLET",
+    "x": 433,
+    "y": 536,
+    "w": 1014,
+    "h": 38
+   },
+   {
+    "sel": "tr",
+    "text": "NI Ninja air fryer AF101 · 4 qt · black $100 4 − +",
+    "x": 433,
+    "y": 574,
+    "w": 1014,
+    "h": 59
+   },
+   {
+    "sel": "tr",
+    "text": "JB JBL Flip 6 speaker Portable Bluetooth · black $130 2 − +",
+    "x": 433,
+    "y": 633,
+    "w": 1014,
+    "h": 59
+   },
+   {
+    "sel": "tr",
+    "text": "SH Shark upright vacuum Navigator · NV360 $180 3 − +",
+    "x": 433,
+    "y": 692,
+    "w": 1014,
+    "h": 59
+   },
+   {
+    "sel": "tr",
+    "text": "KE Keurig K-Mini Single-serve coffee maker $80 7 − +",
+    "x": 433,
+    "y": 751,
+    "w": 1014,
+    "h": 59
+   },
+   {
+    "sel": "tr",
+    "text": "CO COSORI electric kettle 1.7 L · stainless steel $40 12 − +",
+    "x": 433,
+    "y": 810,
+    "w": 1014,
+    "h": 59
+   },
+   {
+    "sel": "tr",
+    "text": "AN Soundcore Q20 headphones Over-ear · noise cancelling $60 10 − +",
+    "x": 433,
+    "y": 869,
+    "w": 1014,
+    "h": 59
+   },
+   {
+    "sel": "tr",
+    "text": "IP Instant Pot Duo 7-in-1 pressure cooker · 6 qt $100 10 − +",
+    "x": 433,
+    "y": 928,
+    "w": 1014,
+    "h": 59
+   },
+   {
+    "sel": "tr",
+    "text": "LO Lodge cast iron skillet Pre-seasoned · 12 inch $30 22 − +",
+    "x": 433,
+    "y": 987,
+    "w": 1014,
+    "h": 59
+   },
+   {
+    "sel": "tr",
+    "text": "LE Levoit air purifier Core 200S · white $90 12 − +",
+    "x": 433,
+    "y": 1046,
+    "w": 1014,
+    "h": 59
+   },
+   {
+    "sel": "tr",
+    "text": "OS Oster countertop blender Classic series · glass jar $50 16 − +",
+    "x": 433,
+    "y": 1105,
+    "w": 1014,
+    "h": 59
+   },
+   {
+    "sel": "tr",
+    "text": "SU Sunbeam heated throw Fleece · 50 × 60 inch $40 20 − +",
+    "x": 433,
+    "y": 1164,
+    "w": 1014,
+    "h": 59
+   },
+   {
+    "sel": "tr",
+    "text": "RU Rubbermaid food storage Easy Find Lids · 20-piece $20 30 − +",
+    "x": 433,
+    "y": 1223,
+    "w": 1014,
+    "h": 59
+   },
+   {
+    "sel": "tr",
+    "text": "BE Belkin wireless charger 15 W charging pad $30 18 − +",
+    "x": 433,
+    "y": 1282,
+    "w": 1014,
+    "h": 59
+   },
+   {
+    "sel": "aside.panel.composition",
+    "text": "PALLET COMPOSITION DRAFT ACCUMULATED RETAIL $540 of $520 minimum 104% ✓ Retail t",
+    "x": 1468,
+    "y": 377,
+    "w": 300,
+    "h": 705
+   },
+   {
+    "sel": "div.target-meter",
+    "text": "",
+    "x": 1487,
+    "y": 574,
+    "w": 262,
+    "h": 6
+   }
+  ]
+ },
+ "dialog-pack": {
+  "page": {
+   "w": 1920,
+   "h": 1435
+  },
+  "els": [
+   {
+    "sel": "header.topbar",
+    "text": "✳ PALLET PRICE SCOUT INVENTORY ROUTING DEMO WORKSPACE / NO LIVE CONNECTIONS",
+    "x": 152,
+    "y": 20,
+    "w": 1616,
+    "h": 57
+   },
+   {
+    "sel": "h2",
+    "text": "Build the value. Then wrap it.",
+    "x": 432,
+    "y": 135,
+    "w": 364,
+    "h": 34
+   },
+   {
+    "sel": "div.builder-tiers",
+    "text": "SALE PRICE $400 $520 minimum retail SALE PRICE $600 $780 minimum retail SALE PRI",
+    "x": 432,
+    "y": 222,
+    "w": 1336,
+    "h": 131
+   },
+   {
+    "sel": "button.builder-tier.selected",
+    "text": "SALE PRICE $400 $520 minimum retail",
+    "x": 432,
+    "y": 222,
+    "w": 325,
+    "h": 131
+   },
+   {
+    "sel": "button.builder-tier",
+    "text": "SALE PRICE $600 $780 minimum retail",
+    "x": 769,
+    "y": 222,
+    "w": 325,
+    "h": 131
+   },
+   {
+    "sel": "button.builder-tier",
+    "text": "SALE PRICE $900 $1,170 minimum retail",
+    "x": 1106,
+    "y": 222,
+    "w": 325,
+    "h": 131
+   },
+   {
+    "sel": "button.builder-tier",
+    "text": "SALE PRICE $1,400 $1,820 minimum retail",
+    "x": 1443,
+    "y": 222,
+    "w": 325,
+    "h": 131
+   },
+   {
+    "sel": "section.panel.inventory-panel",
+    "text": "Available inventory 166 UNITS Store reservations and packed pallets are excluded",
+    "x": 432,
+    "y": 377,
+    "w": 1016,
+    "h": 965
+   },
+   {
+    "sel": "h3",
+    "text": "Available inventory",
+    "x": 450,
+    "y": 395,
+    "w": 130,
+    "h": 19
+   },
+   {
+    "sel": "div.filter-bar",
+    "text": "⌕ Search available inventory… Filter items All categories Kitchen Home Electroni",
+    "x": 433,
+    "y": 475,
+    "w": 1014,
+    "h": 61
+   },
+   {
+    "sel": "tr",
+    "text": "PRODUCT RETAIL AVAILABLE IN PALLET",
+    "x": 433,
+    "y": 536,
+    "w": 1014,
+    "h": 38
+   },
+   {
+    "sel": "tr",
+    "text": "NI Ninja air fryer AF101 · 4 qt · black $100 4 − +",
+    "x": 433,
+    "y": 574,
+    "w": 1014,
+    "h": 59
+   },
+   {
+    "sel": "tr",
+    "text": "JB JBL Flip 6 speaker Portable Bluetooth · black $130 2 − +",
+    "x": 433,
+    "y": 633,
+    "w": 1014,
+    "h": 59
+   },
+   {
+    "sel": "tr",
+    "text": "SH Shark upright vacuum Navigator · NV360 $180 3 − +",
+    "x": 433,
+    "y": 692,
+    "w": 1014,
+    "h": 59
+   },
+   {
+    "sel": "tr",
+    "text": "KE Keurig K-Mini Single-serve coffee maker $80 7 − +",
+    "x": 433,
+    "y": 751,
+    "w": 1014,
+    "h": 59
+   },
+   {
+    "sel": "tr",
+    "text": "CO COSORI electric kettle 1.7 L · stainless steel $40 12 − +",
+    "x": 433,
+    "y": 810,
+    "w": 1014,
+    "h": 59
+   },
+   {
+    "sel": "tr",
+    "text": "AN Soundcore Q20 headphones Over-ear · noise cancelling $60 10 − +",
+    "x": 433,
+    "y": 869,
+    "w": 1014,
+    "h": 59
+   },
+   {
+    "sel": "tr",
+    "text": "IP Instant Pot Duo 7-in-1 pressure cooker · 6 qt $100 10 − +",
+    "x": 433,
+    "y": 928,
+    "w": 1014,
+    "h": 59
+   },
+   {
+    "sel": "tr",
+    "text": "LO Lodge cast iron skillet Pre-seasoned · 12 inch $30 22 − +",
+    "x": 433,
+    "y": 987,
+    "w": 1014,
+    "h": 59
+   },
+   {
+    "sel": "tr",
+    "text": "LE Levoit air purifier Core 200S · white $90 12 − +",
+    "x": 433,
+    "y": 1046,
+    "w": 1014,
+    "h": 59
+   },
+   {
+    "sel": "tr",
+    "text": "OS Oster countertop blender Classic series · glass jar $50 16 − +",
+    "x": 433,
+    "y": 1105,
+    "w": 1014,
+    "h": 59
+   },
+   {
+    "sel": "tr",
+    "text": "SU Sunbeam heated throw Fleece · 50 × 60 inch $40 20 − +",
+    "x": 433,
+    "y": 1164,
+    "w": 1014,
+    "h": 59
+   },
+   {
+    "sel": "tr",
+    "text": "RU Rubbermaid food storage Easy Find Lids · 20-piece $20 30 − +",
+    "x": 433,
+    "y": 1223,
+    "w": 1014,
+    "h": 59
+   },
+   {
+    "sel": "tr",
+    "text": "BE Belkin wireless charger 15 W charging pad $30 18 − +",
+    "x": 433,
+    "y": 1282,
+    "w": 1014,
+    "h": 59
+   },
+   {
+    "sel": "aside.panel.composition",
+    "text": "PALLET COMPOSITION DRAFT ACCUMULATED RETAIL $540 of $520 minimum 104% ✓ Retail t",
+    "x": 1468,
+    "y": 377,
+    "w": 300,
+    "h": 705
+   },
+   {
+    "sel": "div.target-meter",
+    "text": "",
+    "x": 1487,
+    "y": 574,
+    "w": 262,
+    "h": 6
+   },
+   {
+    "sel": "dialog",
+    "text": "SCOUT / DEMO WORKSPACE Mark this pallet packed? × Reserve these 13 units for a $",
+    "x": 670,
+    "y": 311,
+    "w": 580,
+    "h": 458
+   },
+   {
+    "sel": "h2",
+    "text": "Mark this pallet packed?",
+    "x": 696,
+    "y": 359,
+    "w": 251,
+    "h": 30
+   }
+  ]
+ },
+ "dialog-transfer": {
+  "page": {
+   "w": 1920,
+   "h": 1655
+  },
+  "els": [
+   {
+    "sel": "header.topbar",
+    "text": "✳ PALLET PRICE SCOUT INVENTORY ROUTING DEMO WORKSPACE / NO LIVE CONNECTIONS",
+    "x": 152,
+    "y": 20,
+    "w": 1616,
+    "h": 57
+   },
+   {
+    "sel": "h2",
+    "text": "Stock the shelf. Not the backroom.",
+    "x": 432,
+    "y": 135,
+    "w": 443,
+    "h": 34
+   },
+   {
+    "sel": "div.stats.panel",
+    "text": "FAST-SELLING SKUS 6 ≥20 sold / 30 days · ≤7 days to sell STORE PULL 40 Reserved;",
+    "x": 432,
+    "y": 272,
+    "w": 1336,
+    "h": 131
+   },
+   {
+    "sel": "div.stat",
+    "text": "FAST-SELLING SKUS 6 ≥20 sold / 30 days · ≤7 days to sell",
+    "x": 433,
+    "y": 273,
+    "w": 334,
+    "h": 129
+   },
+   {
+    "sel": "div.stat",
+    "text": "STORE PULL 40 Reserved; excluded from pallet inventory",
+    "x": 767,
+    "y": 273,
+    "w": 334,
+    "h": 129
+   },
+   {
+    "sel": "div.stat",
+    "text": "PULL RETAIL VALUE $3,940 Reference value, not store revenue",
+    "x": 1100,
+    "y": 273,
+    "w": 334,
+    "h": 129
+   },
+   {
+    "sel": "div.stat",
+    "text": "TRANSFER DRAFT Review quantities before dispatch",
+    "x": 1434,
+    "y": 273,
+    "w": 334,
+    "h": 129
+   },
+   {
+    "sel": "section.panel",
+    "text": "Recommended replenishment EDITABLE PULL LIST Pull = ceil(30-day sales ÷ 30 × 7) ",
+    "x": 432,
+    "y": 426,
+    "w": 1336,
+    "h": 1033
+   },
+   {
+    "sel": "h3",
+    "text": "Recommended replenishment",
+    "x": 450,
+    "y": 445,
+    "w": 207,
+    "h": 19
+   },
+   {
+    "sel": "div.filter-bar",
+    "text": "⌕ Search matched store products… Filter items All exact matches Fast sellers Slo",
+    "x": 433,
+    "y": 524,
+    "w": 1334,
+    "h": 67
+   },
+   {
+    "sel": "tr",
+    "text": "PRODUCT 30D SOLD AVG. DAYS TO SELL STORE ON-HAND BATCH QTY REC. PULL QTY",
+    "x": 433,
+    "y": 592,
+    "w": 1334,
+    "h": 51
+   },
+   {
+    "sel": "tr",
+    "text": "NI Ninja air fryer AF101 · 4 qt · black 48FAST 3.2d 2 14 10",
+    "x": 433,
+    "y": 642,
+    "w": 1334,
+    "h": 68
+   },
+   {
+    "sel": "tr",
+    "text": "CO COSORI electric kettle 1.7 L · stainless steel 42FAST 2.6d 4 18 6",
+    "x": 433,
+    "y": 710,
+    "w": 1334,
+    "h": 68
+   },
+   {
+    "sel": "tr",
+    "text": "JB JBL Flip 6 speaker Portable Bluetooth · black 36FAST 4.1d 1 10 8",
+    "x": 433,
+    "y": 778,
+    "w": 1334,
+    "h": 68
+   },
+   {
+    "sel": "tr",
+    "text": "KE Keurig K-Mini Single-serve coffee maker 30FAST 4.8d 2 12 5",
+    "x": 433,
+    "y": 846,
+    "w": 1334,
+    "h": 68
+   },
+   {
+    "sel": "tr",
+    "text": "AN Soundcore Q20 headphones Over-ear · noise cancelling 27FAST 5.2d 1 16 6",
+    "x": 433,
+    "y": 914,
+    "w": 1334,
+    "h": 68
+   },
+   {
+    "sel": "tr",
+    "text": "SH Shark upright vacuum Navigator · NV360 24FAST 5.4d 1 8 5",
+    "x": 433,
+    "y": 982,
+    "w": 1334,
+    "h": 68
+   },
+   {
+    "sel": "tr",
+    "text": "RU Rubbermaid food storage Easy Find Lids · 20-piece 11 14d 8 30 0",
+    "x": 433,
+    "y": 1050,
+    "w": 1334,
+    "h": 68
+   },
+   {
+    "sel": "tr",
+    "text": "LO Lodge cast iron skillet Pre-seasoned · 12 inch 9 16d 6 22 0",
+    "x": 433,
+    "y": 1118,
+    "w": 1334,
+    "h": 68
+   },
+   {
+    "sel": "tr",
+    "text": "IP Instant Pot Duo 7-in-1 pressure cooker · 6 qt 7 18d 5 10 0",
+    "x": 433,
+    "y": 1186,
+    "w": 1334,
+    "h": 68
+   },
+   {
+    "sel": "tr",
+    "text": "LE Levoit air purifier Core 200S · white 5 22d 4 12 0",
+    "x": 433,
+    "y": 1254,
+    "w": 1334,
+    "h": 68
+   },
+   {
+    "sel": "tr",
+    "text": "OS Oster countertop blender Classic series · glass jar 4 25d 6 16 0",
+    "x": 433,
+    "y": 1322,
+    "w": 1334,
+    "h": 68
+   },
+   {
+    "sel": "tr",
+    "text": "SU Sunbeam heated throw Fleece · 50 × 60 inch 3 28d 8 20 0",
+    "x": 433,
+    "y": 1390,
+    "w": 1334,
+    "h": 68
+   },
+   {
+    "sel": "div.action-bar.panel",
+    "text": "40 units → Main Street store Reservations are live in this demo. Sending locks t",
+    "x": 432,
+    "y": 1477,
+    "w": 1336,
+    "h": 84
+   },
+   {
+    "sel": "dialog",
+    "text": "SCOUT / DEMO WORKSPACE Create a store transfer? × Simulate sending 40 units to M",
+    "x": 670,
+    "y": 861,
+    "w": 580,
+    "h": 508
+   },
+   {
+    "sel": "h2",
+    "text": "Create a store transfer?",
+    "x": 696,
+    "y": 909,
+    "w": 243,
+    "h": 30
+   }
+  ]
+ },
+ "dispatch": {
+  "page": {
+   "w": 1920,
+   "h": 1106
+  },
+  "els": [
+   {
+    "sel": "header.topbar",
+    "text": "✳ PALLET PRICE SCOUT INVENTORY ROUTING DEMO WORKSPACE / NO LIVE CONNECTIONS",
+    "x": 152,
+    "y": 20,
+    "w": 1616,
+    "h": 57
+   },
+   {
+    "sel": "h2",
+    "text": "Ready for the next stop.",
+    "x": 432,
+    "y": 135,
+    "w": 437,
+    "h": 34
+   },
+   {
+    "sel": "div.stats.panel",
+    "text": "STORE TRANSFERS 1 40 units · simulated sent PACKED PALLETS 1 13 units allocated ",
+    "x": 432,
+    "y": 222,
+    "w": 1336,
+    "h": 131
+   },
+   {
+    "sel": "div.stat",
+    "text": "STORE TRANSFERS 1 40 units · simulated sent",
+    "x": 433,
+    "y": 223,
+    "w": 334,
+    "h": 129
+   },
+   {
+    "sel": "div.stat",
+    "text": "PACKED PALLETS 1 13 units allocated",
+    "x": 767,
+    "y": 223,
+    "w": 334,
+    "h": 129
+   },
+   {
+    "sel": "div.stat",
+    "text": "PALLET SALE TOTAL $400 Asking prices · not realized revenue",
+    "x": 1100,
+    "y": 223,
+    "w": 334,
+    "h": 129
+   },
+   {
+    "sel": "div.stat",
+    "text": "PACKED RETAIL $540 Accumulated demo reference value",
+    "x": 1434,
+    "y": 223,
+    "w": 334,
+    "h": 129
+   },
+   {
+    "sel": "section.panel.dispatch-section",
+    "text": "Store transfers MAIN STREET STORE ↗ TRF-001 / Single-item replenishment 40 units",
+    "x": 432,
+    "y": 376,
+    "w": 1336,
+    "h": 146
+   },
+   {
+    "sel": "h3",
+    "text": "Store transfers",
+    "x": 450,
+    "y": 395,
+    "w": 104,
+    "h": 19
+   },
+   {
+    "sel": "section.panel.dispatch-section",
+    "text": "Packed pallets 1 COMPLETED PLT-001 ✓ PACKED $400sale price 13 units · 4 SKUs $54",
+    "x": 432,
+    "y": 542,
+    "w": 1336,
+    "h": 347
+   },
+   {
+    "sel": "h3",
+    "text": "Packed pallets",
+    "x": 450,
+    "y": 561,
+    "w": 100,
+    "h": 19
+   },
+   {
+    "sel": "article.packed-card",
+    "text": "PLT-001 ✓ PACKED $400sale price 13 units · 4 SKUs $540 retail 35.0% above sale ·",
+    "x": 451,
+    "y": 616,
+    "w": 422,
+    "h": 254
+   }
+  ]
+ },
+ "overview-after": {
+  "page": {
+   "w": 1920,
+   "h": 1340
+  },
+  "els": [
+   {
+    "sel": "header.topbar",
+    "text": "✳ PALLET PRICE SCOUT INVENTORY ROUTING DEMO WORKSPACE / NO LIVE CONNECTIONS",
+    "x": 152,
+    "y": 20,
+    "w": 1616,
+    "h": 57
+   },
+   {
+    "sel": "h2",
+    "text": "Good inventory. Better decisions.",
+    "x": 432,
+    "y": 135,
+    "w": 421,
+    "h": 34
+   },
+   {
+    "sel": "div.stats.panel",
+    "text": "ANALYZED INVENTORY 215 16 product lines · 9 units on hold READY RETAIL VALUE $12",
+    "x": 432,
+    "y": 291,
+    "w": 1336,
+    "h": 131
+   },
+   {
+    "sel": "div.stat",
+    "text": "ANALYZED INVENTORY 215 16 product lines · 9 units on hold",
+    "x": 433,
+    "y": 292,
+    "w": 334,
+    "h": 129
+   },
+   {
+    "sel": "div.stat",
+    "text": "READY RETAIL VALUE $12,260 Illustrative prices · excludes holds",
+    "x": 767,
+    "y": 292,
+    "w": 334,
+    "h": 129
+   },
+   {
+    "sel": "div.stat",
+    "text": "RESERVED FOR SINGLES 40 6 fast-selling SKUs identified",
+    "x": 1100,
+    "y": 292,
+    "w": 334,
+    "h": 129
+   },
+   {
+    "sel": "div.stat",
+    "text": "AVAILABLE FOR PALLETS 153 $7,780 in retail value",
+    "x": 1434,
+    "y": 292,
+    "w": 334,
+    "h": 129
+   },
+   {
+    "sel": "section.panel",
+    "text": "01 Send the best sellers first. STORE MATCHED Ranked by 30-day unit sales at Mai",
+    "x": 432,
+    "y": 445,
+    "w": 1028,
+    "h": 492
+   },
+   {
+    "sel": "h3",
+    "text": "Send the best sellers first.",
+    "x": 472,
+    "y": 464,
+    "w": 180,
+    "h": 19
+   },
+   {
+    "sel": "tr",
+    "text": "PRODUCT 30D SOLD AVG. DAYS TO SELL 7D PULL",
+    "x": 433,
+    "y": 544,
+    "w": 1026,
+    "h": 36
+   },
+   {
+    "sel": "tr",
+    "text": "01 NI Ninja air fryer AF101 · 4 qt · black 48 3.2 days 10 units",
+    "x": 433,
+    "y": 580,
+    "w": 1026,
+    "h": 62
+   },
+   {
+    "sel": "tr",
+    "text": "02 CO COSORI electric kettle 1.7 L · stainless steel 42 2.6 days 6 units",
+    "x": 433,
+    "y": 641,
+    "w": 1026,
+    "h": 62
+   },
+   {
+    "sel": "tr",
+    "text": "03 JB JBL Flip 6 speaker Portable Bluetooth · black 36 4.1 days 8 units",
+    "x": 433,
+    "y": 703,
+    "w": 1026,
+    "h": 62
+   },
+   {
+    "sel": "tr",
+    "text": "04 KE Keurig K-Mini Single-serve coffee maker 30 4.8 days 5 units",
+    "x": 433,
+    "y": 765,
+    "w": 1026,
+    "h": 62
+   },
+   {
+    "sel": "tr",
+    "text": "05 AN Soundcore Q20 headphones Over-ear · noise cancelling 27 5.2 days 6 units",
+    "x": 433,
+    "y": 827,
+    "w": 1026,
+    "h": 61
+   },
+   {
+    "sel": "div.panel-foot",
+    "text": "7-day demand minus current store stock Review pull list →",
+    "x": 433,
+    "y": 888,
+    "w": 1026,
+    "h": 48
+   },
+   {
+    "sel": "section.panel.allocation",
+    "text": "Where it goes. 215 UNITS 96% ready to route Single-item store 40 Pallet inventor",
+    "x": 1478,
+    "y": 445,
+    "w": 290,
+    "h": 492
+   },
+   {
+    "sel": "h3",
+    "text": "Where it goes.",
+    "x": 1496,
+    "y": 464,
+    "w": 98,
+    "h": 19
+   },
+   {
+    "sel": "div.allocation-bar",
+    "text": "",
+    "x": 1498,
+    "y": 631,
+    "w": 250,
+    "h": 15
+   },
+   {
+    "sel": "span.pallet",
+    "text": "",
+    "x": 1546,
+    "y": 631,
+    "w": 172,
+    "h": 15
+   },
+   {
+    "sel": "i.pallet",
+    "text": "",
+    "x": 1498,
+    "y": 698,
+    "w": 7,
+    "h": 7
+   },
+   {
+    "sel": "section.tier-section",
+    "text": "02 Four price points. One value rule. MINIMUM RETAIL = SALE × 1.30 PALLET / 01 ↗",
+    "x": 432,
+    "y": 957,
+    "w": 1336,
+    "h": 251
+   },
+   {
+    "sel": "h3",
+    "text": "Four price points. One value rule.",
+    "x": 454,
+    "y": 971,
+    "w": 224,
+    "h": 19
+   },
+   {
+    "sel": "div.tier-grid",
+    "text": "PALLET / 01 ↗ $400sale price Minimum retail $520 +30% RETAIL VALUE 1 PACKED PALL",
+    "x": 432,
+    "y": 1012,
+    "w": 1336,
+    "h": 196
+   },
+   {
+    "sel": "button.tier-card",
+    "text": "PALLET / 01 ↗ $400sale price Minimum retail $520 +30% RETAIL VALUE 1 PACKED",
+    "x": 432,
+    "y": 1012,
+    "w": 325,
+    "h": 196
+   },
+   {
+    "sel": "span.tier-top",
+    "text": "PALLET / 01 ↗",
+    "x": 449,
+    "y": 1030,
+    "w": 291,
+    "h": 21
+   },
+   {
+    "sel": "div.tier-value",
+    "text": "Minimum retail $520",
+    "x": 449,
+    "y": 1137,
+    "w": 291,
+    "h": 17
+   },
+   {
+    "sel": "div.tier-base",
+    "text": "+30% RETAIL VALUE 1 PACKED",
+    "x": 449,
+    "y": 1171,
+    "w": 291,
+    "h": 36
+   },
+   {
+    "sel": "button.tier-card",
+    "text": "PALLET / 02 ↗ $600sale price Minimum retail $780 +30% RETAIL VALUE BUILD PALLET ",
+    "x": 769,
+    "y": 1012,
+    "w": 325,
+    "h": 196
+   },
+   {
+    "sel": "span.tier-top",
+    "text": "PALLET / 02 ↗",
+    "x": 786,
+    "y": 1030,
+    "w": 291,
+    "h": 21
+   },
+   {
+    "sel": "div.tier-value",
+    "text": "Minimum retail $780",
+    "x": 786,
+    "y": 1137,
+    "w": 291,
+    "h": 17
+   },
+   {
+    "sel": "div.tier-base",
+    "text": "+30% RETAIL VALUE BUILD PALLET →",
+    "x": 786,
+    "y": 1171,
+    "w": 291,
+    "h": 36
+   },
+   {
+    "sel": "button.tier-card",
+    "text": "PALLET / 03 ↗ $900sale price Minimum retail $1,170 +30% RETAIL VALUE BUILD PALLE",
+    "x": 1106,
+    "y": 1012,
+    "w": 325,
+    "h": 196
+   },
+   {
+    "sel": "span.tier-top",
+    "text": "PALLET / 03 ↗",
+    "x": 1123,
+    "y": 1030,
+    "w": 291,
+    "h": 21
+   },
+   {
+    "sel": "div.tier-value",
+    "text": "Minimum retail $1,170",
+    "x": 1123,
+    "y": 1137,
+    "w": 291,
+    "h": 17
+   },
+   {
+    "sel": "div.tier-base",
+    "text": "+30% RETAIL VALUE BUILD PALLET →",
+    "x": 1123,
+    "y": 1171,
+    "w": 291,
+    "h": 36
+   },
+   {
+    "sel": "button.tier-card",
+    "text": "PALLET / 04 ↗ $1,400sale price Minimum retail $1,820 +30% RETAIL VALUE BUILD PAL",
+    "x": 1443,
+    "y": 1012,
+    "w": 325,
+    "h": 196
+   },
+   {
+    "sel": "span.tier-top",
+    "text": "PALLET / 04 ↗",
+    "x": 1460,
+    "y": 1030,
+    "w": 291,
+    "h": 21
+   },
+   {
+    "sel": "div.tier-value",
+    "text": "Minimum retail $1,820",
+    "x": 1460,
+    "y": 1137,
+    "w": 291,
+    "h": 17
+   },
+   {
+    "sel": "div.tier-base",
+    "text": "+30% RETAIL VALUE BUILD PALLET →",
+    "x": 1460,
+    "y": 1171,
+    "w": 291,
+    "h": 36
+   }
+  ]
+ }
+}

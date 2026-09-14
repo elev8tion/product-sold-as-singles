@@ -1,0 +1,169 @@
+<template>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <style>
+  @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/space-grotesk.woff2") format("woff2"); font-weight: 400 700; }
+  @font-face { font-family: "DM Mono"; src: url("assets/fonts/dm-mono.woff2") format("woff2"); font-weight: 400 500; }
+  #root { position: absolute; inset: 0; width: 1920px; height: 1080px; overflow: hidden; color: #E9E8DF; font-family: "Space Grotesk", sans-serif; }
+  .f03-fast-seller-bg { position: absolute; inset: 0; background: #0D0F0E; }
+  .f03-fast-seller-layer { position: absolute; inset: 0; }
+
+  /* chrome */
+  .f03-fast-seller-kicker { position: absolute; left: 106px; top: 106px; font-family: "DM Mono", monospace; font-size: 14px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color: #D6FF55; }
+  .f03-fast-seller-tag { position: absolute; right: 106px; top: 106px; font-family: "DM Mono", monospace; font-size: 14px; letter-spacing: .14em; text-transform: uppercase; color: #A0A49A; border: 1px solid #30342F; padding: 6px 10px; }
+
+  /* strip window — punch-in on the real screenshot (coordinate-target-zoom, nested wrappers) */
+  .f03-fast-seller-strip { position: absolute; left: 106px; top: 160px; width: 1708px; height: 300px; overflow: hidden; background: #0D0F0E; }
+  .f03-fast-seller-cam { position: absolute; left: 0; top: 0; width: 1708px; height: 300px; transform-origin: 50% 50%; }
+  .f03-fast-seller-pan { position: absolute; left: 0; top: 0; width: 1708px; height: 300px; }
+  /* page placed so page point (1100, 656) — centre of the header+Ninja region — sits at the window centre (854, 150) */
+  .f03-fast-seller-page { position: absolute; left: -246px; top: -506px; width: 1920px; height: 1655px; }
+  .f03-fast-seller-page img { position: absolute; left: 0; top: 0; width: 1920px; height: 1655px; max-width: none; display: block; }
+  .f03-fast-seller-marker { position: absolute; left: 0; top: 698px; width: 100px; height: 2px; background: #D6FF55; transform-origin: 0 50%; }
+  .f03-fast-seller-flash { position: absolute; left: 955px; top: 667px; width: 29px; height: 20px; background: #D6FF55; mix-blend-mode: screen; opacity: 0; }
+  .f03-fast-seller-ring { position: absolute; left: 953px; top: 665px; width: 33px; height: 24px; border: 1px solid #D6FF55; opacity: 0; transform-origin: 50% 50%; }
+  .f03-fast-seller-dim { position: absolute; left: 0; width: 1708px; background: rgba(13,15,14,0.62); }
+  .f03-fast-seller-dim-top { top: 0; height: 72px; }
+  .f03-fast-seller-dim-bot { top: 224px; height: 76px; }
+  .f03-fast-seller-frame { position: absolute; inset: 0; border: 1px solid #30342F; box-sizing: border-box; }
+
+  /* receipt — the fast-seller rule, checking off row by row */
+  .f03-fast-seller-checks { position: absolute; left: 106px; top: 520px; width: 720px; border-bottom: 1px solid #30342F; }
+  .f03-fast-seller-row { position: relative; height: 80px; border-top: 1px solid #30342F; display: flex; align-items: center; gap: 28px; }
+  .f03-fast-seller-box { position: relative; width: 52px; height: 52px; flex: 0 0 52px; border: 1px solid #30342F; box-sizing: border-box; }
+  .f03-fast-seller-num { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-family: "DM Mono", monospace; font-size: 14px; letter-spacing: .14em; color: #A0A49A; }
+  .f03-fast-seller-boxon { position: absolute; inset: -1px; border: 1px solid #D6FF55; opacity: 0; }
+  .f03-fast-seller-tick { position: absolute; left: 0; top: 0; width: 50px; height: 50px; overflow: visible; }
+  .f03-fast-seller-tick path { fill: none; stroke: #D6FF55; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+  .f03-fast-seller-label { font-size: 44px; font-weight: 500; letter-spacing: -.01em; line-height: 1; color: #E9E8DF; white-space: nowrap; }
+  .f03-fast-seller-val { font-family: "DM Mono", monospace; font-size: 22px; color: #A0A49A; margin-left: -8px; white-space: nowrap; }
+  /* ≤ / ≥ drawn inline — neither shipped font carries U+2264/2265 */
+  .f03-fast-seller-cmp { display: inline-block; width: 14px; height: 17px; margin-right: 8px; vertical-align: -2px; overflow: visible; }
+  .f03-fast-seller-cmp path { fill: none; stroke: #A0A49A; stroke-width: 1.7; stroke-linecap: square; stroke-linejoin: miter; }
+
+  /* the one display moment */
+  .f03-fast-seller-display { position: absolute; right: 106px; top: 560px; font-size: 150px; font-weight: 700; letter-spacing: -.04em; line-height: .9; color: #D6FF55; white-space: nowrap; }
+  </style>
+  <div data-hf-id="hf-2i6d" id="root" data-composition-id="03-fast-seller" data-width="1920" data-height="1080" data-duration="7.1">
+    <div data-hf-id="hf-59go" class="clip f03-fast-seller-bg" data-start="0" data-duration="6.5" data-track-index="0"></div>
+    <div data-hf-id="hf-q6kn" class="clip f03-fast-seller-layer" data-start="0" data-duration="6.5" data-track-index="1">
+      <div data-hf-id="hf-pret" id="f03-fast-seller-kicker" class="f03-fast-seller-kicker">FATE 01 · THE SHELF</div>
+      <div data-hf-id="hf-o84m" id="f03-fast-seller-tag" class="f03-fast-seller-tag">SAMPLE DATA</div>
+
+      <div data-hf-id="hf-s2y4" id="f03-fast-seller-strip" class="f03-fast-seller-strip">
+        <div data-hf-id="hf-yig2" id="f03-fast-seller-cam" class="f03-fast-seller-cam">
+          <div data-hf-id="hf-3wxe" id="f03-fast-seller-pan" class="f03-fast-seller-pan">
+            <div data-hf-id="hf-25m8" class="f03-fast-seller-page">
+              <img data-hf-id="hf-lkbc" src="assets/view-singles.png" alt="">
+              <div data-hf-id="hf-dpku" id="f03-fast-seller-marker" class="f03-fast-seller-marker"></div>
+              <div data-hf-id="hf-u62g" id="f03-fast-seller-flash" class="f03-fast-seller-flash"></div>
+              <div data-hf-id="hf-b622" id="f03-fast-seller-ring" class="f03-fast-seller-ring"></div>
+            </div>
+          </div>
+        </div>
+        <div data-hf-id="hf-1bln" id="f03-fast-seller-dim-top" class="f03-fast-seller-dim f03-fast-seller-dim-top"></div>
+        <div data-hf-id="hf-vkdf" id="f03-fast-seller-dim-bot" class="f03-fast-seller-dim f03-fast-seller-dim-bot"></div>
+        <div data-hf-id="hf-ac7k" class="f03-fast-seller-frame"></div>
+      </div>
+
+      <div data-hf-id="hf-wdbq" class="f03-fast-seller-checks">
+        <div data-hf-id="hf-6i45" id="f03-fast-seller-row1" class="f03-fast-seller-row">
+          <div data-hf-id="hf-dttz" id="f03-fast-seller-box1" class="f03-fast-seller-box">
+            <span data-hf-id="hf-50gl" id="f03-fast-seller-num1" class="f03-fast-seller-num">01</span>
+            <span data-hf-id="hf-0tqm" id="f03-fast-seller-boxon1" class="f03-fast-seller-boxon"></span>
+            <svg data-hf-id="hf-qnwc" class="f03-fast-seller-tick" viewBox="0 0 50 50"><path data-hf-id="hf-wpzi" id="f03-fast-seller-tick1" d="M14 26 L22 34 L37 17" /></svg>
+          </div>
+          <span data-hf-id="hf-wie9" id="f03-fast-seller-label1" class="f03-fast-seller-label">exact SKU match</span>
+          <span data-hf-id="hf-80gd" id="f03-fast-seller-val1" class="f03-fast-seller-val">99%</span>
+        </div>
+        <div data-hf-id="hf-ag86" id="f03-fast-seller-row2" class="f03-fast-seller-row">
+          <div data-hf-id="hf-2ycc" id="f03-fast-seller-box2" class="f03-fast-seller-box">
+            <span data-hf-id="hf-hwf7" id="f03-fast-seller-num2" class="f03-fast-seller-num">02</span>
+            <span data-hf-id="hf-uo0t" id="f03-fast-seller-boxon2" class="f03-fast-seller-boxon"></span>
+            <svg data-hf-id="hf-7jsk" class="f03-fast-seller-tick" viewBox="0 0 50 50"><path data-hf-id="hf-qk9p" id="f03-fast-seller-tick2" d="M14 26 L22 34 L37 17" /></svg>
+          </div>
+          <span data-hf-id="hf-y79a" id="f03-fast-seller-label2" class="f03-fast-seller-label">48 sold in 30 days</span>
+          <span data-hf-id="hf-e3ko" id="f03-fast-seller-val2" class="f03-fast-seller-val"><svg data-hf-id="hf-u8ml" class="f03-fast-seller-cmp" viewBox="0 0 15 18" aria-label="at least"><path data-hf-id="hf-vl5t" d="M3 3 L12 7.5 L3 12 M3 15.5 L12 15.5" /></svg>20</span>
+        </div>
+        <div data-hf-id="hf-glxz" id="f03-fast-seller-row3" class="f03-fast-seller-row">
+          <div data-hf-id="hf-3q05" id="f03-fast-seller-box3" class="f03-fast-seller-box">
+            <span data-hf-id="hf-37v5" id="f03-fast-seller-num3" class="f03-fast-seller-num">03</span>
+            <span data-hf-id="hf-twd0" id="f03-fast-seller-boxon3" class="f03-fast-seller-boxon"></span>
+            <svg data-hf-id="hf-6cvh" class="f03-fast-seller-tick" viewBox="0 0 50 50"><path data-hf-id="hf-pslw" id="f03-fast-seller-tick3" d="M14 26 L22 34 L37 17" /></svg>
+          </div>
+          <span data-hf-id="hf-v54v" id="f03-fast-seller-label3" class="f03-fast-seller-label">3.2 days to sell</span>
+          <span data-hf-id="hf-cijr" id="f03-fast-seller-val3" class="f03-fast-seller-val"><svg data-hf-id="hf-7b5z" class="f03-fast-seller-cmp" viewBox="0 0 15 18" aria-label="at most"><path data-hf-id="hf-t6jr" d="M12 3 L3 7.5 L12 12 M3 15.5 L12 15.5" /></svg>7</span>
+        </div>
+      </div>
+
+      <div data-hf-id="hf-b655" id="f03-fast-seller-display" class="f03-fast-seller-display">fast seller.</div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      window.__timelines = window.__timelines || {};
+      var tl = gsap.timeline({ paused: true });
+      var P = "#f03-fast-seller-";
+
+      /* ---------- Scene 1 (0.0–1.2s): strip punches in on the header + Ninja row, then locks ---------- */
+      // coordinate-target-zoom, nested form: outer (cam) scales about the window centre, inner (pan) counter-translates.
+      // Start: full page width in the window (S0 = 1708/1920), centred on page (960, 560) -> T0 = (140, 96).
+      // End:   page region x433–1767 fills the window width (S1 = 1708/1334 ≈ 1.28), centred on (1100, 656) -> T1 = (0, 0).
+      var S0 = 1708 / 1920, S1 = 1708 / 1334, ZOOM_AT = 0.1, ZOOM_DUR = 0.9;
+      tl.fromTo(P + "strip", { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power1.out" }, 0);
+      tl.fromTo(P + "cam", { scale: S0 }, { scale: S1, duration: ZOOM_DUR, ease: "expo.out" }, ZOOM_AT);
+      tl.fromTo(P + "pan", { x: 140, y: 96 }, { x: 0, y: 0, duration: ZOOM_DUR, ease: "expo.out" }, ZOOM_AT);
+      tl.fromTo([P + "dim-top", P + "dim-bot"], { opacity: 0 }, { opacity: 1, duration: 0.45, ease: "power1.out" }, 0.9);
+
+      tl.fromTo(P + "kicker", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 0.05);
+      tl.fromTo(P + "tag", { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "power1.out" }, 0.2);
+
+      // receipt skeleton cascades in (pending: outline box + catalogue numeral, no label yet)
+      [1, 2, 3].forEach(function (i) {
+        tl.fromTo(P + "row" + i, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 0.45 + (i - 1) * 0.12);
+      });
+
+      // svg-path-draw setup — measured length
+      [1, 2, 3].forEach(function (i) {
+        var p = document.getElementById("f03-fast-seller-tick" + i);
+        var len = (p && p.getTotalLength ? p.getTotalLength() : 34) || 34;
+        gsap.set(p, { strokeDasharray: len, strokeDashoffset: len });
+      });
+
+      // one check per beat: numeral swaps out, box goes lime with a small press/spring, ✓ draws, then the line lands
+      function tick(i, at) {
+        tl.fromTo(P + "num" + i, { opacity: 1, scale: 1 }, { opacity: 0, scale: 0.6, duration: 0.16, ease: "power2.in" }, at);
+        tl.fromTo(P + "boxon" + i, { opacity: 0 }, { opacity: 1, duration: 0.2, ease: "power1.out" }, at);
+        tl.to(P + "box" + i, { scale: 0.88, duration: 0.07, ease: "power1.in" }, at);
+        tl.to(P + "box" + i, { scale: 1, duration: 0.4, ease: "back.out(2.4)" }, at + 0.07);
+        tl.to(P + "tick" + i, { strokeDashoffset: 0, duration: 0.3, ease: "power2.out" }, at + 0.04);
+        tl.fromTo(P + "label" + i, { opacity: 0, x: -18 }, { opacity: 1, x: 0, duration: 0.4, ease: "power3.out" }, at + 0.18);
+        tl.fromTo(P + "val" + i, { opacity: 0, x: -8 }, { opacity: 1, x: 0, duration: 0.3, ease: "power2.out" }, at + 0.34);
+      }
+
+      /* ---------- Scene 2 (1.2–2.2s): check 1 + marker sweeps under the product cell ---------- */
+      // css-marker-patterns highlight mechanism as a 2px lime underline: scaleX sweep from the left edge.
+      // Marker lives in page coordinates (base width 100px): product x465–900, 30D SOLD x925–1060, AVG. DAYS x1080–1220.
+      tick(1, 1.25);
+      tl.fromTo(P + "marker", { x: 465, scaleX: 0 }, { x: 465, scaleX: 4.35, duration: 0.5, ease: "power2.out" }, 1.25);
+
+      /* ---------- Scene 3 (2.2–3.4s): check 2 -> 30D SOLD, check 3 -> AVG. DAYS ---------- */
+      tick(2, 2.15);
+      tl.to(P + "marker", { x: 925, scaleX: 1.35, duration: 0.45, ease: "power3.inOut" }, 2.15);
+      tick(3, 3.05);
+      tl.to(P + "marker", { x: 1080, scaleX: 1.4, duration: 0.45, ease: "power3.inOut" }, 3.05);
+
+      /* ---------- Scene 4 (3.4–6.0s): "fast seller." settles in, FAST badge pulses once, hold ---------- */
+      tl.fromTo(P + "display", { opacity: 0, y: 70 }, { opacity: 1, y: 0, duration: 1.3, ease: "expo.out" }, 3.45);
+      // one finite attack-decay lime flash on the FAST badge
+      tl.fromTo(P + "flash", { opacity: 0 }, { opacity: 0.7, duration: 0.1, ease: "power2.out" }, 4.0);
+      tl.to(P + "flash", { opacity: 0, duration: 0.9, ease: "power1.out" }, 4.1);
+      tl.fromTo(P + "ring", { opacity: 0 }, { opacity: 0.9, duration: 0.06, ease: "none" }, 4.0);
+      tl.fromTo(P + "ring", { scale: 1 }, { scale: 1.9, duration: 0.9, ease: "power2.out" }, 4.0);
+      tl.to(P + "ring", { opacity: 0, duration: 0.84, ease: "power2.out" }, 4.06);
+      // hold still to 6.0s
+      tl.set({}, {}, 6);
+
+      window.__timelines["03-fast-seller"] = tl;
+    })();
+  </script>
+</template>

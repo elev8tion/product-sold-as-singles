@@ -1,0 +1,180 @@
+<template>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <style>
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/space-grotesk.woff2") format("woff2"); font-weight: 300 700; font-display: block; }
+    @font-face { font-family: "DM Mono"; src: url("assets/fonts/dm-mono.woff2") format("woff2"); font-weight: 400 500; font-display: block; }
+
+    #root { position: absolute; inset: 0; width: 1920px; height: 1080px; overflow: hidden; color: #E9E8DF; font-family: "Space Grotesk", sans-serif; }
+
+    .f01-same-truck-bg { position: absolute; inset: 0; background: #0D0F0E; }
+    .f01-same-truck-layer { position: absolute; inset: 0; }
+
+    /* Scene 1 — mono kicker + hairline */
+    .f01-same-truck-kicker { position: absolute; left: 106px; top: 106px; display: flex; align-items: center; font-family: "DM Mono", monospace; font-weight: 500; font-size: 18px; line-height: 1; letter-spacing: 0.14em; text-transform: uppercase; color: #D6FF55; white-space: nowrap; }
+    .f01-same-truck-kicker-text { display: inline-block; white-space: pre; }
+    .f01-same-truck-kicker-wrap { display: inline-flex; align-items: center; white-space: pre; }
+    .f01-same-truck-caret { display: inline-block; width: 10px; height: 20px; margin-left: 4px; background: #D6FF55; }
+    .f01-same-truck-hairline { position: absolute; left: 106px; top: 150px; width: 980px; height: 1px; background: #30342F; transform-origin: 0% 50%; }
+
+    /* Scene 2 — three identical chips */
+    .f01-same-truck-chips { position: absolute; left: 106px; top: 220px; display: flex; gap: 40px; }
+    .f01-same-truck-unit { display: flex; flex-direction: column; gap: 18px; width: 300px; }
+    .f01-same-truck-chip { width: 300px; height: 220px; box-sizing: border-box; border: 1px solid #30342F; background: #151816; display: flex; flex-direction: column; justify-content: space-between; padding: 24px; }
+    .f01-same-truck-mark { font-family: "DM Mono", monospace; font-weight: 500; font-size: 64px; line-height: 1; letter-spacing: 0.04em; color: #E9E8DF; }
+    .f01-same-truck-mark.f01-same-truck-unknown { color: #A0A49A; }
+    .f01-same-truck-name { font-family: "Space Grotesk", sans-serif; font-weight: 400; font-size: 23px; line-height: 1.3; color: #E9E8DF; }
+    .f01-same-truck-tag { font-family: "DM Mono", monospace; font-weight: 500; font-size: 14px; line-height: 1; letter-spacing: 0.14em; text-transform: uppercase; color: #A0A49A; }
+    .f01-same-truck-tag.f01-same-truck-warn { color: #FF8058; }
+
+    /* Scenes 3–4 — the statement */
+    .f01-same-truck-line { position: absolute; left: 106px; font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 138px; line-height: 0.92; letter-spacing: -0.03em; white-space: nowrap; transform-origin: 0% 50%; }
+    .f01-same-truck-line1 { top: 560px; color: #E9E8DF; }
+    .f01-same-truck-line2 { top: 700px; color: #D6FF55; }
+  </style>
+
+  <div data-hf-id="hf-pfif" id="root" data-composition-id="01-same-truck" data-width="1920" data-height="1080" data-duration="4.9">
+    <div data-hf-id="hf-sy6h" class="clip f01-same-truck-bg" data-start="0" data-duration="4.9" data-track-index="0"></div>
+
+    <div data-hf-id="hf-np5s" class="clip f01-same-truck-layer" data-start="0" data-duration="4.9" data-track-index="1">
+      <div data-hf-id="hf-qn0u" class="f01-same-truck-kicker">
+        <span data-hf-id="hf-usk6" class="f01-same-truck-kicker-wrap"><span data-hf-id="hf-g6yz" class="f01-same-truck-kicker-text" id="f01-same-truck-kicker-text"></span></span>
+      </div>
+      <div data-hf-id="hf-b1yc" class="f01-same-truck-hairline" id="f01-same-truck-hairline"></div>
+
+      <div data-hf-id="hf-hlnm" class="f01-same-truck-chips">
+        <div data-hf-id="hf-8o8r" class="f01-same-truck-unit">
+          <div data-hf-id="hf-5vml" class="f01-same-truck-chip" id="f01-same-truck-chip1">
+            <b data-hf-id="hf-9atw" class="f01-same-truck-mark">NI</b>
+            <span data-hf-id="hf-cw31" class="f01-same-truck-name">Ninja air fryer</span>
+          </div>
+          <div data-hf-id="hf-a014" class="f01-same-truck-tag" id="f01-same-truck-tag1">FATE 01</div>
+        </div>
+        <div data-hf-id="hf-781n" class="f01-same-truck-unit">
+          <div data-hf-id="hf-9tqm" class="f01-same-truck-chip" id="f01-same-truck-chip2">
+            <b data-hf-id="hf-r2n4" class="f01-same-truck-mark">LO</b>
+            <span data-hf-id="hf-dosd" class="f01-same-truck-name">Lodge cast iron skillet</span>
+          </div>
+          <div data-hf-id="hf-rahc" class="f01-same-truck-tag" id="f01-same-truck-tag2">FATE 02</div>
+        </div>
+        <div data-hf-id="hf-6tqm" class="f01-same-truck-unit">
+          <div data-hf-id="hf-drun" class="f01-same-truck-chip" id="f01-same-truck-chip3">
+            <b data-hf-id="hf-it0k" class="f01-same-truck-mark f01-same-truck-unknown">??</b>
+            <span data-hf-id="hf-ea0y" class="f01-same-truck-name">Unidentified appliance</span>
+          </div>
+          <div data-hf-id="hf-ros9" class="f01-same-truck-tag f01-same-truck-warn" id="f01-same-truck-tag3">FATE 03</div>
+        </div>
+      </div>
+
+      <div data-hf-id="hf-t2xo" class="f01-same-truck-line f01-same-truck-line1" id="f01-same-truck-line1" data-layout-allow-overlap>same truck.</div>
+      <div data-hf-id="hf-jb1u" class="f01-same-truck-line f01-same-truck-line2" id="f01-same-truck-line2" data-layout-allow-overlap>three different futures.</div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      window.__timelines = window.__timelines || {};
+      var tl = gsap.timeline({ paused: true });
+      var DURATION = 4.5;
+
+      // One onset grid (music ~110 BPM, 1 beat ≈ 0.55s) — every reveal reads from it.
+      var BEATS = {
+        type: 0.1,      // key-press
+        chip1: 1.0,     // click-soft
+        chip2: 1.45,    // click-soft
+        chip3: 1.9,     // click-soft
+        slam1: 2.2,     // "same truck."
+        slam2: 3.2      // impact-bass — "three different futures."
+      };
+
+      // ---- Scene 1 (0.0–0.9s): kicker types on (discrete-text-sequence) ----
+      var FULL = "BATCH 024 · 215 UNITS · MIXED MERCHANDISE";
+      var SEQUENCE = [
+        { t: 0.0, text: "" },
+        { t: 0.10, text: "B" },
+        { t: 0.14, text: "BAT" },
+        { t: 0.19, text: "BATCH" },
+        { t: 0.25, text: "BATCH 02" },
+        { t: 0.30, text: "BATCH 024" },
+        { t: 0.37, text: "BATCH 024 · 2" },
+        { t: 0.42, text: "BATCH 024 · 215" },
+        { t: 0.50, text: "BATCH 024 · 215 UNI" },
+        { t: 0.55, text: "BATCH 024 · 215 UNITS" },
+        { t: 0.62, text: "BATCH 024 · 215 UNITS · MIX" },
+        { t: 0.67, text: "BATCH 024 · 215 UNITS · MIXED" },
+        { t: 0.72, text: "BATCH 024 · 215 UNITS · MIXED MERCH" },
+        { t: 0.78, text: FULL }
+      ];
+      var T_DONE = 0.78;
+
+      function textAt(time) {
+        for (var i = SEQUENCE.length - 1; i >= 0; i--) {
+          if (time >= SEQUENCE[i].t) return SEQUENCE[i].text;
+        }
+        return "";
+      }
+
+      var textEl = document.getElementById("f01-same-truck-kicker-text");
+      var wrapEl = textEl.parentNode;
+      var caretEl = document.createElement("span");
+      caretEl.className = "f01-same-truck-caret";
+      wrapEl.appendChild(caretEl);
+      textEl.textContent = "";
+
+      // Caret: blinks on the beat before the first key, solid while typing,
+      // blinks after completion, then retires as the chips arrive.
+      var BLINK_PERIOD = 0.55;
+      function caretOpacity(t) {
+        var blinkOn = Math.sin((t / BLINK_PERIOD) * Math.PI * 2 + Math.PI / 2) > 0;
+        if (t < BEATS.type) return 1;
+        if (t < T_DONE) return 1;
+        if (t < BEATS.chip1) return blinkOn ? 1 : 0;
+        return 0;
+      }
+
+      var driver = { t: 0 };
+      tl.to(driver, {
+        t: DURATION,
+        duration: DURATION,
+        ease: "none",
+        onUpdate: function () {
+          textEl.textContent = textAt(driver.t);
+          caretEl.style.opacity = String(caretOpacity(driver.t));
+        }
+      }, 0);
+
+      // Hairline draws left → right under the kicker.
+      tl.fromTo("#f01-same-truck-hairline",
+        { scaleX: 0 },
+        { scaleX: 1, duration: 0.7, ease: "power2.inOut" },
+        0.2);
+
+      // ---- Scene 2 (0.9–2.2s): three identical chips land, one per beat ----
+      [["#f01-same-truck-chip1", "#f01-same-truck-tag1", BEATS.chip1],
+       ["#f01-same-truck-chip2", "#f01-same-truck-tag2", BEATS.chip2],
+       ["#f01-same-truck-chip3", "#f01-same-truck-tag3", BEATS.chip3]].forEach(function (c) {
+        tl.fromTo(c[0],
+          { y: 44, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" },
+          c[2]);
+        tl.fromTo(c[1],
+          { y: 10, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.35, ease: "power2.out" },
+          c[2] + 0.14);
+      });
+
+      // ---- Scene 3 (2.2–3.2s): "same truck." slams in (kinetic-beat-slam: scale+blur, power4.out) ----
+      tl.fromTo("#f01-same-truck-line1",
+        { scale: 1.5, filter: "blur(16px)", opacity: 0 },
+        { scale: 1, filter: "blur(0px)", opacity: 1, duration: 0.5, ease: "power4.out" },
+        BEATS.slam1);
+
+      // ---- Scene 4 (3.2–4.5s): "three different futures." — distinct entrance (side snap, expo.out), then hold still ----
+      tl.fromTo("#f01-same-truck-line2",
+        { x: -220, filter: "blur(8px)", opacity: 0 },
+        { x: 0, filter: "blur(0px)", opacity: 1, duration: 0.45, ease: "expo.out" },
+        BEATS.slam2);
+
+      window.__timelines["01-same-truck"] = tl;
+    })();
+  </script>
+</template>

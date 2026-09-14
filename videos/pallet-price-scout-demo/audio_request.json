@@ -1,0 +1,11 @@
+{
+  "provider": "auto",
+  "speed": 1,
+  "lines": [],
+  "bgm": {
+    "mode": "retrieve",
+    "query": "confident minimal tech underscore, steady mid-tempo pulse, dry industrial percussion, no vocals",
+    "blob": "Every unit goes where it earns the most: best sellers to the shelf, the rest into value-backed pallets, nothing guessed.",
+    "arc": "BAB with feature-benefit progression — hook → promise → fate 1 (shelf) → fate 2 (pallet) → fate 3 (held) → dispatch → benefits → brand"
+  }
+}

@@ -1,0 +1,121 @@
+<template>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <style>
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/space-grotesk.woff2") format("woff2"); font-weight: 400 700; }
+    @font-face { font-family: "DM Mono"; src: url("assets/fonts/dm-mono.woff2") format("woff2"); font-weight: 400 500; }
+
+    #root { position: absolute; inset: 0; width: 1920px; height: 1080px; overflow: hidden; color: #E9E8DF; font-family: "Space Grotesk", sans-serif; }
+    #root *, #root *::before, #root *::after { box-sizing: border-box; }
+
+    /* full-bleed ground on its own clip layer (never on #root) */
+    .f08-held-not-guessed-bg { position: absolute; inset: 0; background: #0D0F0E; }
+    .f08-held-not-guessed-layer { position: absolute; inset: 0; }
+    .f08-held-not-guessed-stage { position: absolute; inset: 0; }
+
+    /* chrome — DM Mono uppercase 0.14em */
+    .f08-held-not-guessed-kicker { position: absolute; left: 106px; top: 106px; font-family: "DM Mono", monospace; font-size: 14px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color: #FF8058; line-height: 1; }
+    .f08-held-not-guessed-tag { position: absolute; right: 106px; top: 100px; font-family: "DM Mono", monospace; font-size: 14px; letter-spacing: .14em; text-transform: uppercase; color: #A0A49A; border: 1px solid #30342F; padding: 6px 10px; line-height: 1; }
+
+    /* left window — the real dialog, cropped */
+    .f08-held-not-guessed-window { position: absolute; left: 106px; top: 160px; width: 900px; height: 640px; overflow: hidden; background: #151816; }
+    /* viewport shot 3840x2160 = 1920x1080 CSS, shown at 1.05x (2016x1134);
+       dialog (CSS 670,250 580x582) centered in the 900x640 window */
+    .f08-held-not-guessed-plate { position: absolute; left: -558px; top: -248px; width: 2016px; height: 1134px; transform-origin: 1008px 568px; }
+    .f08-held-not-guessed-shot { position: absolute; left: 0; top: 0; width: 2016px; height: 1134px; display: block; max-width: none; }
+    .f08-held-not-guessed-winframe { position: absolute; left: 106px; top: 160px; width: 900px; height: 640px; border: 1px solid #30342F; pointer-events: none; }
+
+    /* css-marker-patterns outline — hairline warn box around the matching dialog cell (0 radius) */
+    .f08-held-not-guessed-ring { position: absolute; border: 2px solid #FF8058; transform-origin: 50% 50%; }
+
+    /* HELD stamp */
+    .f08-held-not-guessed-stamp { position: absolute; left: 1100px; top: 170px; font-family: "DM Mono", monospace; font-size: 120px; font-weight: 500; line-height: 1; color: #FF8058; border: 4px solid #FF8058; padding: 12px 28px 12px 40px; letter-spacing: .1em; transform-origin: 50% 50%; white-space: nowrap; }
+
+    /* mono facts */
+    .f08-held-not-guessed-facts { position: absolute; left: 1100px; top: 420px; width: 714px; font-family: "DM Mono", monospace; font-size: 28px; line-height: 1.6; letter-spacing: .14em; text-transform: uppercase; color: #E9E8DF; }
+    .f08-held-not-guessed-fact { display: flex; align-items: center; gap: 20px; white-space: nowrap; }
+    .f08-held-not-guessed-fact i { display: block; flex: none; width: 16px; height: 16px; border: 2px solid #FF8058; }
+
+    /* statement lines — Space Grotesk lowercase, masked line rise */
+    .f08-held-not-guessed-h2 { position: absolute; left: 1100px; top: 580px; width: 714px; font-size: 72px; font-weight: 700; line-height: 1.1; letter-spacing: -.02em; color: #E9E8DF; }
+    .f08-held-not-guessed-line { display: block; overflow: hidden; padding-bottom: 14px; margin-bottom: -14px; }
+    .f08-held-not-guessed-line > span { display: block; white-space: nowrap; }
+    .f08-held-not-guessed-warn { color: #FF8058; }
+  </style>
+
+  <div data-hf-id="hf-uaxs" id="root" data-composition-id="08-held-not-guessed" data-width="1920" data-height="1080" data-duration="6.9">
+    <div data-hf-id="hf-zx3z" class="clip f08-held-not-guessed-bg" data-start="0" data-duration="6.9" data-track-index="0"></div>
+
+    <div data-hf-id="hf-656a" class="clip f08-held-not-guessed-layer" data-start="0" data-duration="6.9" data-track-index="1">
+      <div data-hf-id="hf-39zq" id="f08-held-not-guessed-stage" class="f08-held-not-guessed-stage">
+
+        <div data-hf-id="hf-yqr5" id="f08-held-not-guessed-kicker" class="f08-held-not-guessed-kicker">FATE 03 · HELD</div>
+        <div data-hf-id="hf-pr3y" id="f08-held-not-guessed-tag" class="f08-held-not-guessed-tag">SAMPLE DATA</div>
+
+        <!-- left window: the unidentified-appliance dialog -->
+        <div data-hf-id="hf-afsp" id="f08-held-not-guessed-window" class="f08-held-not-guessed-window">
+          <div data-hf-id="hf-jgrm" id="f08-held-not-guessed-plate" class="f08-held-not-guessed-plate">
+            <img data-hf-id="hf-va6f" class="f08-held-not-guessed-shot" src="assets/view-dialog-unknown.png" alt="Unidentified countertop appliance dialog">
+            <!-- rings in plate coords (image CSS coords x1.05) -->
+            <div data-hf-id="hf-x81s" id="f08-held-not-guessed-ring-row" class="f08-held-not-guessed-ring" style="left:722px;top:357px;width:231px;height:70px"></div>
+            <div data-hf-id="hf-iv6e" id="f08-held-not-guessed-ring-conf" class="f08-held-not-guessed-ring" style="left:1003px;top:455px;width:121px;height:70px"></div>
+            <div data-hf-id="hf-3odo" id="f08-held-not-guessed-ring-price" class="f08-held-not-guessed-ring" style="left:866px;top:455px;width:122px;height:70px"></div>
+          </div>
+        </div>
+        <div data-hf-id="hf-8iok" id="f08-held-not-guessed-winframe" class="f08-held-not-guessed-winframe"></div>
+
+        <!-- right column -->
+        <div data-hf-id="hf-oopl" id="f08-held-not-guessed-stamp" class="f08-held-not-guessed-stamp">HELD</div>
+
+        <div data-hf-id="hf-yqtj" class="f08-held-not-guessed-facts">
+          <div data-hf-id="hf-m2x0" id="f08-held-not-guessed-fact-1" class="f08-held-not-guessed-fact"><i data-hf-id="hf-wt6k"></i>model label obscured</div>
+          <div data-hf-id="hf-f88o" id="f08-held-not-guessed-fact-2" class="f08-held-not-guessed-fact"><i data-hf-id="hf-zeb8"></i>62% confidence · price unknown</div>
+        </div>
+
+        <div data-hf-id="hf-izp1" class="f08-held-not-guessed-h2">
+          <span data-hf-id="hf-e7qz" class="f08-held-not-guessed-line"><span data-hf-id="hf-09mu" id="f08-held-not-guessed-line-1">held for review.</span></span>
+          <span data-hf-id="hf-reyj" class="f08-held-not-guessed-line"><span data-hf-id="hf-erz9" id="f08-held-not-guessed-line-2" class="f08-held-not-guessed-warn">not guessed.</span></span>
+          <span data-hf-id="hf-r0ni" class="f08-held-not-guessed-line"><span data-hf-id="hf-fdoe" id="f08-held-not-guessed-line-3" class="f08-held-not-guessed-warn">not priced at zero.</span></span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var P = "#f08-held-not-guessed-";
+      var tl = gsap.timeline({ paused: true });
+
+      // Scene 1 (0.0–1.5s): the dialog rises into the left window (smooth long tail).
+      tl.fromTo(P + "winframe", { opacity: 0 }, { opacity: 1, duration: 0.35, ease: "power2.out" }, 0);
+      tl.fromTo(P + "plate", { y: 90, opacity: 0 }, { y: 0, opacity: 1, duration: 1.3, ease: "expo.out" }, 0.05);
+      tl.fromTo(P + "kicker", { x: -20, opacity: 0 }, { x: 0, opacity: 1, duration: 0.45, ease: "power3.out" }, 0.15);
+      tl.fromTo(P + "tag", { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "power2.out" }, 0.25);
+      // barely-perceptible camera drift under the rest of the shot
+      tl.fromTo(P + "plate", { scale: 1 }, { scale: 1.02, duration: 4.65, ease: "sine.inOut", immediateRender: false }, 1.35);
+
+      // Scene 2 (1.5–3.0s): mono facts, one per beat; a warn hairline box marks each matching cell.
+      tl.fromTo(P + "fact-1", { x: -24, opacity: 0 }, { x: 0, opacity: 1, duration: 0.45, ease: "power3.out" }, 1.5);
+      tl.fromTo(P + "ring-row", { scale: 0, rotation: -4 }, { scale: 1, rotation: -1, duration: 0.55, ease: "back.out(1.7)" }, 1.62);
+      tl.fromTo(P + "fact-2", { x: -24, opacity: 0 }, { x: 0, opacity: 1, duration: 0.45, ease: "power3.out" }, 2.05);
+      tl.fromTo(P + "ring-conf", { scale: 0, rotation: -4 }, { scale: 1, rotation: -1, duration: 0.55, ease: "back.out(1.7)" }, 2.17);
+      tl.fromTo(P + "ring-price", { scale: 0, rotation: -4 }, { scale: 1, rotation: -1, duration: 0.55, ease: "back.out(1.7)" }, 2.29);
+
+      // Scene 3 (3.0–4.0s): HELD stamp — headline-slam mechanics: scale-down landing,
+      // then a deterministic three-frame stage shake on impact (3.0s), then still.
+      var SHAKE_FRAME = 1 / 30;
+      tl.fromTo(P + "stamp", { scale: 1.6, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.3, ease: "expo.out" }, 2.72);
+      tl.to(P + "stage", { x: 10.5, y: -3.2, duration: SHAKE_FRAME, ease: "power2.out" }, 3.0);
+      tl.to(P + "stage", { x: -7.3, y: 2.2, duration: SHAKE_FRAME, ease: "power2.out" }, 3.0 + SHAKE_FRAME);
+      tl.to(P + "stage", { x: 0, y: 0, duration: SHAKE_FRAME, ease: "power2.out" }, 3.0 + SHAKE_FRAME * 2);
+
+      // Scene 4 (4.0–6.0s): statement lines rise out of their masks, one per beat; hold still.
+      tl.fromTo(P + "line-1", { yPercent: 110 }, { yPercent: 0, duration: 0.55, ease: "power3.out" }, 4.0);
+      tl.fromTo(P + "line-2", { yPercent: 110 }, { yPercent: 0, duration: 0.55, ease: "power3.out" }, 4.55);
+      tl.fromTo(P + "line-3", { yPercent: 110 }, { yPercent: 0, duration: 0.55, ease: "power3.out" }, 5.1);
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines["08-held-not-guessed"] = tl;
+    })();
+  </script>
+</template>

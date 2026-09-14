@@ -1,0 +1,17 @@
+{
+  "name": "scout-inventory-routing-demo",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node --test tests/*.test.js",
+    "check": "node --check app.js && node --check demo.js && node --check server.js",
+    "app": "mkmacapp",
+    "install-app": "mkmacapp --install"
+  },
+  "devDependencies": {
+    "happy-dom": "^20.14.3"
+  }
+}

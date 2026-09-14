@@ -1,0 +1,184 @@
+<template>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <style>
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/space-grotesk.woff2") format("woff2"); font-weight: 400 700; }
+    @font-face { font-family: "DM Mono"; src: url("assets/fonts/dm-mono.woff2") format("woff2"); font-weight: 400 500; }
+
+    #root { position: absolute; inset: 0; width: 1920px; height: 1080px; overflow: hidden; color: #E9E8DF; font-family: "Space Grotesk", sans-serif; }
+
+    /* full-bleed ground on its own clip layer (never on #root) */
+    .f05-slow-seller-bg { position: absolute; inset: 0; background: #0D0F0E; }
+    .f05-slow-seller-layer { position: absolute; inset: 0; }
+
+    .f05-slow-seller-lime { color: #D6FF55; }
+
+    /* mono chrome */
+    .f05-slow-seller-kicker { position: absolute; left: 106px; top: 106px; font-family: "DM Mono", monospace; font-weight: 500; font-size: 14px; line-height: 1; letter-spacing: .14em; text-transform: uppercase; color: #D6FF55; }
+    .f05-slow-seller-tag { position: absolute; right: 106px; top: 100px; font-family: "DM Mono", monospace; font-weight: 500; font-size: 14px; line-height: 1; letter-spacing: .14em; text-transform: uppercase; color: #A0A49A; border: 1px solid #30342F; padding: 6px 10px; }
+
+    /* top strip window onto the real screenshot: header band + Lodge row band, 1.28x */
+    .f05-slow-seller-window { position: absolute; left: 106px; top: 160px; width: 1708px; height: 260px; overflow: hidden; background: #151816; outline: 1px solid #30342F; }
+    .f05-slow-seller-crop { position: absolute; left: 0; width: 1708px; overflow: hidden; }
+    .f05-slow-seller-crop-hdr { top: 0; height: 67px; }
+    .f05-slow-seller-crop-row { top: 67px; height: 193px; }
+    .f05-slow-seller-shot { position: absolute; left: 0; top: 0; width: 1920px; height: 1655px; max-width: none; transform-origin: 0 0; }
+    .f05-slow-seller-scrim { position: absolute; left: 0; width: 1708px; background: rgba(13, 15, 14, .62); }
+    .f05-slow-seller-mark { position: absolute; top: 211px; height: 2px; background: #A0A49A; transform-origin: 0 50%; }
+
+    /* route lanes — flat, 1px hairlines, 0 radius */
+    .f05-slow-seller-lane { position: absolute; top: 480px; width: 834px; height: 150px; box-sizing: border-box; border: 1px solid #30342F; padding: 24px; display: flex; flex-direction: column; justify-content: space-between; align-items: flex-start; }
+    .f05-slow-seller-lane-label { font-family: "DM Mono", monospace; font-weight: 500; font-size: 16px; line-height: 1; letter-spacing: .14em; text-transform: uppercase; color: #B5B9AF; }
+    .f05-slow-seller-lane-value { font-size: 44px; font-weight: 700; line-height: 1; letter-spacing: -.02em; }
+    .f05-slow-seller-muted { color: #A0A49A; }
+
+    .f05-slow-seller-token { position: absolute; left: 776px; top: 502px; width: 140px; box-sizing: border-box; padding: 9px 0; text-align: center; font-family: "DM Mono", monospace; font-weight: 500; font-size: 22px; line-height: 1; letter-spacing: .08em; color: #E9E8DF; background: #0D0F0E; border: 1px solid #A0A49A; }
+
+    /* the payoff statement */
+    .f05-slow-seller-statement { position: absolute; left: 106px; top: 700px; font-size: 72px; font-weight: 700; line-height: 1.1; letter-spacing: -.02em; white-space: nowrap; }
+    .f05-slow-seller-statement span { display: inline-block; }
+  </style>
+
+  <div data-hf-id="hf-moz2" id="root" data-composition-id="05-slow-seller" data-width="1920" data-height="1080" data-duration="6.5">
+    <div data-hf-id="hf-y2wr" class="clip f05-slow-seller-bg" data-start="0" data-duration="6.5" data-track-index="0"></div>
+
+    <div data-hf-id="hf-xikm" class="clip f05-slow-seller-layer" data-start="0" data-duration="6.5" data-track-index="1">
+      <div data-hf-id="hf-0p9q" id="f05-slow-seller-kicker" class="f05-slow-seller-kicker">FATE 02 · THE PALLET</div>
+      <div data-hf-id="hf-pr3y" id="f05-slow-seller-tag" class="f05-slow-seller-tag">SAMPLE DATA</div>
+
+      <!-- Scene 1: punch-in window on assets/view-singles.png (header band + Lodge row band) -->
+      <div data-hf-id="hf-a73a" id="f05-slow-seller-window" class="f05-slow-seller-window">
+        <div data-hf-id="hf-or2h" class="f05-slow-seller-crop f05-slow-seller-crop-hdr">
+          <img data-hf-id="hf-gky5" id="f05-slow-seller-img-hdr" class="f05-slow-seller-shot" src="assets/view-singles.png" alt="">
+        </div>
+        <div data-hf-id="hf-rzjr" class="f05-slow-seller-crop f05-slow-seller-crop-row">
+          <img data-hf-id="hf-o9zv" id="f05-slow-seller-img-row" class="f05-slow-seller-shot" src="assets/view-singles.png" alt="">
+        </div>
+        <!-- focus: dim the neighbouring rows, leave the Lodge row lit -->
+        <div data-hf-id="hf-ritg" id="f05-slow-seller-scrim-a" class="f05-slow-seller-scrim" style="top:67px;height:88px"></div>
+        <div data-hf-id="hf-ke91" id="f05-slow-seller-scrim-b" class="f05-slow-seller-scrim" style="top:243px;height:17px"></div>
+        <!-- underline marker under 9 / 16d / REC. 0 -->
+        <div data-hf-id="hf-trzv" class="f05-slow-seller-mark" style="left:624px;width:44px"></div>
+        <div data-hf-id="hf-1o0d" class="f05-slow-seller-mark" style="left:826px;width:64px"></div>
+        <div data-hf-id="hf-nq9c" class="f05-slow-seller-mark" style="left:1341px;width:44px"></div>
+      </div>
+
+      <!-- Scene 2: SHELF lane -->
+      <div data-hf-id="hf-zunq" id="f05-slow-seller-shelf" class="f05-slow-seller-lane" style="left:106px">
+        <span data-hf-id="hf-ntd4" id="f05-slow-seller-shelf-label" class="f05-slow-seller-lane-label">SHELF</span>
+        <b data-hf-id="hf-8udh" id="f05-slow-seller-shelf-value" class="f05-slow-seller-lane-value f05-slow-seller-muted">pull: 0</b>
+      </div>
+
+      <!-- Scene 3: PALLET lane -->
+      <div data-hf-id="hf-wazd" id="f05-slow-seller-pallet" class="f05-slow-seller-lane" style="left:980px">
+        <span data-hf-id="hf-rrtz" id="f05-slow-seller-pallet-label" class="f05-slow-seller-lane-label">PALLET →</span>
+        <b data-hf-id="hf-0hjp" id="f05-slow-seller-pallet-value" class="f05-slow-seller-lane-value">22 units available</b>
+      </div>
+
+      <!-- Scene 3: the routed token (rides SHELF → PALLET) -->
+      <div data-hf-id="hf-qpps" id="f05-slow-seller-token" class="f05-slow-seller-token">LO × 22</div>
+
+      <!-- Scene 4: the statement -->
+      <div data-hf-id="hf-gpbc" class="f05-slow-seller-statement"><span data-hf-id="hf-yqg8" id="f05-slow-seller-p1">slow on the shelf.</span> <span data-hf-id="hf-jtbj" id="f05-slow-seller-p2" class="f05-slow-seller-lime">strong in a pallet.</span></div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      window.__timelines = window.__timelines || {};
+      var tl = gsap.timeline({ paused: true });
+
+      // One tempo grid (music ~110 BPM) drives the statement beats.
+      var PULSE = 60 / 110;
+      var BEATS = [PULSE * 7, PULSE * 9]; // ≈ 3.82s, 4.91s
+
+      // ---- Scene 1 (0.0–1.2s): strip punch-in on the real page, lock at 1.28x ----
+      // Zoom about the Lodge row's focal point: page x1100 stays at window x853.76.
+      // Final mapping: page x433 → window x0; header band shows page y591–643,
+      // row band shows page y1049–1200 (Lodge row box 1118–1186).
+      var S0 = 1.1, S1 = 1.28, FX = 1100, FXW = 853.76;
+      function hx(s) { return FXW - FX * s; }
+      function hdrY(s) { return 33.28 - 617 * s; }   // header label centre page y617 → band y33.28
+      function rowY(s) { return 131.84 - 1152 * s; } // Lodge row centre page y1152 → band y131.84
+
+      tl.fromTo("#f05-slow-seller-window",
+        { opacity: 0.25, filter: "blur(14px)" },
+        { opacity: 1, filter: "blur(0px)", duration: 0.55, ease: "expo.out" }, 0.05);
+      tl.fromTo("#f05-slow-seller-img-hdr",
+        { x: hx(S0), y: hdrY(S0), scale: S0 },
+        { x: hx(S1), y: hdrY(S1), scale: S1, duration: 0.95, ease: "expo.out" }, 0.05);
+      tl.fromTo("#f05-slow-seller-img-row",
+        { x: hx(S0), y: rowY(S0), scale: S0 },
+        { x: hx(S1), y: rowY(S1), scale: S1, duration: 0.95, ease: "expo.out" }, 0.05);
+
+      tl.fromTo("#f05-slow-seller-kicker",
+        { x: -16, opacity: 0 },
+        { x: 0, opacity: 1, duration: 0.5, ease: "power3.out" }, 0.12);
+      tl.fromTo("#f05-slow-seller-tag",
+        { opacity: 0 },
+        { opacity: 1, duration: 0.4, ease: "power2.out" }, 0.3);
+
+      // underline marker sweeps 9 → 16d → REC. 0 (left→right)
+      tl.fromTo(".f05-slow-seller-mark",
+        { scaleX: 0 },
+        { scaleX: 1, duration: 0.3, ease: "power3.out", stagger: 0.12 }, 0.68);
+      // neighbouring rows dim once the frame locks
+      tl.fromTo("#f05-slow-seller-scrim-a, #f05-slow-seller-scrim-b",
+        { opacity: 0 },
+        { opacity: 1, duration: 0.4, ease: "power2.out" }, 0.85);
+
+      // ---- Scene 2 (1.2–2.4s): SHELF lane reveals left ----
+      tl.fromTo("#f05-slow-seller-shelf",
+        { clipPath: "inset(0% 100% 0% 0%)" },
+        { clipPath: "inset(0% 0% 0% 0%)", duration: 0.5, ease: "power3.out" }, 1.2);
+      tl.fromTo("#f05-slow-seller-shelf-label",
+        { x: -14, opacity: 0 },
+        { x: 0, opacity: 1, duration: 0.4, ease: "power3.out" }, 1.32);
+      tl.fromTo("#f05-slow-seller-shelf-value",
+        { y: 22, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" }, 1.66);
+
+      // ---- Scene 3 (2.4–3.8s): token rises, rides right into the PALLET lane ----
+      tl.fromTo("#f05-slow-seller-pallet",
+        { clipPath: "inset(0% 100% 0% 0%)" },
+        { clipPath: "inset(0% 0% 0% 0%)", duration: 0.45, ease: "power3.out" }, 2.15);
+      tl.fromTo("#f05-slow-seller-pallet-label",
+        { x: -14, opacity: 0 },
+        { x: 0, opacity: 1, duration: 0.4, ease: "power3.out" }, 2.25);
+
+      tl.fromTo("#f05-slow-seller-token",
+        { y: 26, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.32, ease: "power3.out" }, 2.32);
+      // cut-the-curve velocity profile: power4.in ramp to mid-route (≈5,830 px/s),
+      // then an expo.out long-tail stop matched to that speed. 874px = lane-to-lane offset.
+      tl.fromTo("#f05-slow-seller-token",
+        { x: 0 },
+        { x: 437, duration: 0.3, ease: "power4.in", immediateRender: false }, 2.5);
+      tl.to("#f05-slow-seller-token",
+        { x: 874, duration: 0.52, ease: "expo.out" }, 2.8);
+
+      // arrival: PALLET hairline turns lime, token + label take the accent
+      tl.fromTo("#f05-slow-seller-pallet",
+        { borderColor: "#30342F" },
+        { borderColor: "#D6FF55", duration: 0.25, ease: "power2.out", immediateRender: false }, 3.3);
+      tl.fromTo("#f05-slow-seller-pallet-label",
+        { color: "#B5B9AF" },
+        { color: "#D6FF55", duration: 0.25, ease: "power2.out", immediateRender: false }, 3.3);
+      tl.fromTo("#f05-slow-seller-token",
+        { color: "#E9E8DF", borderColor: "#A0A49A" },
+        { color: "#D6FF55", borderColor: "#D6FF55", duration: 0.25, ease: "power2.out", immediateRender: false }, 3.3);
+      tl.fromTo("#f05-slow-seller-pallet-value",
+        { y: 22, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" }, 3.45);
+
+      // ---- Scene 4 (3.8–6.0s): kinetic-beat-slam, restrained; then hold still ----
+      tl.fromTo("#f05-slow-seller-p1",
+        { scale: 1.1, filter: "blur(10px)", opacity: 0, transformOrigin: "0% 60%" },
+        { scale: 1, filter: "blur(0px)", opacity: 1, duration: 0.5, ease: "power4.out" }, BEATS[0]);
+      tl.fromTo("#f05-slow-seller-p2",
+        { x: -56, opacity: 0 },
+        { x: 0, opacity: 1, duration: 0.45, ease: "expo.out" }, BEATS[1]);
+
+      window.__timelines["05-slow-seller"] = tl;
+    })();
+  </script>
+</template>

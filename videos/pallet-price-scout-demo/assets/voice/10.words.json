@@ -1,0 +1,62 @@
+[
+  {
+    "id": "w0",
+    "text": "Shelves",
+    "start": 0,
+    "end": 0.4
+  },
+  {
+    "id": "w1",
+    "text": "stay",
+    "start": 0.4,
+    "end": 0.72
+  },
+  {
+    "id": "w2",
+    "text": "stocked",
+    "start": 0.72,
+    "end": 1.28
+  },
+  {
+    "id": "w3",
+    "text": "Pallets",
+    "start": 1.84,
+    "end": 2.24
+  },
+  {
+    "id": "w4",
+    "text": "prove",
+    "start": 2.24,
+    "end": 2.56
+  },
+  {
+    "id": "w5",
+    "text": "their",
+    "start": 2.56,
+    "end": 2.72
+  },
+  {
+    "id": "w6",
+    "text": "value",
+    "start": 2.72,
+    "end": 3.2
+  },
+  {
+    "id": "w7",
+    "text": "Nothing",
+    "start": 3.68,
+    "end": 4.08
+  },
+  {
+    "id": "w8",
+    "text": "gets",
+    "start": 4.08,
+    "end": 4.32
+  },
+  {
+    "id": "w9",
+    "text": "guessed",
+    "start": 4.32,
+    "end": 4.8
+  }
+]

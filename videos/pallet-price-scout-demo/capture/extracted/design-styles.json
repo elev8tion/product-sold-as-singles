@@ -1,0 +1,268 @@
+{
+  "typography": [
+    {
+      "role": "display",
+      "fontFamily": "Space Grotesk",
+      "fontSize": "34px",
+      "fontWeight": "500",
+      "lineHeight": "36.72px",
+      "letterSpacing": "-1.87px",
+      "color": "#E9E8DF",
+      "sampleText": "The right items.The right place."
+    },
+    {
+      "role": "heading",
+      "fontFamily": "Space Grotesk",
+      "fontSize": "29px",
+      "fontWeight": "500",
+      "lineHeight": "33.64px",
+      "letterSpacing": "-1.305px",
+      "color": "#E9E8DF",
+      "sampleText": "Good inventory. Better decisions."
+    },
+    {
+      "role": "heading-3",
+      "fontFamily": "Space Grotesk",
+      "fontSize": "15px",
+      "fontWeight": "500",
+      "lineHeight": "normal",
+      "letterSpacing": "-0.375px",
+      "color": "#E9E8DF",
+      "sampleText": "Send the best sellers first."
+    },
+    {
+      "role": "body",
+      "fontFamily": "Space Grotesk",
+      "fontSize": "12px",
+      "fontWeight": "400",
+      "lineHeight": "20.4px",
+      "letterSpacing": "0.14px",
+      "color": "#A0A49A",
+      "sampleText": "Keep your best sellers moving.Build more value into the rest"
+    },
+    {
+      "role": "code",
+      "fontFamily": "DM Mono",
+      "fontSize": "12px",
+      "fontWeight": "700",
+      "lineHeight": "normal",
+      "letterSpacing": "0.14px",
+      "color": "#E9E8DF",
+      "sampleText": "48"
+    },
+    {
+      "role": "link",
+      "fontFamily": "Space Grotesk",
+      "fontSize": "11px",
+      "fontWeight": "700",
+      "lineHeight": "normal",
+      "letterSpacing": "1.32px",
+      "color": "#E9E8DF",
+      "sampleText": "✳PALLET PRICE SCOUTINVENTORY ROUTING"
+    },
+    {
+      "role": "body-small",
+      "fontFamily": "DM Mono",
+      "fontSize": "9px",
+      "fontWeight": "400",
+      "lineHeight": "normal",
+      "letterSpacing": "0.72px",
+      "color": "#A0A49A",
+      "sampleText": "INVENTORY ROUTING"
+    },
+    {
+      "role": "label",
+      "fontFamily": "DM Mono",
+      "fontSize": "8px",
+      "fontWeight": "400",
+      "lineHeight": "normal",
+      "letterSpacing": "0.32px",
+      "color": "#D6FF55",
+      "sampleText": "✓ ANALYSIS COMPLETE"
+    }
+  ],
+  "spacing": {
+    "observed": [
+      3,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "baseUnit": 4
+  },
+  "radius": [
+    "1px",
+    "2px",
+    "3px"
+  ],
+  "shadows": [],
+  "buttons": [
+    {
+      "label": "↻ Reset demo",
+      "background": "transparent",
+      "backgroundImage": "",
+      "backdropFilter": "",
+      "color": "#A0A49A",
+      "padding": "3px 0px",
+      "borderRadius": "0px",
+      "border": "0px none rgb(160, 164, 154)",
+      "boxShadow": "none",
+      "fontSize": "10px",
+      "fontWeight": "400",
+      "height": "19px"
+    },
+    {
+      "label": "↓ Export routing plan",
+      "background": "transparent",
+      "backgroundImage": "",
+      "backdropFilter": "",
+      "color": "#E9E8DF",
+      "padding": "11px 13px",
+      "borderRadius": "2px",
+      "border": "1px solid rgb(82, 89, 75)",
+      "boxShadow": "none",
+      "fontSize": "10px",
+      "fontWeight": "400",
+      "height": "37px"
+    },
+    {
+      "label": "View results ↗",
+      "background": "transparent",
+      "backgroundImage": "",
+      "backdropFilter": "",
+      "color": "#E9E8DF",
+      "padding": "3px 0px",
+      "borderRadius": "0px",
+      "border": "0px none rgb(233, 232, 223)",
+      "boxShadow": "none",
+      "fontSize": "9px",
+      "fontWeight": "400",
+      "height": "18px"
+    },
+    {
+      "label": "Review pull list →",
+      "background": "transparent",
+      "backgroundImage": "",
+      "backdropFilter": "",
+      "color": "#D6FF55",
+      "padding": "3px 0px",
+      "borderRadius": "0px",
+      "border": "0px none rgb(214, 255, 85)",
+      "boxShadow": "none",
+      "fontSize": "10px",
+      "fontWeight": "400",
+      "height": "19px"
+    },
+    {
+      "label": "Review held items ↗",
+      "background": "transparent",
+      "backgroundImage": "",
+      "backdropFilter": "",
+      "color": "#FF8058",
+      "padding": "3px 0px",
+      "borderRadius": "0px",
+      "border": "0px none rgb(255, 128, 88)",
+      "boxShadow": "none",
+      "fontSize": "9px",
+      "fontWeight": "400",
+      "height": "18px"
+    },
+    {
+      "label": "PALLET / 01↗$400sale priceMinimum retail",
+      "background": "#151816",
+      "backgroundImage": "",
+      "backdropFilter": "",
+      "color": "#E9E8DF",
+      "padding": "17px 16px 0px",
+      "borderRadius": "3px",
+      "border": "1px solid rgb(48, 52, 47)",
+      "boxShadow": "none",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "height": "196px"
+    }
+  ],
+  "cards": [
+    {
+      "label": "card",
+      "background": "#151816",
+      "backgroundImage": "",
+      "backdropFilter": "",
+      "color": "#E9E8DF",
+      "padding": "17px 13px",
+      "borderRadius": "0px",
+      "border": "1px solid rgb(48, 52, 47)",
+      "boxShadow": "none",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "height": "141px"
+    },
+    {
+      "label": "card",
+      "background": "#151816",
+      "backgroundImage": "",
+      "backdropFilter": "",
+      "color": "#E9E8DF",
+      "padding": "0px",
+      "borderRadius": "3px",
+      "border": "1px solid rgb(48, 52, 47)",
+      "boxShadow": "none",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "height": "131.391px"
+    }
+  ],
+  "nav": {
+    "label": "navigation",
+    "background": "transparent",
+    "backgroundImage": "",
+    "backdropFilter": "",
+    "color": "#E9E8DF",
+    "padding": "0px",
+    "borderRadius": "0px",
+    "border": "",
+    "boxShadow": "none",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "height": "57px"
+  },
+  "chips": [
+    {
+      "label": "✓ ANALYSIS COMPLETE",
+      "background": "#202719",
+      "color": "#D6FF55",
+      "padding": "5px 6px",
+      "borderRadius": "1px",
+      "border": "1px solid rgb(82, 101, 53)",
+      "boxShadow": "none",
+      "fontSize": "8px",
+      "fontWeight": "400",
+      "height": "22px"
+    }
+  ],
+  "statCells": [
+    {
+      "background": "transparent",
+      "borderRadius": "0px",
+      "border": "",
+      "boxShadow": "none",
+      "numberFontSize": "34px",
+      "numberFontWeight": "500",
+      "numberColor": "#E9E8DF"
+    }
+  ],
+  "tabs": [],
+  "backgrounds": [],
+  "glass": []
+}

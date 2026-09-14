@@ -1,0 +1,215 @@
+<template>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <style>
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/space-grotesk.woff2") format("woff2"); font-weight: 300 700; font-display: block; }
+    @font-face { font-family: "DM Mono"; src: url("assets/fonts/dm-mono.woff2") format("woff2"); font-weight: 400; font-display: block; }
+
+    #root { position: absolute; inset: 0; width: 1920px; height: 1080px; overflow: hidden; color: #E9E8DF; font-family: "Space Grotesk", sans-serif; }
+
+    /* layer 1 — ground */
+    .f02-where-it-goes-bg { position: absolute; inset: 0; background: #0D0F0E; }
+    .f02-where-it-goes-layer { position: absolute; inset: 0; }
+
+    /* chrome — mono kicker, rule stub, tag */
+    .f02-where-it-goes-kicker { position: absolute; left: 106px; top: 106px; font-family: "DM Mono", monospace; font-weight: 400; font-size: 18px; line-height: 1; letter-spacing: .14em; text-transform: uppercase; color: #D6FF55; white-space: nowrap; }
+    .f02-where-it-goes-caret { display: inline-block; width: 10px; height: 18px; margin-left: 4px; vertical-align: top; background: #D6FF55; }
+    .f02-where-it-goes-stub { position: absolute; left: 106px; top: 140px; width: 36px; height: 2px; background: #D6FF55; transform-origin: 0 50%; }
+    .f02-where-it-goes-tag { position: absolute; right: 106px; top: 106px; font-family: "DM Mono", monospace; font-weight: 400; font-size: 14px; line-height: 1; letter-spacing: .14em; text-transform: uppercase; color: #A0A49A; border: 1px solid #30342F; padding: 7px 10px; }
+
+    /* layer 3 — the promise, left column (40) */
+    .f02-where-it-goes-copy { position: absolute; left: 106px; top: 250px; width: 640px; }
+    .f02-where-it-goes-route { font-size: 72px; font-weight: 700; line-height: 1.1; letter-spacing: -.02em; }
+    .f02-where-it-goes-route + .f02-where-it-goes-route { margin-top: 20px; }
+    .f02-where-it-goes-chunk { display: inline-block; white-space: nowrap; }
+    .f02-where-it-goes-lime { color: #D6FF55; }
+    .f02-where-it-goes-arrow { display: inline-block; width: .8em; height: .5em; vertical-align: .02em; }
+    .f02-where-it-goes-arrow svg { display: block; width: 100%; height: 100%; overflow: visible; }
+    .f02-where-it-goes-rule { width: 640px; height: 1px; margin-top: 26px; background: #30342F; transform-origin: 0 50%; }
+    .f02-where-it-goes-verdict { margin-top: 24px; font-size: 72px; font-weight: 700; line-height: 1.1; letter-spacing: -.02em; color: #D6FF55; }
+
+    /* layer 2 — the app window, right column (60) */
+    .f02-where-it-goes-window { position: absolute; left: 820px; top: 150px; width: 994px; height: 600px; }
+    .f02-where-it-goes-view { position: absolute; inset: 0; overflow: hidden; background: #0D0F0E; }
+    .f02-where-it-goes-world { position: absolute; left: 0; top: 0; width: 1920px; height: 1340px; transform-origin: 0 0; }
+    .f02-where-it-goes-shot { position: absolute; left: 0; top: 0; width: 1920px; height: 1340px; display: block; }
+    .f02-where-it-goes-mask { position: absolute; top: 629px; height: 19px; background: #151816; transform-origin: 100% 50%; }
+    .f02-where-it-goes-track { position: absolute; left: 0; top: 0; width: 0; height: 0; box-sizing: border-box; border: 2px solid #D6FF55; }
+    .f02-where-it-goes-frame { position: absolute; inset: 0; border: 1px solid #30342F; pointer-events: none; }
+  </style>
+
+  <div data-hf-id="hf-v88w" id="root" data-composition-id="02-where-it-goes" data-width="1920" data-height="1080" data-duration="6.5">
+    <!-- ground -->
+    <div data-hf-id="hf-pkix" class="clip f02-where-it-goes-bg" data-start="0" data-duration="6.5" data-track-index="0"></div>
+
+    <div data-hf-id="hf-vjio" class="clip f02-where-it-goes-layer" data-start="0" data-duration="6.5" data-track-index="1">
+      <!-- window: real Overview capture, camera lives inside -->
+      <div data-hf-id="hf-t6ti" id="f02-where-it-goes-window" class="f02-where-it-goes-window">
+        <div data-hf-id="hf-6qfr" class="f02-where-it-goes-view">
+          <div data-hf-id="hf-df7m" id="f02-where-it-goes-world" class="f02-where-it-goes-world">
+            <img data-hf-id="hf-91dg" class="f02-where-it-goes-shot" src="assets/view-overview.png" width="1920" height="1340" alt="">
+            <!-- bar-fill masks over the real 40 / 166 / 9 bar (page css px, measured from the capture) -->
+            <div data-hf-id="hf-5t49" id="f02-where-it-goes-mask-a" class="f02-where-it-goes-mask" style="left:1497px;width:48px"></div>
+            <div data-hf-id="hf-uf8f" id="f02-where-it-goes-mask-b" class="f02-where-it-goes-mask" style="left:1545px;width:191px"></div>
+            <div data-hf-id="hf-ig30" id="f02-where-it-goes-mask-c" class="f02-where-it-goes-mask" style="left:1736px;width:14px"></div>
+          </div>
+          <div data-hf-id="hf-cu3k" id="f02-where-it-goes-track" class="f02-where-it-goes-track"></div>
+        </div>
+        <div data-hf-id="hf-m7sz" class="f02-where-it-goes-frame"></div>
+      </div>
+
+      <!-- chrome -->
+      <div data-hf-id="hf-qusk" id="f02-where-it-goes-kicker" class="f02-where-it-goes-kicker"><span data-hf-id="hf-m5cb" id="f02-where-it-goes-kicker-text"></span><i data-hf-id="hf-jwy8" id="f02-where-it-goes-caret" class="f02-where-it-goes-caret"></i></div>
+      <div data-hf-id="hf-a8dm" id="f02-where-it-goes-stub" class="f02-where-it-goes-stub"></div>
+      <div data-hf-id="hf-pr3y" id="f02-where-it-goes-tag" class="f02-where-it-goes-tag">SAMPLE DATA</div>
+
+      <!-- the promise -->
+      <div data-hf-id="hf-fwa1" class="f02-where-it-goes-copy">
+        <div data-hf-id="hf-t25f" class="f02-where-it-goes-route">
+          <span data-hf-id="hf-i7n4" id="f02-where-it-goes-r1a" class="f02-where-it-goes-chunk">best sellers</span>
+          <span data-hf-id="hf-lbrl" id="f02-where-it-goes-r1b" class="f02-where-it-goes-arrow"><svg data-hf-id="hf-hi21" viewBox="0 0 60 36" aria-hidden="true"><path data-hf-id="hf-68um" d="M3 18 H52 M38 5 L53 18 L38 31" fill="none" stroke="#E9E8DF" stroke-width="6" stroke-linecap="square" stroke-linejoin="miter" /></svg></span>
+          <span data-hf-id="hf-0li6" id="f02-where-it-goes-r1c" class="f02-where-it-goes-chunk f02-where-it-goes-lime">the shelf.</span>
+        </div>
+        <div data-hf-id="hf-gylf" class="f02-where-it-goes-route">
+          <span data-hf-id="hf-atec" id="f02-where-it-goes-r2a" class="f02-where-it-goes-chunk">the rest</span>
+          <span data-hf-id="hf-1ro4" id="f02-where-it-goes-r2b" class="f02-where-it-goes-arrow"><svg data-hf-id="hf-pztp" viewBox="0 0 60 36" aria-hidden="true"><path data-hf-id="hf-r2oi" d="M3 18 H52 M38 5 L53 18 L38 31" fill="none" stroke="#E9E8DF" stroke-width="6" stroke-linecap="square" stroke-linejoin="miter" /></svg></span>
+          <span data-hf-id="hf-ksbm" id="f02-where-it-goes-r2c" class="f02-where-it-goes-chunk f02-where-it-goes-lime">value-backed</span>
+          <span data-hf-id="hf-4648" id="f02-where-it-goes-r2d" class="f02-where-it-goes-chunk f02-where-it-goes-lime">pallets.</span>
+        </div>
+        <div data-hf-id="hf-92ze" id="f02-where-it-goes-rule" class="f02-where-it-goes-rule"></div>
+        <div data-hf-id="hf-x2tf" class="f02-where-it-goes-verdict">
+          <span data-hf-id="hf-j8de" id="f02-where-it-goes-v1" class="f02-where-it-goes-chunk">nothing</span>
+          <span data-hf-id="hf-w7xo" id="f02-where-it-goes-v2" class="f02-where-it-goes-chunk">guessed.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var ID = "02-where-it-goes";
+      var P = "#f02-where-it-goes-";
+      var tl = gsap.timeline({ paused: true });
+
+      // ---------------------------------------------------------------
+      // Camera — zoom-out-workspace-reveal (sub-shape B), coordinate-target-zoom
+      // reversed. One world (the real Overview, page css px), transform-origin
+      // 0 0, single writer: point p -> T + S*p. Window viewport 994x600.
+      // ---------------------------------------------------------------
+      var VW = 994, VH = 600;
+      var FX = 1623, FY = 602;            // "Where it goes." panel: header -> legend, centred
+      var S0 = 1.9;                       // open tight
+      var SD = 1.82;                      // end of the gentle pre-reveal drift (~4%)
+      var S1 = VW / 1920;                 // wide: page x0-1920 fit to window width (shows y0-1160)
+      var DRIFT_END = 2.8, LOCK = 4.1;
+      var PANEL = { x: 1478, y: 445, w: 290, h: 492 }, OUT = 3;
+      var driftEase = gsap.parseEase("power1.in");
+      var revealEase = gsap.parseEase("expo.out");
+      var TXD = VW / 2 - SD * FX, TYD = VH / 2 - SD * FY;
+
+      function camAt(t) {
+        var s, tx, ty, e;
+        if (t <= DRIFT_END) {
+          e = driftEase(Math.max(0, t) / DRIFT_END);
+          s = S0 + (SD - S0) * e;
+          tx = VW / 2 - s * FX; ty = VH / 2 - s * FY;
+        } else if (t < LOCK) {
+          e = revealEase((t - DRIFT_END) / (LOCK - DRIFT_END));
+          s = SD + (S1 - SD) * e;
+          tx = TXD * (1 - e); ty = TYD * (1 - e);
+        } else {
+          s = S1; tx = 0; ty = 0;
+        }
+        return { s: s, tx: tx, ty: ty };
+      }
+
+      var world = document.querySelector(P + "world");
+      var track = document.querySelector(P + "track");
+      function applyCam(t) {
+        var c = camAt(t);
+        world.style.transform = "translate(" + c.tx.toFixed(3) + "px," + c.ty.toFixed(3) + "px) scale(" + c.s.toFixed(5) + ")";
+        track.style.left = (c.tx + c.s * PANEL.x - OUT).toFixed(2) + "px";
+        track.style.top = (c.ty + c.s * PANEL.y - OUT).toFixed(2) + "px";
+        track.style.width = (c.s * PANEL.w + OUT * 2).toFixed(2) + "px";
+        track.style.height = (c.s * PANEL.h + OUT * 2).toFixed(2) + "px";
+      }
+      applyCam(0);
+      var cam = { t: 0 };
+      // the only camera tween; it ends at LOCK — no camera motion after the lock
+      tl.to(cam, { t: LOCK, duration: LOCK, ease: "none", onUpdate: function () { applyCam(cam.t); } }, 0);
+
+      // window present from the open
+      tl.fromTo(P + "window", { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power2.out" }, 0);
+      tl.fromTo(P + "tag", { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "power2.out" }, 0.3);
+
+      // Scene 1 close-up micro-action — the real 40 / 166 / 9 bar fills left-to-right
+      tl.fromTo(P + "mask-a", { scaleX: 1 }, { scaleX: 0, duration: 0.35, ease: "power2.out" }, 0.25);
+      tl.fromTo(P + "mask-b", { scaleX: 1 }, { scaleX: 0, duration: 0.6, ease: "power2.inOut" }, 0.55);
+      tl.fromTo(P + "mask-c", { scaleX: 1 }, { scaleX: 0, duration: 0.18, ease: "power2.out" }, 1.12);
+
+      // lime marker locks onto the panel just before the pull, then rides it home
+      tl.fromTo(P + "track", { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power2.out" }, 2.45);
+
+      // ---------------------------------------------------------------
+      // Scenes 1–2 — dynamic-content-sequencing: per-chunk reveal times
+      // pre-computed from content length (BASE + chars * SEC_PER_CHAR).
+      // ---------------------------------------------------------------
+      var BASE = 0.2, SEC_PER_CHAR = 0.02, REVEAL = 0.45;
+      var ROUTES = [
+        { start: 0.2, chunks: [
+          { id: "r1a", text: "best sellers" },
+          { id: "r1b", text: "→", arrow: true },
+          { id: "r1c", text: "the shelf." }
+        ] },
+        { start: 1.45, chunks: [
+          { id: "r2a", text: "the rest" },
+          { id: "r2b", text: "→", arrow: true },
+          { id: "r2c", text: "value-backed" },
+          { id: "r2d", text: "pallets." }
+        ] }
+      ];
+      var SEQ = [];
+      ROUTES.forEach(function (route) {
+        var cumulative = route.start;
+        route.chunks.forEach(function (c) {
+          SEQ.push({ id: c.id, arrow: !!c.arrow, start: cumulative });
+          cumulative += BASE + c.text.length * SEC_PER_CHAR;
+        });
+      });
+      SEQ.forEach(function (c) {
+        if (c.arrow) {
+          tl.fromTo(P + c.id, { opacity: 0, x: -24 }, { opacity: 1, x: 0, duration: REVEAL, ease: "power3.out" }, c.start);
+        } else {
+          tl.fromTo(P + c.id, { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: REVEAL, ease: "power3.out" }, c.start);
+        }
+      });
+
+      // Scene 3 — hairline under the two routes, then the verdict lands as the window locks
+      tl.fromTo(P + "rule", { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: "power3.out" }, 3.45);
+      tl.fromTo(P + "v1", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.5, ease: "power4.out" }, 3.72);
+      tl.fromTo(P + "v2", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.5, ease: "power4.out" }, 3.86);
+
+      // Scene 4 — the product named at the payoff: stub draws, mono kicker types on, then hold
+      tl.fromTo(P + "stub", { scaleX: 0 }, { scaleX: 1, duration: 0.3, ease: "power3.out" }, 4.05);
+      var KICKER = "PALLET PRICE SCOUT · INVENTORY ROUTING";
+      var kickerText = document.querySelector(P + "kicker-text");
+      var caret = document.querySelector(P + "caret");
+      var lastCount = -1;
+      // guarded writer: DOM touched only when the character count changes;
+      // the caret shows only while characters are landing (hidden before + after)
+      function applyKicker(n) {
+        var count = Math.max(0, Math.min(KICKER.length, Math.floor(n)));
+        if (count !== lastCount) {
+          kickerText.textContent = KICKER.slice(0, count);
+          caret.style.opacity = count > 0 && count < KICKER.length ? "1" : "0";
+          lastCount = count;
+        }
+      }
+      applyKicker(0);
+      var type = { n: 0 };
+      tl.to(type, { n: KICKER.length, duration: 0.9, ease: "none", onUpdate: function () { applyKicker(type.n); } }, 4.15);
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines[ID] = tl;
+    })();
+  </script>
+</template>

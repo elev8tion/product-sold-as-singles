@@ -1,0 +1,313 @@
+<template>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <style>
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/space-grotesk.woff2") format("woff2"); font-weight: 400 700; }
+    @font-face { font-family: "DM Mono"; src: url("assets/fonts/dm-mono.woff2") format("woff2"); font-weight: 400 500; }
+
+    #root {
+      position: absolute;
+      inset: 0;
+      width: 1920px;
+      height: 1080px;
+      overflow: hidden;
+      color: #E9E8DF;
+      font-family: "Space Grotesk", sans-serif;
+    }
+    #root *, #root *::before, #root *::after { box-sizing: border-box; }
+
+    .f07-build-the-value-bg { position: absolute; inset: 0; background: #0D0F0E; }
+    .f07-build-the-value-layer { position: absolute; inset: 0; }
+
+    /* chrome */
+    .f07-build-the-value-kicker {
+      position: absolute; left: 106px; top: 106px;
+      font-family: "DM Mono", monospace; font-size: 14px; font-weight: 500;
+      letter-spacing: 0.14em; text-transform: uppercase; color: #D6FF55; line-height: 18px;
+    }
+    .f07-build-the-value-tag {
+      position: absolute; right: 106px; top: 98px;
+      font-family: "DM Mono", monospace; font-size: 14px; font-weight: 500;
+      letter-spacing: 0.14em; text-transform: uppercase; color: #A0A49A;
+      border: 1px solid #30342F; padding: 6px 10px; line-height: 18px;
+    }
+
+    /* left window — the captured page, seen through a virtual camera */
+    .f07-build-the-value-window {
+      position: absolute; left: 106px; top: 160px; width: 980px; height: 680px;
+      border: 1px solid #30342F; background: #151816; overflow: hidden;
+    }
+    .f07-build-the-value-world {
+      position: absolute; left: 0; top: 0; width: 1920px; height: 1435px;
+      transform-origin: 0 0; will-change: transform;
+    }
+    .f07-build-the-value-shot { position: absolute; left: 0; top: 0; width: 1920px; height: 1435px; display: block; max-width: none; }
+    .f07-build-the-value-hl {
+      position: absolute; left: 433px; top: 987px; width: 1014px; height: 59px;
+      background: rgba(214, 255, 85, 0.08); transform-origin: 50% 100%;
+    }
+    .f07-build-the-value-hl::before {
+      content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: #D6FF55;
+    }
+    .f07-build-the-value-ul {
+      position: absolute; left: 1190px; width: 94px; height: 3px; background: #D6FF55; transform-origin: 0 50%;
+    }
+
+    /* right — rebuilt pallet composition panel */
+    .f07-build-the-value-panel {
+      position: absolute; left: 1160px; top: 160px; width: 654px; height: 680px;
+      border: 1px solid #30342F; background: #151816;
+    }
+    .f07-build-the-value-panel > * { position: absolute; left: 32px; right: 32px; }
+    .f07-build-the-value-label {
+      top: 32px; font-family: "DM Mono", monospace; font-size: 14px; font-weight: 500;
+      letter-spacing: 0.14em; text-transform: uppercase; color: #A0A49A; line-height: 18px;
+    }
+    .f07-build-the-value-stat {
+      top: 66px; height: 136px; font-size: 136px; font-weight: 700; line-height: 1;
+      letter-spacing: -0.04em; color: #D6FF55; white-space: nowrap;
+      font-variant-numeric: tabular-nums; font-feature-settings: "tnum" 1;
+    }
+    .f07-build-the-value-num { display: inline-block; transform-origin: 0% 85%; }
+    .f07-build-the-value-ticklabel {
+      left: 562px; right: auto; width: 72px; top: 218px; text-align: center;
+      font-family: "DM Mono", monospace; font-size: 14px; font-weight: 500;
+      letter-spacing: 0.06em; color: #A0A49A; line-height: 18px;
+    }
+    .f07-build-the-value-meter { top: 244px; height: 10px; }
+    .f07-build-the-value-track { position: absolute; inset: 0; background: #30342F; transform-origin: 0 50%; }
+    .f07-build-the-value-fill { position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: #D6FF55; transform-origin: 0 50%; }
+    .f07-build-the-value-tick {
+      position: absolute; left: 566px; top: -8px; bottom: -8px; width: 2px; background: #E9E8DF; transform-origin: 50% 50%;
+    }
+    .f07-build-the-value-min {
+      top: 272px; height: 28px; display: flex; justify-content: space-between; align-items: baseline;
+      font-size: 22px; color: #A0A49A; line-height: 28px;
+    }
+    .f07-build-the-value-min b { font-family: "DM Mono", monospace; font-weight: 500; font-size: 20px; color: #E9E8DF; }
+    .f07-build-the-value-check {
+      top: 314px; height: 38px; display: flex; align-items: center; gap: 12px;
+    }
+    .f07-build-the-value-check svg { width: 32px; height: 32px; flex: 0 0 auto; overflow: visible; }
+    .f07-build-the-value-check polyline {
+      fill: none; stroke: #D6FF55; stroke-width: 3.5; stroke-linecap: square; stroke-linejoin: miter;
+      stroke-dasharray: 1;
+    }
+    .f07-build-the-value-checktext {
+      font-size: 32px; font-weight: 700; letter-spacing: -0.02em; line-height: 38px; color: #D6FF55; white-space: nowrap;
+    }
+    .f07-build-the-value-rule { height: 1px; background: #30342F; transform-origin: 0 50%; }
+    .f07-build-the-value-item {
+      height: 36px; display: flex; align-items: baseline; line-height: 36px; white-space: nowrap;
+    }
+    .f07-build-the-value-qty {
+      width: 58px; flex: 0 0 auto; font-family: "DM Mono", monospace; font-size: 22px; font-weight: 500; color: #D6FF55;
+    }
+    .f07-build-the-value-name { flex: 1 1 auto; font-size: 26px; font-weight: 500; color: #E9E8DF; }
+    .f07-build-the-value-amt {
+      flex: 0 0 auto; font-family: "DM Mono", monospace; font-size: 24px; font-weight: 500; color: #E9E8DF;
+      font-variant-numeric: tabular-nums;
+    }
+    .f07-build-the-value-foot {
+      top: 614px; height: 32px; display: flex; justify-content: space-between; align-items: baseline; line-height: 32px; white-space: nowrap;
+    }
+    .f07-build-the-value-footl { font-size: 22px; font-weight: 500; color: #A0A49A; }
+    .f07-build-the-value-footl em { font-style: normal; color: #E9E8DF; }
+    .f07-build-the-value-footr {
+      font-family: "DM Mono", monospace; font-size: 15px; font-weight: 500; letter-spacing: 0.14em;
+      text-transform: uppercase; color: #A0A49A;
+    }
+  </style>
+
+  <div data-hf-id="hf-78bp" id="root" data-composition-id="07-build-the-value" data-width="1920" data-height="1080" data-duration="7.4">
+    <div data-hf-id="hf-iltt" class="clip f07-build-the-value-bg" data-start="0" data-duration="7.4" data-track-index="0"></div>
+
+    <div data-hf-id="hf-xkyg" class="clip f07-build-the-value-layer" data-start="0" data-duration="7.4" data-track-index="1">
+      <div data-hf-id="hf-epaq" class="f07-build-the-value-kicker" id="f07-build-the-value-kicker">$400 pallet · slow sellers</div>
+      <div data-hf-id="hf-wv8i" class="f07-build-the-value-tag" id="f07-build-the-value-tag">Sample data</div>
+
+      <!-- LEFT: inventory table (real capture) behind a single-state virtual camera -->
+      <div data-hf-id="hf-vzqu" class="f07-build-the-value-window" id="f07-build-the-value-window">
+        <div data-hf-id="hf-jp8r" class="f07-build-the-value-world" id="f07-build-the-value-world" data-layout-allow-overflow="">
+          <img data-hf-id="hf-uagv" class="f07-build-the-value-shot" src="assets/view-pallets-slow-sellers.png" alt="" width="1920" height="1435">
+          <div data-hf-id="hf-0pj6" class="f07-build-the-value-hl" id="f07-build-the-value-hl"></div>
+          <div data-hf-id="hf-qe3c" class="f07-build-the-value-ul" id="f07-build-the-value-ul-ip" style="top:977px"></div>
+          <div data-hf-id="hf-bw1h" class="f07-build-the-value-ul" id="f07-build-the-value-ul-lodge" style="top:1036px"></div>
+          <div data-hf-id="hf-4em0" class="f07-build-the-value-ul" id="f07-build-the-value-ul-levoit" style="top:1095px"></div>
+          <div data-hf-id="hf-dm62" class="f07-build-the-value-ul" id="f07-build-the-value-ul-oster" style="top:1154px"></div>
+        </div>
+      </div>
+
+      <!-- RIGHT: composition panel (rebuilt — the consequence) -->
+      <div data-hf-id="hf-7obo" class="f07-build-the-value-panel" id="f07-build-the-value-panel">
+        <div data-hf-id="hf-h3yp" class="f07-build-the-value-label" id="f07-build-the-value-label">Accumulated retail</div>
+        <div data-hf-id="hf-2loq" class="f07-build-the-value-stat" id="f07-build-the-value-stat"><span data-hf-id="hf-doiz" class="f07-build-the-value-num" id="f07-build-the-value-num">$<span data-hf-id="hf-u5r4" id="f07-build-the-value-count">0</span></span></div>
+        <div data-hf-id="hf-4g6j" class="f07-build-the-value-ticklabel" id="f07-build-the-value-ticklabel">$520</div>
+        <div data-hf-id="hf-fnee" class="f07-build-the-value-meter" id="f07-build-the-value-meter">
+          <div data-hf-id="hf-ytcy" class="f07-build-the-value-track" id="f07-build-the-value-track"></div>
+          <div data-hf-id="hf-skfm" class="f07-build-the-value-fill" id="f07-build-the-value-fill"></div>
+          <div data-hf-id="hf-jzs2" class="f07-build-the-value-tick" id="f07-build-the-value-tick"></div>
+        </div>
+        <div data-hf-id="hf-amys" class="f07-build-the-value-min" id="f07-build-the-value-min"><span data-hf-id="hf-1ird">of $520 minimum</span><b data-hf-id="hf-r2of">104%</b></div>
+        <div data-hf-id="hf-d8q0" class="f07-build-the-value-check" id="f07-build-the-value-check">
+          <svg data-hf-id="hf-nlni" viewBox="0 0 32 32" aria-hidden="true"><polyline data-hf-id="hf-7g8s" id="f07-build-the-value-checkmark" points="5,17 13,25 27,8" pathLength="1" /></svg>
+          <span data-hf-id="hf-cp0z" class="f07-build-the-value-checktext" id="f07-build-the-value-checktext">retail target reached</span>
+        </div>
+        <div data-hf-id="hf-sya6" class="f07-build-the-value-rule" id="f07-build-the-value-rule1" style="top:374px"></div>
+        <div data-hf-id="hf-35e3" class="f07-build-the-value-item" id="f07-build-the-value-item0" style="top:392px"><span data-hf-id="hf-dwom" class="f07-build-the-value-qty">10×</span><span data-hf-id="hf-rnnr" class="f07-build-the-value-name">Lodge cast iron skillet</span><span data-hf-id="hf-xk4v" class="f07-build-the-value-amt">$300</span></div>
+        <div data-hf-id="hf-q6m6" class="f07-build-the-value-item" id="f07-build-the-value-item1" style="top:442px"><span data-hf-id="hf-j2dc" class="f07-build-the-value-qty">1×</span><span data-hf-id="hf-0e1l" class="f07-build-the-value-name">Instant Pot Duo</span><span data-hf-id="hf-iso5" class="f07-build-the-value-amt">$100</span></div>
+        <div data-hf-id="hf-qfca" class="f07-build-the-value-item" id="f07-build-the-value-item2" style="top:492px"><span data-hf-id="hf-62m0" class="f07-build-the-value-qty">1×</span><span data-hf-id="hf-yd8w" class="f07-build-the-value-name">Levoit air purifier</span><span data-hf-id="hf-375b" class="f07-build-the-value-amt">$90</span></div>
+        <div data-hf-id="hf-klit" class="f07-build-the-value-item" id="f07-build-the-value-item3" style="top:542px"><span data-hf-id="hf-4vox" class="f07-build-the-value-qty">1×</span><span data-hf-id="hf-g6rm" class="f07-build-the-value-name">Oster blender</span><span data-hf-id="hf-44dv" class="f07-build-the-value-amt">$50</span></div>
+        <div data-hf-id="hf-lggn" class="f07-build-the-value-rule" id="f07-build-the-value-rule2" style="top:596px"></div>
+        <div data-hf-id="hf-t3b9" class="f07-build-the-value-foot">
+          <span data-hf-id="hf-qqvw" class="f07-build-the-value-footl" id="f07-build-the-value-footl">$400 pallet · <em data-hf-id="hf-zyqi">35%</em> above sale</span>
+          <span data-hf-id="hf-t5hz" class="f07-build-the-value-footr" id="f07-build-the-value-footr">13 units / 4 SKUs</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      "use strict";
+      var P = "f07-build-the-value-";
+      function $(id) { return document.getElementById(P + id); }
+
+      var tl = gsap.timeline({ paused: true });
+
+      // ---------- virtual camera (viewport-change): ONE state, ONE writer ----------
+      // origin 0 0: screen = T + s * pagePoint  →  T = viewCenter − s * target
+      var world = $("world");
+      var VIEW_CX = 489, VIEW_CY = 339; // window inner center (980×680 minus 1px border)
+      var cam = { s: 0.97, cx: 880, cy: 1080 };
+      function applyCamera() {
+        var tx = VIEW_CX - cam.s * cam.cx;
+        var ty = VIEW_CY - cam.s * cam.cy;
+        world.style.transform = "translate(" + tx.toFixed(2) + "px, " + ty.toFixed(2) + "px) scale(" + cam.s.toFixed(4) + ")";
+      }
+      applyCamera();
+      function camTo(s, cx, cy, dur, ease, at) {
+        tl.to(cam, { s: s, cx: cx, cy: cy, duration: dur, ease: ease, onUpdate: applyCamera }, at);
+      }
+
+      // Row centers (page CSS px, from the capture DOM dump): IP 957.5 · Lodge 1016.5 · Levoit 1075.5 · Oster 1134.5
+      var ROW = 59, CAM_X = 866;
+      var Y_IP = 957.5, Y_LODGE = 1016.5, Y_LEVOIT = 1075.5, Y_OSTER = 1134.5, Y_GROUP = 1046;
+
+      // ---------- Scene 1 (0.0–1.6): establish — window + panel, empty meter, $520 tick ----------
+      tl.fromTo($("window"), { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 0);
+      tl.fromTo($("panel"), { opacity: 0, x: 40 }, { opacity: 1, x: 0, duration: 0.55, ease: "power3.out" }, 0.08);
+      tl.fromTo($("kicker"), { opacity: 0, x: -16 }, { opacity: 1, x: 0, duration: 0.45, ease: "power3.out" }, 0.14);
+      tl.fromTo($("tag"), { opacity: 0 }, { opacity: 1, duration: 0.45, ease: "power2.out" }, 0.22);
+
+      // leg 1 — dive in onto the Lodge row (hard out)
+      camTo(1.1, CAM_X, Y_LODGE, 1.3, "power4.out", 0);
+
+      tl.fromTo($("label"), { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, 0.3);
+      tl.fromTo($("stat"), { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "power2.out" }, 0.38);
+      tl.fromTo($("track"), { scaleX: 0 }, { scaleX: 1, duration: 0.55, ease: "power3.out" }, 0.5);
+      tl.fromTo($("tick"), { scaleY: 0 }, { scaleY: 1, duration: 0.3, ease: "power3.out" }, 0.85);
+      tl.fromTo($("ticklabel"), { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 0.9);
+
+      tl.fromTo($("hl"), { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power2.out" }, 0.95);
+      tl.fromTo($("ul-lodge"), { scaleX: 0 }, { scaleX: 1, duration: 0.4, ease: "power3.out" }, 1.05);
+      tl.fromTo($("rule1"), { scaleX: 0 }, { scaleX: 1, duration: 0.45, ease: "power3.out" }, 1.2);
+
+      // ---------- Scene 2 (1.6–3.6): line items land one per beat; count + fill in lockstep ----------
+      // count mechanics adapted from the installed count-up component: every displayed integer is
+      // precomputed per 30fps frame and placed with tl.set — seek-safe, no callbacks.
+      var FPS = 30;
+      var countEl = $("count");
+      var numEl = $("num");
+      var fillEl = $("fill");
+      var MAX = 540;
+      function sOf(v) { return 0.58 + 0.42 * (v / MAX); } // counting-dynamic-scale: weight escalates with value
+
+      function countStep(from, to, at, dur, easeName) {
+        var ease = gsap.parseEase(easeName);
+        var last = Math.max(1, Math.round(dur * FPS));
+        for (var f = 1; f <= last; f += 1) {
+          var v = from + (to - from) * ease(f / last);
+          tl.set(countEl, { textContent: String(Math.round(v)) }, at + dur * (f / last));
+        }
+      }
+
+      var steps = [
+        { at: 1.6, from: 0,   to: 300, dur: 0.5, ease: "power3.out",   item: "item0" },
+        { at: 2.1, from: 300, to: 400, dur: 0.5, ease: "power3.out",   item: "item1" },
+        { at: 2.6, from: 400, to: 490, dur: 0.5, ease: "power3.out",   item: "item2" },
+        { at: 3.1, from: 490, to: 540, dur: 0.8, ease: "power2.inOut", item: "item3" }
+      ];
+
+      steps.forEach(function (st, i) {
+        // the line item lands (click-soft on the beat)
+        tl.fromTo($(st.item), { opacity: 0, x: 36 }, { opacity: 1, x: 0, duration: 0.4, ease: "power3.out" }, st.at);
+        // the counter (value + scale share timing and ease)
+        countStep(st.from, st.to, st.at, st.dur, st.ease);
+        if (i === 0) {
+          tl.fromTo(numEl, { scale: sOf(st.from) }, { scale: sOf(st.to), duration: st.dur, ease: st.ease }, st.at);
+          tl.fromTo(fillEl, { scaleX: 0 }, { scaleX: st.to / MAX, duration: st.dur, ease: st.ease }, st.at);
+        } else {
+          tl.to(numEl, { scale: sOf(st.to), duration: st.dur, ease: st.ease }, st.at);
+          tl.to(fillEl, { scaleX: st.to / MAX, duration: st.dur, ease: st.ease }, st.at);
+        }
+      });
+
+      // left view steps row to row, arriving just before each item lands (cause → consequence)
+      var PAN = 0.36, PAN_EASE = "power2.inOut";
+      camTo(1.1, CAM_X, Y_IP, PAN, PAN_EASE, 1.72);
+      tl.to($("hl"), { y: -ROW, duration: PAN, ease: PAN_EASE }, 1.72);
+      tl.fromTo($("ul-ip"), { scaleX: 0 }, { scaleX: 1, duration: 0.35, ease: "power3.out" }, 1.95);
+
+      camTo(1.1, CAM_X, Y_LEVOIT, PAN, PAN_EASE, 2.22);
+      tl.to($("hl"), { y: ROW, duration: PAN, ease: PAN_EASE }, 2.22);
+      tl.fromTo($("ul-levoit"), { scaleX: 0 }, { scaleX: 1, duration: 0.35, ease: "power3.out" }, 2.45);
+
+      camTo(1.1, CAM_X, Y_OSTER, PAN, PAN_EASE, 2.72);
+      tl.to($("hl"), { y: 2 * ROW, duration: PAN, ease: PAN_EASE }, 2.72);
+      tl.fromTo($("ul-oster"), { scaleX: 0 }, { scaleX: 1, duration: 0.35, ease: "power3.out" }, 2.95);
+
+      // ---------- Scene 3 (3.6–5.0): the fill crosses the $520 tick → target reached ----------
+      // exact crossing moment of the last fill tween (520/540), solved once at build — deterministic
+      var last = steps[3];
+      var lastEase = gsap.parseEase(last.ease);
+      var need = (520 - last.from) / (last.to - last.from);
+      var tCross = 1;
+      for (var k = 0; k <= 1000; k += 1) { if (lastEase(k / 1000) >= need) { tCross = k / 1000; break; } }
+      var CROSS_AT = last.at + last.dur * tCross;
+
+      tl.to($("tick"), { scaleY: 1.9, duration: 0.14, ease: "power3.out" }, CROSS_AT);
+      tl.to($("tick"), { scaleY: 1, duration: 0.3, ease: "power2.out" }, CROSS_AT + 0.14);
+      tl.to($("ticklabel"), { color: "#D6FF55", duration: 0.25, ease: "power2.out" }, CROSS_AT);
+
+      // "✓ retail target reached" writes in lime (chime at 3.7)
+      tl.fromTo($("checkmark"), { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.3, ease: "power2.out" }, 3.7);
+      tl.fromTo($("checktext"),
+        { clipPath: "inset(0% 100% 0% 0%)" },
+        { clipPath: "inset(0% 0% 0% 0%)", duration: 0.5, ease: "power2.out" }, 3.78);
+
+      // the counter lands on $540 with one restrained pulse (count-up landing)
+      var LAND = last.at + last.dur;
+      tl.to(numEl, { scale: 1.05, duration: 0.16, ease: "power3.out" }, LAND);
+      tl.to(numEl, { scale: 1, duration: 0.22, ease: "power2.out" }, LAND + 0.16);
+
+      // "of $520 minimum · 104%" settles under the counter
+      tl.fromTo($("min"), { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 4.1);
+
+      // leg 3 — pull back to frame the whole built pallet; the focus band widens to all four rows
+      camTo(1.04, CAM_X, Y_GROUP, 1.0, "power2.inOut", 3.75);
+      tl.to($("hl"), { scaleY: 4, duration: 0.7, ease: "power2.inOut" }, 3.8);
+
+      // ---------- Scene 4 (5.0–7.0): footer rows reveal, then hold ----------
+      tl.fromTo($("rule2"), { scaleX: 0 }, { scaleX: 1, duration: 0.45, ease: "power3.out" }, 5.0);
+      tl.fromTo($("footl"), { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 5.05);
+      tl.fromTo($("footr"), { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 5.35);
+
+      // landing — near-imperceptible drift so the hold never dies
+      camTo(1.054, CAM_X, Y_GROUP, 2.65, "sine.inOut", 4.75);
+
+      tl.seek(0);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["07-build-the-value"] = tl;
+    })();
+  </script>
+</template>

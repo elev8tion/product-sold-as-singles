@@ -1,0 +1,128 @@
+<template>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <style>
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/space-grotesk.woff2") format("woff2"); font-weight: 400 700; }
+    @font-face { font-family: "DM Mono"; src: url("assets/fonts/dm-mono.woff2") format("woff2"); font-weight: 400 500; }
+
+    #root {
+      position: absolute; inset: 0; width: 1920px; height: 1080px; overflow: hidden;
+      color: #E9E8DF; font-family: "Space Grotesk", sans-serif;
+    }
+    .f10-what-you-get-bg { position: absolute; inset: 0; background: #0D0F0E; }
+    .f10-what-you-get-layer { position: absolute; inset: 0; }
+    .f10-what-you-get-cam { position: absolute; inset: 0; transform-origin: 106px 420px; }
+
+    /* kicker + rule stub (chrome) */
+    .f10-what-you-get-kicker {
+      position: absolute; left: 106px; top: 106px;
+      font-family: "DM Mono", monospace; font-weight: 500; font-size: 14px; line-height: 1;
+      letter-spacing: 0.14em; text-transform: uppercase; color: #D6FF55; white-space: nowrap;
+    }
+    .f10-what-you-get-stub {
+      position: absolute; left: 106px; top: 136px; width: 36px; height: 2px;
+      background: #D6FF55; transform-origin: 0 50%;
+    }
+
+    /* the three-line benefit list — the focal */
+    .f10-what-you-get-list { position: absolute; left: 106px; top: 260px; }
+    .f10-what-you-get-line {
+      font-size: 88px; font-weight: 700; line-height: 1.25; letter-spacing: -0.03em;
+      white-space: nowrap; color: #E9E8DF;
+    }
+    .f10-what-you-get-mark {
+      display: inline-block; font-family: "DM Mono", monospace; font-weight: 500;
+      letter-spacing: 0; color: #D6FF55; margin-right: 0.12em;
+    }
+    .f10-what-you-get-w {
+      display: inline-block; vertical-align: baseline;
+      clip-path: inset(0 -0.2em 0 -0.2em);
+    }
+    .f10-what-you-get-wi { display: inline-block; }
+  </style>
+
+  <div data-hf-id="hf-4ydw" id="root" data-composition-id="10-what-you-get" data-width="1920" data-height="1080" data-duration="6">
+    <div data-hf-id="hf-wao0" class="clip f10-what-you-get-bg" data-start="0" data-duration="6" data-track-index="0"></div>
+
+    <div data-hf-id="hf-s7ph" class="clip f10-what-you-get-layer" data-start="0" data-duration="6" data-track-index="1">
+      <div data-hf-id="hf-xo1f" class="f10-what-you-get-cam">
+        <div data-hf-id="hf-2tg7" class="f10-what-you-get-kicker">WHAT YOU GET</div>
+        <div data-hf-id="hf-2li2" class="f10-what-you-get-stub"></div>
+
+        <div data-hf-id="hf-mhwt" class="f10-what-you-get-list">
+          <div data-hf-id="hf-sdtr" class="f10-what-you-get-line"><span data-hf-id="hf-uho7" class="f10-what-you-get-mark">/</span><span data-hf-id="hf-c7m8" class="f10-what-you-get-w"><span data-hf-id="hf-yhtn" class="f10-what-you-get-wi">best</span></span> <span data-hf-id="hf-2lpk" class="f10-what-you-get-w"><span data-hf-id="hf-fl8r" class="f10-what-you-get-wi">sellers</span></span> <span data-hf-id="hf-1esh" class="f10-what-you-get-w"><span data-hf-id="hf-22u4" class="f10-what-you-get-wi">stay</span></span> <span data-hf-id="hf-1t3i" class="f10-what-you-get-w"><span data-hf-id="hf-gbok" class="f10-what-you-get-wi">on</span></span> <span data-hf-id="hf-0m6f" class="f10-what-you-get-w"><span data-hf-id="hf-iyyg" class="f10-what-you-get-wi">the</span></span> <span data-hf-id="hf-10hg" class="f10-what-you-get-w"><span data-hf-id="hf-rce3" class="f10-what-you-get-wi">shelf.</span></span></div>
+          <div data-hf-id="hf-5ix9" class="f10-what-you-get-line"><span data-hf-id="hf-9cdz" class="f10-what-you-get-mark">/</span><span data-hf-id="hf-ztkd" class="f10-what-you-get-w"><span data-hf-id="hf-fa8o" class="f10-what-you-get-wi">every</span></span> <span data-hf-id="hf-07ve" class="f10-what-you-get-w"><span data-hf-id="hf-osv3" class="f10-what-you-get-wi">pallet</span></span> <span data-hf-id="hf-5dur" class="f10-what-you-get-w"><span data-hf-id="hf-kufb" class="f10-what-you-get-wi">clears</span></span> <span data-hf-id="hf-5s5s" class="f10-what-you-get-w"><span data-hf-id="hf-lw0q" class="f10-what-you-get-wi">1.30×</span></span> <span data-hf-id="hf-gux4" class="f10-what-you-get-w"><span data-hf-id="hf-piio" class="f10-what-you-get-wi">retail.</span></span></div>
+          <div data-hf-id="hf-hbkw" class="f10-what-you-get-line"><span data-hf-id="hf-4w3u" class="f10-what-you-get-mark">/</span><span data-hf-id="hf-ggm3" class="f10-what-you-get-w"><span data-hf-id="hf-hxm6" class="f10-what-you-get-wi">nothing</span></span> <span data-hf-id="hf-g2b2" class="f10-what-you-get-w"><span data-hf-id="hf-ve3c" class="f10-what-you-get-wi">gets</span></span> <span data-hf-id="hf-fo01" class="f10-what-you-get-w"><span data-hf-id="hf-zzh7" class="f10-what-you-get-wi">guessed.</span></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var ID = "10-what-you-get";
+      var DURATION = 5;
+      var root = document.querySelector('[data-composition-id="' + ID + '"]') || document;
+      var q = function (sel) { return root.querySelectorAll(sel); };
+
+      window.__timelines = window.__timelines || {};
+      var tl = gsap.timeline({ paused: true });
+
+      // ── dynamic-content-sequencing: pre-compute every reveal time ONCE from content length ──
+      // One slot per benefit line (~1.4s each, on the 0.3 / 1.7 / 3.1 click beats);
+      // inside a slot the marker draws first, then words reveal with a gap that grows
+      // with each word's character count — longer words earn more time.
+      var SLOT = 1.4;          // Scene windows: 0.0–1.4 / 1.4–2.8 / 2.8–4.2
+      var MARK_AT = 0.3;       // marker draw lands on the soft click
+      var WORDS_AT = 0.48;     // first word follows the finished stroke
+      var BASE_GAP = 0.05;     // BASE_DURATION per word
+      var SEC_PER_CHAR = 0.012;
+      var WORD_DUR = 0.42;
+
+      var lines = Array.prototype.slice.call(q(".f10-what-you-get-line"));
+      var TIMELINE = lines.map(function (line, i) {
+        var slotStart = i * SLOT;
+        var words = Array.prototype.slice.call(line.querySelectorAll(".f10-what-you-get-wi"));
+        var cumulative = slotStart + WORDS_AT;
+        var wordTimes = words.map(function (w) {
+          var start = cumulative;
+          cumulative += BASE_GAP + w.textContent.length * SEC_PER_CHAR;
+          return { el: w, start: start };
+        });
+        return {
+          mark: line.querySelector(".f10-what-you-get-mark"),
+          markAt: slotStart + MARK_AT,
+          words: wordTimes
+        };
+      });
+
+      // ── Scene 1 (0.0–1.4s): kicker + rule stub open the field ──
+      tl.fromTo(q(".f10-what-you-get-kicker"),
+        { opacity: 0, x: -16 },
+        { opacity: 1, x: 0, duration: 0.4, ease: "power3.out" }, 0.05);
+      tl.fromTo(q(".f10-what-you-get-stub"),
+        { scaleX: 0 },
+        { scaleX: 1, duration: 0.35, ease: "power2.out" }, 0.12);
+
+      // ── Scenes 1–3: each line — lime `/` draws (bottom → top), then per-word mask rise ──
+      TIMELINE.forEach(function (entry) {
+        tl.fromTo(entry.mark,
+          { clipPath: "inset(100% 0% 0% 0%)", y: 10 },
+          { clipPath: "inset(0% 0% 0% 0%)", y: 0, duration: 0.26, ease: "power2.out" },
+          entry.markAt);
+        entry.words.forEach(function (w) {
+          tl.fromTo(w.el,
+            { yPercent: 105, opacity: 0 },
+            { yPercent: 0, opacity: 1, duration: WORD_DUR, ease: "power3.out" },
+            w.start);
+        });
+      });
+
+      // ── macro camera underneath: a faint, steady push; Scene 4 (4.2–5.0s) reads as a still hold ──
+      tl.fromTo(q(".f10-what-you-get-cam"),
+        { scale: 1 },
+        { scale: 1.012, duration: DURATION, ease: "none" }, 0);
+
+      window.__timelines[ID] = tl;
+    })();
+  </script>
+</template>

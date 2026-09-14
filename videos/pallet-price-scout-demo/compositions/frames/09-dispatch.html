@@ -1,0 +1,189 @@
+<template>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <style>
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/space-grotesk.woff2") format("woff2"); font-weight: 300 700; font-display: block; }
+    @font-face { font-family: "DM Mono"; src: url("assets/fonts/dm-mono.woff2") format("woff2"); font-weight: 400; font-display: block; }
+
+    #root { position: absolute; inset: 0; width: 1920px; height: 1080px; overflow: hidden; color: #E9E8DF; font-family: "Space Grotesk", sans-serif; }
+
+    /* full-bleed ground on its own clip (never on #root) */
+    .f09-dispatch-bg { position: absolute; inset: 0; background: #0D0F0E; }
+    .f09-dispatch-layer { position: absolute; inset: 0; }
+    /* virtual camera — origin at the CSV chip (the commit push-in target) */
+    .f09-dispatch-cam { position: absolute; inset: 0; transform-origin: 312px 744px; }
+
+    .f09-dispatch-mono { font-family: "DM Mono", monospace; font-weight: 400; letter-spacing: .14em; text-transform: uppercase; }
+
+    /* chrome */
+    .f09-dispatch-kicker { position: absolute; left: 106px; top: 106px; font-size: 16px; line-height: 1.2; color: #D6FF55; }
+    .f09-dispatch-tag { position: absolute; right: 106px; top: 98px; font-size: 14px; line-height: 1.2; color: #A0A49A; border: 1px solid #30342F; padding: 7px 12px; }
+
+    /* headline — h2 ramp, lowercase, per-word masked reveal */
+    .f09-dispatch-h2 { position: absolute; left: 106px; top: 150px; margin: 0; font-size: 86px; font-weight: 700; line-height: 1.1; letter-spacing: -.02em; white-space: nowrap; }
+    .f09-dispatch-wm { display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: .16em; margin-bottom: -.16em; }
+    .f09-dispatch-w { display: inline-block; }
+    .f09-dispatch-dot { color: #D6FF55; }
+
+    /* manifest cards — top-hairline stat-card, flat panel, 0 radius */
+    .f09-dispatch-card { position: absolute; top: 360px; width: 834px; height: 280px; }
+    .f09-dispatch-panel { position: absolute; inset: 0; background: #151816; transform-origin: 50% 0; }
+    .f09-dispatch-hair { position: absolute; left: 0; top: 0; width: 100%; height: 1px; background: #30342F; transform-origin: 0 50%; }
+    .f09-dispatch-stub { position: absolute; left: 0; top: 0; width: 36px; height: 2px; background: #D6FF55; transform-origin: 0 50%; }
+    .f09-dispatch-label { position: absolute; left: 32px; top: 36px; font-size: 16px; line-height: 1.2; color: #D6FF55; }
+    .f09-dispatch-big { position: absolute; left: 32px; top: 86px; font-size: 64px; font-weight: 700; line-height: 1; letter-spacing: -.04em; white-space: nowrap; }
+    .f09-dispatch-big em { font-style: normal; font-weight: 500; color: #A0A49A; letter-spacing: -.02em; }
+    .f09-dispatch-arrow { display: inline-block; width: 58px; height: 35px; margin: 0 16px 0 14px; vertical-align: 3px; overflow: visible; }
+    .f09-dispatch-sub { position: absolute; left: 32px; top: 170px; font-family: "DM Mono", monospace; font-weight: 400; font-size: 24px; line-height: 1.2; color: #A0A49A; white-space: nowrap; font-variant-numeric: tabular-nums; }
+    .f09-dispatch-hi { color: #E9E8DF; }
+    .f09-dispatch-sub.f09-dispatch-lime, .f09-dispatch-sub.f09-dispatch-lime .f09-dispatch-hi { color: #D6FF55; }
+    .f09-dispatch-track { position: absolute; left: 32px; right: 32px; top: 222px; height: 4px; background: #30342F; }
+    .f09-dispatch-fill { position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: #D6FF55; transform-origin: 0 50%; }
+    .f09-dispatch-tick { position: absolute; top: -6px; width: 2px; height: 16px; margin-left: -1px; background: #E9E8DF; }
+    .f09-dispatch-tick-sale { top: -4px; width: 1px; height: 12px; background: #A0A49A; }
+    .f09-dispatch-foot { position: absolute; left: 32px; top: 242px; font-size: 14px; line-height: 1.2; color: #A0A49A; white-space: nowrap; }
+    .f09-dispatch-pill { position: absolute; right: 32px; top: 28px; display: flex; align-items: center; gap: 9px; font-size: 15px; line-height: 1.2; color: #D6FF55; border: 1px solid #D6FF55; background: rgba(214, 255, 85, .08); padding: 8px 12px; transform-origin: 50% 50%; white-space: nowrap; }
+    .f09-dispatch-pill svg { width: 15px; height: 15px; overflow: visible; }
+
+    /* export chip — tactile press target */
+    .f09-dispatch-chipwrap { position: absolute; left: 106px; top: 700px; }
+    .f09-dispatch-burst { position: absolute; inset: 0; z-index: 1; border: 2px solid rgba(214, 255, 85, 0); transform-origin: 50% 50%; }
+    .f09-dispatch-chip { position: relative; z-index: 2; display: flex; align-items: center; gap: 18px; font-family: "DM Mono", monospace; font-weight: 400; font-size: 32px; line-height: 1.2; letter-spacing: .02em; color: #E9E8DF; background: #151816; border: 1px solid #E9E8DF; padding: 24px 36px; transform-origin: 50% 50%; white-space: nowrap; }
+    .f09-dispatch-chip svg { width: 22px; height: 28px; overflow: visible; }
+
+    /* provenance strip — the real capture, cropped to Store transfers + Packed pallets */
+    .f09-dispatch-strip { position: absolute; left: 980px; top: 680px; width: 834px; height: 160px; overflow: hidden; background: #0D0F0E; }
+    .f09-dispatch-world { position: absolute; left: 0; top: 0; width: 1920px; height: 1106px; transform-origin: 0 0; }
+    .f09-dispatch-world img { display: block; width: 1920px; height: 1106px; }
+  </style>
+
+  <div data-hf-id="hf-w845" id="root" data-composition-id="09-dispatch" data-width="1920" data-height="1080" data-duration="5.6">
+    <div data-hf-id="hf-mhbx" class="clip f09-dispatch-bg" data-start="0" data-duration="5.6" data-track-index="0"></div>
+
+    <div data-hf-id="hf-bbqi" class="clip f09-dispatch-layer" data-start="0" data-duration="5.6" data-track-index="1">
+      <div data-hf-id="hf-7irq" id="f09-dispatch-cam" class="f09-dispatch-cam">
+
+        <div data-hf-id="hf-x25d" id="f09-dispatch-kicker" class="f09-dispatch-kicker f09-dispatch-mono">05 · PACKING &amp; DISPATCH</div>
+        <div data-hf-id="hf-pr3y" id="f09-dispatch-tag" class="f09-dispatch-tag f09-dispatch-mono">SAMPLE DATA</div>
+
+        <h2 data-hf-id="hf-u5uk" class="f09-dispatch-h2"><span data-hf-id="hf-0t28" class="f09-dispatch-wm"><span data-hf-id="hf-qdbi" class="f09-dispatch-w">ready</span></span> <span data-hf-id="hf-lxco" class="f09-dispatch-wm"><span data-hf-id="hf-ju96" class="f09-dispatch-w">for</span></span> <span data-hf-id="hf-kqfl" class="f09-dispatch-wm"><span data-hf-id="hf-k4my" class="f09-dispatch-w">the</span></span> <span data-hf-id="hf-l4qm" class="f09-dispatch-wm"><span data-hf-id="hf-1yvy" class="f09-dispatch-w">next</span></span> <span data-hf-id="hf-jxtj" class="f09-dispatch-wm"><span data-hf-id="hf-9ebr" class="f09-dispatch-w">stop<span data-hf-id="hf-lpqp" class="f09-dispatch-dot">.</span></span></span></h2>
+
+        <!-- TRF-001 — store transfer manifest -->
+        <div data-hf-id="hf-o6f8" id="f09-dispatch-trf" class="f09-dispatch-card" style="left:106px">
+          <div data-hf-id="hf-5lpx" id="f09-dispatch-trf-panel" class="f09-dispatch-panel"></div>
+          <div data-hf-id="hf-5xa1" id="f09-dispatch-trf-hair" class="f09-dispatch-hair"></div>
+          <div data-hf-id="hf-ecs5" id="f09-dispatch-trf-stub" class="f09-dispatch-stub"></div>
+          <div data-hf-id="hf-4cat" id="f09-dispatch-trf-label" class="f09-dispatch-label f09-dispatch-mono">TRF-001 · STORE TRANSFER</div>
+          <div data-hf-id="hf-gvgo" id="f09-dispatch-trf-big" class="f09-dispatch-big">40 units<svg data-hf-id="hf-ocfn" class="f09-dispatch-arrow" viewBox="0 0 40 24" aria-hidden="true"><path data-hf-id="hf-zd45" d="M2 12 H36 M26 3 L36 12 L26 21" fill="none" stroke="#D6FF55" stroke-width="3.4" stroke-linecap="square" stroke-linejoin="miter" /></svg>Main Street</div>
+          <div data-hf-id="hf-w7zv" id="f09-dispatch-trf-sub" class="f09-dispatch-sub"><span data-hf-id="hf-n3cf" class="f09-dispatch-hi">$3,940</span> retail reference</div>
+          <div data-hf-id="hf-t7ft" id="f09-dispatch-trf-track" class="f09-dispatch-track"><div data-hf-id="hf-x023" id="f09-dispatch-trf-fill" class="f09-dispatch-fill"></div></div>
+          <div data-hf-id="hf-6kmr" id="f09-dispatch-trf-foot" class="f09-dispatch-foot f09-dispatch-mono">SINGLE-ITEM REPLENISHMENT · MAIN STREET STORE</div>
+          <div data-hf-id="hf-43uv" id="f09-dispatch-trf-pill" class="f09-dispatch-pill f09-dispatch-mono">SENT · SIMULATED</div>
+        </div>
+
+        <!-- PLT-001 — packed pallet manifest -->
+        <div data-hf-id="hf-ip8q" id="f09-dispatch-plt" class="f09-dispatch-card" style="left:980px">
+          <div data-hf-id="hf-ex7l" id="f09-dispatch-plt-panel" class="f09-dispatch-panel"></div>
+          <div data-hf-id="hf-4kp1" id="f09-dispatch-plt-hair" class="f09-dispatch-hair"></div>
+          <div data-hf-id="hf-f6sx" id="f09-dispatch-plt-stub" class="f09-dispatch-stub"></div>
+          <div data-hf-id="hf-8zi3" id="f09-dispatch-plt-label" class="f09-dispatch-label f09-dispatch-mono">PLT-001 · PALLET</div>
+          <div data-hf-id="hf-ka85" id="f09-dispatch-plt-big" class="f09-dispatch-big">$400 <em data-hf-id="hf-bns5">pallet</em></div>
+          <div data-hf-id="hf-l4uh" id="f09-dispatch-plt-sub" class="f09-dispatch-sub f09-dispatch-lime"><span data-hf-id="hf-3san" class="f09-dispatch-hi">$<span data-hf-id="hf-30d5" id="f09-dispatch-count">540</span></span> retail · 13 units · 4 SKUs</div>
+          <div data-hf-id="hf-y43l" id="f09-dispatch-plt-track" class="f09-dispatch-track">
+            <div data-hf-id="hf-13lf" id="f09-dispatch-plt-fill" class="f09-dispatch-fill"></div>
+            <div data-hf-id="hf-w9z7" class="f09-dispatch-tick f09-dispatch-tick-sale" style="left:66.667%"></div>
+            <div data-hf-id="hf-egfl" class="f09-dispatch-tick" style="left:86.667%"></div>
+          </div>
+          <div data-hf-id="hf-zozn" id="f09-dispatch-plt-foot" class="f09-dispatch-foot f09-dispatch-mono">35.0% ABOVE SALE · TARGET $520</div>
+          <div data-hf-id="hf-afrt" id="f09-dispatch-plt-pill" class="f09-dispatch-pill f09-dispatch-mono"><svg data-hf-id="hf-z4wu" viewBox="0 0 16 16" aria-hidden="true"><path data-hf-id="hf-gs0x" id="f09-dispatch-check" d="M2.5 8.5 L6.5 12.5 L13.5 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter" stroke-dasharray="18" /></svg>PACKED</div>
+        </div>
+
+        <!-- export chip -->
+        <div data-hf-id="hf-bwy0" id="f09-dispatch-chipwrap" class="f09-dispatch-chipwrap">
+          <div data-hf-id="hf-eap6" id="f09-dispatch-burst" class="f09-dispatch-burst"></div>
+          <div data-hf-id="hf-zdkq" id="f09-dispatch-chip" class="f09-dispatch-chip"><svg data-hf-id="hf-pgly" viewBox="0 0 20 26" aria-hidden="true"><path data-hf-id="hf-jz1o" d="M10 2 V22 M3 15 L10 22 L17 15" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square" stroke-linejoin="miter" /></svg>manifests + CSV</div>
+        </div>
+
+        <!-- provenance: the real dispatch capture, faint -->
+        <div data-hf-id="hf-v5ck" id="f09-dispatch-strip" class="f09-dispatch-strip">
+          <div data-hf-id="hf-lmyb" id="f09-dispatch-world" class="f09-dispatch-world" data-layout-allow-overflow="">
+            <img data-hf-id="hf-xkeu" src="assets/view-dispatch.png" alt="" width="1920" height="1106">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      window.__timelines = window.__timelines || {};
+      var tl = gsap.timeline({ paused: true });
+      var P = "#f09-dispatch-";
+
+      // ── Scene 1 (0.0–1.0): kicker, per-word h2 reveal; card slots draw in ──
+      tl.fromTo(P + "kicker", { opacity: 0, x: -16 }, { opacity: 1, x: 0, duration: 0.4, ease: "power2.out" }, 0);
+      tl.fromTo(P + "tag", { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "power1.out" }, 0.1);
+      tl.fromTo(".f09-dispatch-w", { yPercent: 110 }, { yPercent: 0, duration: 0.55, ease: "power3.out", stagger: 0.08 }, 0.12);
+      tl.fromTo([P + "trf-hair", P + "plt-hair"], { scaleX: 0 }, { scaleX: 1, duration: 0.7, ease: "power2.inOut", stagger: 0.12 }, 0.35);
+
+      // card assembly: panel drops from its hairline, stub ornament, rows stagger up
+      function assemble(k, t0) {
+        tl.fromTo(P + k + "-panel", { scaleY: 0 }, { scaleY: 1, duration: 0.45, ease: "power3.out" }, t0);
+        tl.fromTo(P + k + "-stub", { scaleX: 0 }, { scaleX: 1, duration: 0.3, ease: "power2.out" }, t0 + 0.05);
+        tl.fromTo(
+          [P + k + "-label", P + k + "-big", P + k + "-sub", P + k + "-track", P + k + "-foot"],
+          { opacity: 0, y: 16 },
+          { opacity: 1, y: 0, duration: 0.45, ease: "power3.out", stagger: 0.08 },
+          t0 + 0.08
+        );
+      }
+      // status pill stamps down (firm back.out punctuation)
+      function stamp(sel, t) {
+        tl.fromTo(sel, { opacity: 0, scale: 1.6 }, { opacity: 1, scale: 1, duration: 0.32, ease: "back.out(1.8)" }, t);
+      }
+
+      // ── Scene 2 (1.0–2.4): TRF-001 assembles, route line runs, SENT · SIMULATED stamps ──
+      assemble("trf", 1.0);
+      tl.fromTo(P + "trf-fill", { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: "power2.inOut" }, 1.45);
+      stamp(P + "trf-pill", 1.9);
+
+      // provenance strip settles in (50%) on the Store transfers section
+      var S = 834 / 1336;
+      tl.fromTo(P + "strip", { opacity: 0, y: 16 }, { opacity: 0.5, y: 0, duration: 0.5, ease: "power2.out" }, 1.5);
+
+      // ── Scene 3 (2.4–3.8): PLT-001 assembles, $540 counts up past target, ✓ PACKED stamps ──
+      assemble("plt", 2.4);
+      tl.fromTo(P + "count", { innerText: 400 }, { innerText: 540, snap: { innerText: 1 }, duration: 0.8, ease: "power3.out" }, 2.7);
+      tl.fromTo(P + "plt-fill", { scaleX: 0.6667 }, { scaleX: 0.9, duration: 0.8, ease: "power3.out" }, 2.7);
+      stamp(P + "plt-pill", 3.3);
+      tl.fromTo(P + "check", { strokeDashoffset: 18 }, { strokeDashoffset: 0, duration: 0.25, ease: "power2.out" }, 3.4);
+      // strip scrolls from Store transfers down to Packed pallets, then rests
+      tl.fromTo(
+        P + "world",
+        { scale: S, x: -432 * S, y: -376 * S },
+        { scale: S, x: -432 * S, y: -633 * S, duration: 1.0, ease: "power2.inOut" },
+        2.5
+      );
+
+      // ── Scene 4 (3.8–5.0): CSV chip enters with a tactile press (press-release-spring, smooth), hold ──
+      tl.fromTo(P + "chipwrap", { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.24, ease: "power2.out" }, 3.62);
+      // press — linear-ish compression, surface sinks darker
+      tl.fromTo(P + "chip", { scale: 1, backgroundColor: "#151816" }, { scale: 0.92, backgroundColor: "#0D0F0E", duration: 0.12, ease: "power1.in" }, 3.84);
+      // release — adjacent (3.84 + 0.12), smooth recovery, no bounce; state flips to lime (ready)
+      tl.to(P + "chip", { scale: 1, backgroundColor: "#D6FF55", color: "#0D0F0E", borderColor: "#D6FF55", duration: 0.55, ease: "power3.out" }, 3.96);
+      // burst ring behind the chip: grow in, then expand + dissolve
+      tl.fromTo(
+        P + "burst",
+        { scaleX: 1, scaleY: 1, borderColor: "rgba(214, 255, 85, 0)" },
+        { scaleX: 1.05, scaleY: 1.25, borderColor: "rgba(214, 255, 85, 0.9)", duration: 0.12, ease: "power1.out" },
+        3.96
+      );
+      tl.to(P + "burst", { scaleX: 1.14, scaleY: 1.7, borderColor: "rgba(214, 255, 85, 0)", duration: 0.6, ease: "power2.out" }, 4.08);
+      // commit-synced micro push-in, then the camera re-locks (hold)
+      tl.fromTo(P + "cam", { scale: 1 }, { scale: 1.012, duration: 0.7, ease: "power2.out" }, 3.96);
+
+      tl.set({}, {}, 5);
+      window.__timelines["09-dispatch"] = tl;
+    })();
+  </script>
+</template>

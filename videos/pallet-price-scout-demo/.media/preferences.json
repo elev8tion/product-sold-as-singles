@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "preferences": {
+    "destination": {
+      "value": "youtube",
+      "confirmed_in": [
+        "pallet-price-scout-demo"
+      ],
+      "updated_at": "2026-09-11T19:50:20.628Z"
+    },
+    "aspect": {
+      "value": "1920x1080",
+      "confirmed_in": [
+        "pallet-price-scout-demo"
+      ],
+      "updated_at": "2026-09-11T19:50:20.666Z"
+    },
+    "flow": {
+      "value": "automation",
+      "confirmed_in": [
+        "pallet-price-scout-demo"
+      ],
+      "updated_at": "2026-09-11T19:50:20.705Z"
+    },
+    "storyboard": {
+      "value": "yes",
+      "confirmed_in": [
+        "pallet-price-scout-demo"
+      ],
+      "updated_at": "2026-09-11T19:50:20.741Z"
+    },
+    "voice": {
+      "value": "536d3a5e000945adb7038665781a4aca",
+      "confirmed_in": [
+        "pallet-price-scout-demo"
+      ],
+      "updated_at": "2026-09-11T20:41:51.110Z"
+    }
+  },
+  "sightings": {}
+}

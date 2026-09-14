@@ -1,0 +1,56 @@
+[
+  {
+    "id": "w0",
+    "text": "Every",
+    "start": 0,
+    "end": 0.24
+  },
+  {
+    "id": "w1",
+    "text": "returns",
+    "start": 0.24,
+    "end": 0.72
+  },
+  {
+    "id": "w2",
+    "text": "truck",
+    "start": 0.72,
+    "end": 1.04
+  },
+  {
+    "id": "w3",
+    "text": "looks",
+    "start": 1.04,
+    "end": 1.28
+  },
+  {
+    "id": "w4",
+    "text": "the",
+    "start": 1.28,
+    "end": 1.36
+  },
+  {
+    "id": "w5",
+    "text": "same",
+    "start": 1.36,
+    "end": 1.84
+  },
+  {
+    "id": "w6",
+    "text": "What's",
+    "start": 2.32,
+    "end": 2.56
+  },
+  {
+    "id": "w7",
+    "text": "inside",
+    "start": 2.56,
+    "end": 3.12
+  },
+  {
+    "id": "w8",
+    "text": "isn't",
+    "start": 3.36,
+    "end": 3.6
+  }
+]

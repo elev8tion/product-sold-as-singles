@@ -1,0 +1,119 @@
+[span] PALLET PRICE SCOUT
+[small] INVENTORY ROUTING
+[div] DEMO WORKSPACE
+[span] NO LIVE CONNECTIONS
+[div] FROM SCAN TO SELL-THROUGH
+[h1] The right items.
+[h1] The right
+[em] place.
+[p] Keep your best sellers moving.
+[p] Build more value into the rest.
+[a] Overview
+[a] Analysis results
+[a] Single-item pulls
+[a] Pallet builder
+[a] Packing & dispatch
+[div] SINGLE-ITEM DESTINATION
+[strong] Main Street store
+[span] Sample location · 30-day sales
+[span] Sales history
+[span] DEMO LOADED
+[span] THE PALLET RULE
+[p] Retail value ≥ sale price
+[span] × 1.30
+[small] Retail reference value, not profit or a guarantee of resale proceeds.
+[button] ↻ Reset demo
+[div] 01 / ROUTING OVERVIEW
+[h2] Good inventory. Better decisions.
+[p] Pull what sells. Give everything else a place.
+[button] ↓ Export routing plan
+[strong] Mixed merchandise / Batch 024
+[span] Sample completed analysis
+[span] ✓ ANALYSIS COMPLETE
+[button] View results ↗
+[span] ANALYZED INVENTORY
+[strong] 215
+[span] 16 product lines · 9 units on hold
+[span] READY RETAIL VALUE
+[strong] $12,260
+[span] Illustrative prices · excludes holds
+[span] RESERVED FOR SINGLES
+[span] 6 fast-selling SKUs identified
+[span] AVAILABLE FOR PALLETS
+[strong] 166
+[span] $8,320 in retail value
+[h3] Send the best sellers first.
+[span] STORE MATCHED
+[p] Ranked by 30-day unit sales at Main Street. Only exact SKU matches qualify.
+[th] PRODUCT
+[th] 30D SOLD
+[th] AVG. DAYS TO SELL
+[th] 7D PULL
+[button] Ninja air fryer
+[small] AF101 · 4 qt · black
+[span] 3.2 days
+[span] units
+[button] COSORI electric kettle
+[small] 1.7 L · stainless steel
+[span] 2.6 days
+[span] units
+[button] JBL Flip 6 speaker
+[small] Portable Bluetooth · black
+[span] 4.1 days
+[span] units
+[button] Keurig K-Mini
+[small] Single-serve coffee maker
+[span] 4.8 days
+[span] units
+[button] Soundcore Q20 headphones
+[small] Over-ear · noise cancelling
+[span] 5.2 days
+[span] units
+[span] 7-day demand minus current store stock
+[button] Review pull list →
+[h3] Where it goes.
+[span] 215 UNITS
+[small] ready to route
+[span] Single-item store
+[span] Pallet inventory
+[strong] 166
+[span] Needs review
+[strong] Uncertainty stays visible.
+[p] Unconfirmed models, unknown prices, and condition checks stay out of both queues.
+[button] Review held items ↗
+[h3] Four price points. One value rule.
+[span] MINIMUM RETAIL = SALE × 1.30
+[span] PALLET / 01
+[strong] $400
+[small] sale price
+[span] Minimum retail
+[b] $520
+[span] +30% RETAIL VALUE
+[span] BUILD PALLET →
+[span] PALLET / 02
+[strong] $600
+[small] sale price
+[span] Minimum retail
+[b] $780
+[span] +30% RETAIL VALUE
+[span] BUILD PALLET →
+[span] PALLET / 03
+[strong] $900
+[small] sale price
+[span] Minimum retail
+[b] $1,170
+[span] +30% RETAIL VALUE
+[span] BUILD PALLET →
+[span] PALLET / 04
+[strong] $1,400
+[small] sale price
+[span] Minimum retail
+[b] $1,820
+[span] +30% RETAIL VALUE
+[span] BUILD PALLET →
+[span] ROUTING LOGIC
+[span] Exact SKU match
+[span] → Sales velocity → Store stock gap → Singles first → Remaining stock to pallets
+[span] SCOUT / ROUTING WORKSPACE
+[span] LOCAL DEMO
+[span] FICTIONAL INVENTORY & SALES · NOTHING IS SENT TO A REAL STORE

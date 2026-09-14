@@ -1,0 +1,30 @@
+{
+  "name": "products-sold-as-singles",
+  "identifier": "local.products-sold-as-singles.app",
+  "version": "1.0.0",
+  "icon": "assets/icon.png",
+
+  "// command": "simplest mode: run this in the project dir, in place. {port} substituted.",
+  "command": "node server.js",
+
+  "// build": "compiled stacks: shell command producing the server binary at {out}",
+  "build": "",
+  "// exec": "or: path to an existing executable or launch script to bundle",
+  "exec": "",
+
+  "// resources": "files/dirs copied into Contents/Resources (server cwd at runtime)",
+  "resources": [],
+
+  "// port_env": "env var the server reads for its listen address ('' to use args only)",
+  "port_env": "PORT",
+  "addr_template": "{port}",
+  "// args": "extra server args; {port} is substituted, e.g. [\"--port\", \"{port}\"]",
+  "args": [],
+  "// preferred_port": "auto = stable port assigned from ~/.mkmacapp/ports.json; 0 = ephemeral",
+  "preferred_port": "auto",
+
+  "start_path": "/",
+  "// health_path": "empty = wait for the port to accept TCP (works everywhere)",
+  "health_path": "",
+  "window": [1280, 840]
+}

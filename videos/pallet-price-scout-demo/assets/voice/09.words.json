@@ -1,0 +1,74 @@
+[
+  {
+    "id": "w0",
+    "text": "The",
+    "start": 0,
+    "end": 0.08
+  },
+  {
+    "id": "w1",
+    "text": "store",
+    "start": 0.08,
+    "end": 0.4
+  },
+  {
+    "id": "w2",
+    "text": "transfer",
+    "start": 0.4,
+    "end": 0.96
+  },
+  {
+    "id": "w3",
+    "text": "and",
+    "start": 0.96,
+    "end": 1.12
+  },
+  {
+    "id": "w4",
+    "text": "packed",
+    "start": 1.12,
+    "end": 1.44
+  },
+  {
+    "id": "w5",
+    "text": "pallet",
+    "start": 1.44,
+    "end": 1.76
+  },
+  {
+    "id": "w6",
+    "text": "are",
+    "start": 1.76,
+    "end": 1.84
+  },
+  {
+    "id": "w7",
+    "text": "ready",
+    "start": 1.84,
+    "end": 2.32
+  },
+  {
+    "id": "w8",
+    "text": "with",
+    "start": 2.56,
+    "end": 2.72
+  },
+  {
+    "id": "w9",
+    "text": "manifests",
+    "start": 2.72,
+    "end": 3.44
+  },
+  {
+    "id": "w10",
+    "text": "to",
+    "start": 3.52,
+    "end": 3.52
+  },
+  {
+    "id": "w11",
+    "text": "match",
+    "start": 3.52,
+    "end": 4.08
+  }
+]
