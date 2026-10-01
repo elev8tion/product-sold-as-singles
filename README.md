@@ -1,6 +1,8 @@
 # Scout / Inventory Routing Demo
 
-A standalone, interactive **demo only** in the visual language of `/Users/kcdacre8tor/pallet-price-scout`: charcoal panels, acid-lime highlights, thin borders, Space Grotesk, and DM Mono. The original Scout project is unchanged.
+A standalone, interactive **demo only** in the visual language of `/Users/kcdacre8tor/pallet-price-scout`: charcoal panels, acid-lime highlights, thin borders, Space Grotesk, and DM Mono.
+
+The live combined web workspace is `pallet-price-scout` (`/` scan, `/routing/` this demo). Prefer that project.
 
 ## Run
 
